@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Accessible Computational Drug Discovery</title>
+  <desc id="description">A project by Martin Cifuentes. Designing integrated computational workflows for small-molecule discovery. Establish, Explore, Investigate, Interpret, Decide; revisit as needed. New evidence can enter throughout and independent questions can progress concurrently. Practitioner validation in progress.</desc>
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#132d49"/>
+  <g fill="#245f87" font-family="Arial, sans-serif" font-size="13" letter-spacing="2.7">
+    <text x="64" y="66">COMPUTATIONAL MOLECULAR MODELING</text>
+  </g>
+  <g fill="#132d49" font-family="Georgia, 'Times New Roman', serif" font-size="62" letter-spacing="-1.5">
+    <text x="61" y="158">Accessible Computational</text>
+    <text x="61" y="230">Drug Discovery</text>
+  </g>
+  <g fill="#425368" font-family="Arial, sans-serif" font-size="24">
+    <text x="64" y="282">Designing integrated computational workflows</text>
+    <text x="64" y="316">for small-molecule discovery.</text>
+  </g>
+  <g stroke="#c5d5df" fill="#f4f7f9">
+    <rect x="64" y="361" width="192" height="106" rx="2"/>
+    <rect x="284" y="361" width="192" height="106" rx="2"/>
+    <rect x="504" y="361" width="192" height="106" rx="2"/>
+    <rect x="724" y="361" width="192" height="106" rx="2"/>
+    <rect x="944" y="361" width="192" height="106" rx="2"/>
+  </g>
+  <g fill="#596e83" font-family="Arial, sans-serif" font-size="13" letter-spacing="1.2">
+    <text x="83" y="389">01</text><text x="303" y="389">02</text><text x="523" y="389">03</text><text x="743" y="389">04</text><text x="963" y="389">05</text>
+  </g>
+  <g fill="#132d49" font-family="Georgia, 'Times New Roman', serif" font-size="27">
+    <text x="83" y="435">Establish</text><text x="303" y="435">Explore</text><text x="523" y="435">Investigate</text><text x="743" y="435">Interpret</text><text x="963" y="435">Decide</text>
+  </g>
+  <g fill="none" stroke="#4e7c98" stroke-width="1.4">
+    <path d="M263 414h14m-5-5 5 5-5 5M483 414h14m-5-5 5 5-5 5M703 414h14m-5-5 5 5-5 5M923 414h14m-5-5 5 5-5 5"/>
+    <path d="M160 478v24h880v-24M380 478v24M600 478v24M820 478v24" stroke-dasharray="4 4"/>
+    <path d="m155 483 5-7 5 7m210 0 5-7 5 7m210 0 5-7 5 7m210 0 5-7 5 7m210 0 5-7 5 7"/>
+  </g>
+  <rect x="438" y="487" width="324" height="29" fill="#ffffff"/>
+  <text x="600" y="507" text-anchor="middle" fill="#596e83" font-family="Arial, sans-serif" font-size="16">Revisit activities as needed</text>
+  <text x="600" y="535" text-anchor="middle" fill="#596e83" font-family="Arial, sans-serif" font-size="13">New evidence can enter throughout; independent questions can progress concurrently.</text>
+  <path d="M64 550h1072" stroke="#d4e0e7"/>
+  <text x="64" y="589" fill="#132d49" font-family="Arial, sans-serif" font-size="18">Martin Cifuentes</text>
+  <circle cx="870" cy="583" r="4" fill="#27736e"/>
+  <text x="1136" y="589" text-anchor="end" fill="#425368" font-family="Arial, sans-serif" font-size="17">Practitioner validation in progress</text>
+</svg>
