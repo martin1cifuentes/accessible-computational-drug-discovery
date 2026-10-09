@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pt-BR" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#132d49">
+  <meta name="description" content="Concepção de um sistema adaptativo, orientado por algoritmos, para a descoberta de pequenas moléculas: exploração química, decisões baseadas em evidências e cálculos cientificamente justificados. Um projeto de Martin Cifuentes.">
+  <title>Descoberta Computacional Acessível de Fármacos — Martin Cifuentes</title>
+  <!-- Os metadados de compartilhamento são estáticos para que os mecanismos de busca não precisem de JavaScript.
+       Ao mudar de hospedagem, execute: node scripts/set-site-url.mjs https://your-host/your-project/ -->
+  <link rel="canonical" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/pt-br/">
+  <link rel="alternate" hreflang="en" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/">
+  <link rel="alternate" hreflang="es" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/pt-br/">
+  <link rel="alternate" hreflang="x-default" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Descoberta Computacional Acessível de Fármacos">
+  <meta property="og:title" content="Descoberta Computacional Acessível de Fármacos">
+  <meta property="og:description" content="Concepção de um sistema adaptativo para a descoberta de pequenas moléculas, conectando exploração química, evidências acumuladas e investigações cientificamente justificadas. Concepção central substancialmente desenvolvida; validação com profissionais da área em andamento.">
+  <meta property="og:url" content="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/pt-br/">
+  <meta property="og:image" content="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/assets/social-preview-v2.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Descoberta Computacional Acessível de Fármacos, por Martin Cifuentes. Atividades conectadas: Estabelecer, Explorar, Investigar, Interpretar, Decidir; retomar conforme necessário. Novas evidências podem ser incorporadas em qualquer etapa e questões independentes podem avançar em paralelo. Validação com profissionais da área em andamento.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Descoberta Computacional Acessível de Fármacos">
+  <meta name="twitter:description" content="Concepção de um sistema adaptativo para a descoberta de pequenas moléculas, conectando exploração química, evidências acumuladas e investigações cientificamente justificadas. Concepção central substancialmente desenvolvida; validação com profissionais da área em andamento.">
+  <meta name="twitter:image" content="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/assets/social-preview-v2.jpg">
+  <meta name="twitter:image:alt" content="Descoberta Computacional Acessível de Fármacos, por Martin Cifuentes. Atividades conectadas: Estabelecer, Explorar, Investigar, Interpretar, Decidir; retomar conforme necessário. Novas evidências podem ser incorporadas em qualquer etapa e questões independentes podem avançar em paralelo. Validação com profissionais da área em andamento.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css?v=20261009-languages">
+  <script src="../site-config.js" defer></script>
+  <script src="../site.js?v=20261009-languages" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="language-bar">
+      <nav class="container language-switcher" aria-label="Idioma do site">
+        <a href="../" hreflang="en" lang="en" aria-label="English"><img src="../assets/flags/gb.svg" width="20" height="15" alt="" aria-hidden="true"><span>English</span></a>
+        <a href="../es/" hreflang="es" lang="es" aria-label="Español"><img src="../assets/flags/es.svg" width="20" height="15" alt="" aria-hidden="true"><span>Español</span></a>
+        <a href="../pt-br/" hreflang="pt-BR" lang="pt-BR" aria-label="Português (Brasil)" aria-current="page"><img src="../assets/flags/br.svg" width="20" height="15" alt="" aria-hidden="true"><span>Português</span></a>
+      </nav>
+    </div>
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Descoberta Computacional Acessível de Fármacos, início">
+        <svg class="brand-mark" viewBox="0 0 40 44" aria-hidden="true"><path d="M20 3 36 12v20L20 41 4 32V12Z"/><path d="m4 12 16 9 16-9M20 21v20"/><circle cx="20" cy="3" r="2.4"/><circle cx="36" cy="32" r="2.4"/><circle cx="4" cy="32" r="2.4"/></svg>
+        <span>Descoberta Computacional<br>Acessível de Fármacos</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#problem">Projeto</a><a href="#workflow">Fluxo de trabalho</a><a href="#status">Estágio atual</a><a href="#previous-work">Trabalhos anteriores</a><a href="#about">Sobre</a>
+      </nav>
+      <a class="header-contact" href="mailto:martincifuentesgomez1@gmail.com">Entre em contato <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="project-title">
+      <div class="hero-main">
+        <div class="hero-copy">
+          <p class="eyebrow">Descoberta adaptativa · Decisões científicas</p>
+          <h1 id="project-title">Descoberta Computacional Acessível de Fármacos</h1>
+          <p class="hero-intro">Um sistema integrado, orientado por algoritmos, para a descoberta de pequenas moléculas.</p>
+          <p class="hero-summary">Concebido para transformar a experiência científica em decisões explícitas, explorar sistematicamente o espaço químico e selecionar investigações de acordo com as evidências disponíveis, evitando trabalho computacional desnecessário.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#campaign">Veja um exemplo de campanha <span aria-hidden="true">↓</span></a><a class="text-link" href="#validation">O que estou validando <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <figure class="hero-figure">
+          <img src="../assets/protein-ligand-illustration.webp" width="1254" height="1254" fetchpriority="high" decoding="async" alt="Ilustração da superfície de uma proteína com um sítio de ligação azul envolvendo uma pequena molécula representada em bastões.">
+          <figcaption>Vista ilustrativa de proteína–ligante</figcaption>
+        </figure>
+      </div>
+      <div class="hero-context prose">
+          <p>A concepção conecta exploração química, investigação computacional e evidências experimentais em um processo adaptativo de descoberta. À medida que as evidências se acumulam, elas orientam a priorização de candidatos, o escopo da exploração química e quais questões justificam investigações adicionais.</p>
+          <p>A acessibilidade continua sendo um objetivo central. Tornar operacional o raciocínio de especialistas e coordenar o trabalho dentro de limites científicos e de recursos visa tornar a descoberta computacional mais útil e viável para equipes de pesquisa.</p>
+      </div>
+      <div class="hero-status"><span class="status-dot" aria-hidden="true"></span><p><strong>A concepção central do sistema está substancialmente desenvolvida e agora está sendo confrontada com a prática real de descoberta.</strong></p><a href="#status" aria-label="Leia sobre o estágio atual do projeto">Estágio atual <span aria-hidden="true">→</span></a></div>
+    </section>
+
+    <section class="section" id="problem" aria-labelledby="problem-title">
+      <div class="container editorial-grid">
+        <div class="section-aside"><p class="eyebrow">01 / Contexto</p><h2 id="problem-title">O problema</h2><p class="aside-note">Custo. Complexidade operacional.<br>A experiência necessária para orientar o trabalho.</p></div>
+        <div class="prose">
+          <p class="lead">O acesso à descoberta computacional de fármacos é limitado pelo <strong>custo, pela complexidade operacional e pela experiência necessária para orientar o trabalho</strong>.</p>
+          <p>Plataformas comerciais oferecem recursos integrados poderosos, mas seus custos de licenciamento e computação podem limitar o acesso. Ferramentas de código aberto oferecem outro caminho, mas montar e operar um fluxo de trabalho confiável ainda exige um esforço técnico considerável.</p>
+          <p>Os pesquisadores também precisam manter cálculos, premissas, dados moleculares e evidências experimentais conectados ao transitar entre diferentes métodos e ferramentas. Esse trabalho operacional consome atenção que poderia ser dedicada a questões científicas.</p>
+          <p>Mesmo quando as ferramentas estão disponíveis, permanece um problema mais profundo: <strong>o que deve ser feito a seguir?</strong></p>
+          <p>Uma equipe de pesquisa precisa decidir continuamente se as evidências existentes são suficientes, se mais compostos devem ser explorados, se outra investigação computacional se justifica ou se evidências experimentais seriam mais valiosas naquele momento.</p>
+          <p>O objetivo, portanto, não é simplesmente reunir ferramentas computacionais em uma única interface.</p>
+          <blockquote>O objetivo é tornar operacional o conhecimento especializado já estabelecido: automatizar o trabalho quando houver justificativa científica, preservar as evidências por trás de cada decisão e concentrar a atenção humana onde o julgamento, novos conhecimentos ou a autorização afetem de forma relevante o resultado.</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section campaign-section" id="campaign" aria-labelledby="campaign-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">02 / Uma campanha na prática</p><h2 id="campaign-title">Uma campanha adaptativa de descoberta</h2></div><span class="margin-label">Decisões ilustrativas previstas na concepção</span></div>
+        <div class="prose section-intro"><p class="lead">Considere um projeto com um alvo definido, compostos iniciais e objetivos de descoberta conflitantes. A questão é como orientar a próxima atividade à medida que as evidências se acumulam.</p><p>As decisões abaixo ilustram o funcionamento pretendido. Os métodos são selecionados quando aplicáveis; uma campanha pode retomar decisões, investigar questões independentes em paralelo ou encerrar o trabalho quando houver evidências suficientes.</p></div>
+        <ol class="campaign-decisions">
+          <li><div class="campaign-step"><span class="step-index" aria-hidden="true">01</span><h3>Definir o problema de descoberta</h3></div><p>Reunir o alvo, os compostos iniciais, as medições existentes, os objetivos e as restrições práticas. Estabelecer quais questões as evidências disponíveis já permitem responder.</p></li>
+          <li><div class="campaign-step"><span class="step-index" aria-hidden="true">02</span><h3>Explorar o espaço químico relevante</h3></div><p>Selecionar buscas estruturais e por similaridade aplicáveis, transformações de pares moleculares correspondentes com <strong>mmpdb</strong>, modificações baseadas em fragmentos com <strong>CReM</strong> ou amostragem a partir de geradores pré-treinados selecionados do <strong>REINVENT4</strong>. Preservar o escopo químico permitido.</p></li>
+          <li><div class="campaign-step"><span class="step-index" aria-hidden="true">03</span><h3>Avaliar e priorizar candidatos</h3></div><p>Reutilizar evidências compatíveis e, quando justificado, aplicar predições de aprendizado de máquina (ML) ou docking a questões específicas. Comparar candidatos segundo os diferentes objetivos, manter diversidade química útil e preservar compostos que possam testar uma hipótese importante.</p></li>
+          <li><div class="campaign-step"><span class="step-index" aria-hidden="true">04</span><h3>Acumular evidências e adaptar</h3></div><p>À medida que chegam resultados interpretáveis, reavaliar a priorização de candidatos e as questões ainda não resolvidas. Refinar uma série química, rever as preferências de busca dentro do escopo permitido ou explorar lacunas de cobertura relevantes.</p></li>
+          <li><div class="campaign-step"><span class="step-index" aria-hidden="true">05</span><h3>Escolher a próxima investigação justificada</h3></div><p>Reutilizar evidências suficientes, ampliar a exploração ou considerar dinâmica molecular (MD), cálculos de energia livre de ligação relativa ou absoluta (RBFE/ABFE), ou um experimento. Comparar opções cientificamente adequadas quanto à incerteza, aos pré-requisitos, à demanda computacional, ao custo e ao prazo.</p></li>
+          <li><div class="campaign-step"><span class="step-index" aria-hidden="true">06</span><h3>Incorporar o retorno experimental</h3></div><p>Interpretar as medições fornecidas em seu contexto experimental. Reavaliar as conclusões afetadas, as comparações entre candidatos e as escolhas de investigação e, então, continuar, redirecionar, pausar ou encerrar o trabalho conforme as evidências justificarem.</p></li>
+        </ol>
+        <div class="evidence-adaptation editorial-grid">
+          <div><p class="eyebrow">Evidências e eficiência no uso de recursos</p><h3>Novas evidências mudam a próxima decisão</h3></div>
+          <div class="prose"><p>Uma nova medição ou um resultado computacional pode mudar quais compostos são priorizados, para onde a exploração química é direcionada e se outra investigação é necessária. Evidências que resolvem uma questão podem eliminar a necessidade de novos cálculos; evidências conflitantes ou incompletas podem justificar uma investigação mais focada.</p><p>A concepção busca selecionar uma investigação cientificamente adequada com a menor demanda justificada entre as opções aplicáveis, considerando esforço computacional, custo e prazo. Reutilizar evidências suficientes, limitar o escopo do trabalho e reavaliá-lo em pontos de revisão relevantes são elementos centrais desse objetivo.</p><p class="evidence-qualification">A eficiência prática e o valor científico precisarão ser demonstrados por meio da implementação e da avaliação empírica.</p><div class="campaign-links"><a class="text-link" href="#workflow">Leia o fluxo de trabalho detalhado <span aria-hidden="true">↓</span></a><a class="text-link" href="#mechanisms">Examine os mecanismos de decisão <span aria-hidden="true">↓</span></a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section workflow-section" id="workflow" aria-labelledby="workflow-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">03 / Fluxo de descoberta</p><h2 id="workflow-title">Um fluxo de descoberta conectado</h2></div><span class="margin-label">Atividades conectadas · retomar conforme necessário</span></div>
+        <div class="prose section-intro"><p class="lead">A plataforma foi concebida para organizar a descoberta em torno de questões científicas em evolução, objetivos de projeto explícitos e um registro rastreável de evidências.</p><p>Os pesquisadores estabelecem o alvo pretendido, a química de partida, as evidências disponíveis e as restrições práticas. Buscas, cálculos e observações experimentais contribuem, então, para decisões sobre quais compostos, hipóteses e investigações devem ser levados adiante.</p></div>
+        <figure class="workflow-figure" aria-labelledby="workflow-caption">
+          <ol class="workflow-nodes"><li><a href="#establish"><span class="node-number">01</span><strong>Estabelecer</strong><span>Alvo, química, objetivos e restrições</span></a></li>
+<li><a href="#explore"><span class="node-number">02</span><strong>Explorar</strong><span>Métodos de busca aplicáveis e comparação de candidatos</span></a></li>
+<li><a href="#investigate"><span class="node-number">03</span><strong>Investigar</strong><span>Evidências necessárias, métodos aplicáveis e trabalho autorizado</span></a></li>
+<li><a href="#interpret"><span class="node-number">04</span><strong>Interpretar</strong><span>Contexto, completude e adequação ao uso</span></a></li>
+<li><a href="#decide"><span class="node-number">05</span><strong>Decidir</strong><span>Priorizar, rever, continuar, pausar ou encerrar</span></a></li></ol>
+          <div class="workflow-revisit" aria-hidden="true"><span>↕</span><span>↕</span><span>↕</span><span>↕</span><span>↕</span><p>Retomar atividades conforme necessário</p></div>
+          <figcaption id="workflow-caption"><span class="figure-label">Figura 01</span> Estabelecer → Explorar → Investigar → Interpretar → Decidir → retomar conforme necessário</figcaption>
+        </figure>
+        <p class="workflow-context-note">Essas atividades formam um fluxo de trabalho conectado. Novas evidências podem ser incorporadas ao longo de todo o projeto, e questões independentes podem avançar em paralelo.</p>
+        <div class="workflow-detail" id="establish"><div class="step-heading"><span class="step-index">01</span><h3>Estabelecer o ponto de partida</h3></div><div class="prose"><p>Um projeto reúne seu alvo pretendido, as informações de sequência ou estrutura disponíveis, os compostos iniciais, as medições anteriores, os objetivos e as restrições.</p>
+<p>O sistema estabelece identidades moleculares, significados dos campos, unidades e contexto experimental usando mapeamentos compatíveis e os metadados disponíveis. Os pesquisadores esclarecem intenções científicas ausentes ou ambiguidades com consequências relevantes. Informações previamente estabelecidas são reutilizadas.</p>
+<p>Os objetivos distinguem requisitos obrigatórios de preferências. Restrições químicas, como arcabouços moleculares protegidos ou sítios de modificação permitidos, permanecem separadas de preferências temporárias de busca.</p>
+<p>É possível atribuir as entradas originais e as interpretações subsequentes às suas fontes. Medições de tipos compatíveis podem passar pela análise necessária para derivar endpoints utilizáveis; resultados adequados fornecidos podem ser incorporados sem recálculos desnecessários.</p></div></div>
+        <div class="workflow-detail" id="explore"><div class="step-heading"><span class="step-index">02</span><h3>Explorar e comparar candidatos</h3></div><div class="prose"><p>Os pesquisadores podem recuperar compostos de bibliotecas químicas, investigar estruturas relacionadas e gerar propostas dentro do espaço químico permitido.</p>
+<p>O sistema usa regras explícitas para selecionar métodos de busca aplicáveis com base na necessidade de pesquisa e nas entradas disponíveis. Os métodos contemplados incluem buscas indexadas por estrutura e similaridade, transformações de pares moleculares correspondentes, modificações baseadas em fragmentos, enumeração de reações e amostragem a partir de geradores moleculares pré-treinados selecionados.</p>
+<p>A plataforma identifica opções úteis e aplicáveis, reutiliza resultados existentes e distribui o trabalho dentro de limites definidos, de acordo com as prioridades do projeto e as regras acordadas para exploração.</p>
+<p>Grandes populações são exploradas por meio de consultas, filtros, resumos e seleções de tamanho limitado. As visualizações detalhadas preservam sua relação com a população mais ampla e tornam visível a cobertura não examinada ou incompleta.</p>
+<p>A comparação de candidatos usa os objetivos declarados do projeto e evidências compatíveis. A comparação de Pareto identifica alternativas com compromissos de desempenho entre esses objetivos. Regras separadas de cobertura e teste de hipóteses podem manter compostos com um papel investigativo justificado, incluindo compostos que não apresentam o melhor desempenho no momento.</p></div></div>
+        <div class="investigation-detail" id="investigate">
+          <div class="step-heading"><span class="step-index">03</span><h3>Selecionar uma investigação relevante para a decisão</h3></div>
+          <div class="investigation-grid">
+            <div class="prose"><p>A seleção de uma investigação começa com uma questão específica ainda não resolvida e com as evidências necessárias para abordá-la.</p>
+<p>Primeiro, o sistema verifica se as evidências existentes ou o trabalho já em andamento são suficientes. Para trabalho adicional, considera:</p>
+<ul class="investigation-criteria"><li>Se o método pode fornecer o tipo de informação necessário.</li><li>Se suas entradas, seus pré-requisitos e suas condições de validação são atendidos.</li><li>Se a cobertura proposta poderia mudar a decisão relevante.</li><li>A incerteza fundamentada e as limitações conhecidas do método.</li><li>Sua demanda computacional, seu custo e seu prazo em relação a alternativas adequadas.</li></ul>
+<p>O trabalho elegível pode incluir predição por ML de endpoints específicos, docking, dinâmica molecular, cálculos de energia livre de ligação relativa ou absoluta, ou análise de medições experimentais. Quando novas observações físicas são necessárias, a plataforma pode formular um plano experimental e incorporar os resultados quando forem fornecidos.</p>
+<p>As prioridades do projeto e as regras de decisão acordadas orientam a escolha da investigação. O trabalho rotineiro pode avançar dentro dos limites acordados; escolhas com consequências relevantes fora desses limites exigem a decisão ou autorização apropriada do pesquisador.</p>
+<p>Quando houver suporte para isso, um trabalho autorizado pode ser executado em porções finitas e reavaliado em pontos de revisão relevantes. Lotes de execução não constituem automaticamente resultados cientificamente completos.</p></div>
+            <figure class="decision-figure" aria-labelledby="decision-caption">
+              <p class="eyebrow">Seleção de investigações</p>
+              <ol class="decision-nodes">
+                <li>Decisão e evidências necessárias</li>
+                <li class="reuse-node">Reutilizar evidências suficientes<span class="decision-criteria">Verificar as evidências existentes e o trabalho em andamento</span><span class="decision-reuse-route">Se forem suficientes → avaliar os resultados e reconsiderar</span></li>
+                <li><span class="decision-condition">Quando for necessário trabalho adicional</span>Identificar investigações aplicáveis</li>
+                <li>Comparar esforço, custo e prazo segundo as regras acordadas</li>
+                <li class="selected-node">Autorizar trabalho dentro de limites definidos</li>
+                <li>Avaliar os resultados e reconsiderar</li>
+              </ol>
+              <figcaption id="decision-caption"><span class="figure-label">Figura 02</span> Decisão e evidências necessárias → reutilizar evidências suficientes → identificar investigações aplicáveis → comparar esforço, custo e prazo segundo as regras acordadas → autorizar trabalho dentro de limites definidos → avaliar os resultados e reconsiderar</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="workflow-detail" id="interpret"><div class="step-heading"><span class="step-index">04</span><h3>Interpretar as evidências em contexto</h3></div><div class="prose"><p>Os resultados permanecem conectados aos seus compostos, estados moleculares, condições, métodos, entradas e histórico de derivação.</p>
+<p>A interpretação verifica correspondência, completude, achados diagnósticos e adequação ao uso pretendido. Um cálculo concluído com sucesso não estabelece automaticamente a afirmação física que o motivou.</p>
+<p>Predições, estimativas computacionais, observações medidas e endpoints experimentais derivados mantêm seus significados distintos. A incerteza relatada preserva a interpretação que lhe é aplicável; valores desconhecidos e incertezas não resolvidas permanecem explícitos.</p>
+<p>Evidências conflitantes, censuradas ou inconclusivas permanecem visíveis. Correções levam à reavaliação de conclusões dependentes, preservando a base original e as evidências que continuam válidas de forma independente.</p></div></div>
+        <div class="workflow-detail" id="decide"><div class="step-heading"><span class="step-index">05</span><h3>Refinar a próxima decisão</h3></div><div class="prose"><p>As evidências aceitas atualizam o estado científico do projeto, as avaliações dos objetivos afetados e o trabalho subsequente.</p>
+<p>A próxima ação pode priorizar candidatos, investigar uma discrepância específica, testar uma hipótese, rever entradas de busca permitidas, ampliar a cobertura útil ainda não explorada, solicitar evidências adicionais, pausar ou encerrar uma investigação.</p>
+<p>A comparação de Pareto explicita compromissos sustentados pelas evidências; as preferências do pesquisador ou uma regra autorizada determinam quais seguir. Os candidatos mantidos para exploração ou teste de hipóteses têm razões explícitas e condições de reavaliação.</p>
+<p>Revisões da busca preservam as restrições químicas obrigatórias. Uma preferência temporária por um escopo mais restrito pode ser flexibilizada dentro do espaço previamente autorizado, enquanto uma mudança na intenção científica exige uma decisão própria.</p>
+<p>O encerramento reflete a questão atual, as evidências e o escopo autorizado. Uma busca sem sucesso dentro de limites definidos não estabelece que não exista química útil.</p></div></div>
+
+        <details class="mechanism-details" id="mechanisms">
+          <summary><span><span class="eyebrow">Visão técnica opcional</span><strong>Mecanismos de decisão científica</strong><span class="mechanism-summary">Os métodos e as regras por trás da exploração, da priorização, da seleção de investigações e da execução.</span></span></summary>
+          <div class="mechanism-content">
+            <p class="mechanism-intro">A concepção combina métodos computacionais estabelecidos com regras explícitas para decidir quando seu uso é cientificamente justificado. Esses são papéis previstos na concepção do sistema; a implementação e o desempenho empírico ainda precisam ser demonstrados.</p>
+            <section class="mechanism-row" aria-labelledby="mechanism-exploration"><h3 id="mechanism-exploration">Exploração do espaço químico</h3><div class="prose"><p><a href="https://www.rdkit.org/docs/GettingStartedInPython.html">RDKit</a> fornece representações moleculares, comparações estruturais e seleção de diversidade baseada em fingerprints moleculares. <a href="https://github.com/rdkit/mmpdb">mmpdb</a> permite usar transformações extraídas de pares moleculares correspondentes; <a href="https://github.com/DrrDom/crem">CReM</a> propõe modificações baseadas em fragmentos; geradores pré-treinados selecionados do <a href="https://github.com/MolecularAI/REINVENT4">REINVENT4</a> fornecem outra fonte de propostas moleculares.</p><p>A aplicabilidade, as entradas disponíveis e o escopo químico permitido determinam quais caminhos são utilizados.</p></div></section>
+            <section class="mechanism-row" aria-labelledby="mechanism-prioritization"><h3 id="mechanism-prioritization">Priorização multiobjetivo</h3><div class="prose"><p>Comparações de Pareto explicitam compromissos entre objetivos. Regras de diversidade, exploração e teste de hipóteses mantêm alternativas cientificamente úteis de forma separada da seleção baseada em desempenho.</p><p>A concepção usa <a href="https://pymoo.org/">pymoo</a> para comparação por não dominância e otimização com <a href="https://pymoo.org/algorithms/moo/nsga2.html">NSGA-II</a> de portfólios de candidatos dentro de limites definidos, com objetivos explícitos, critérios de inclusão de compostos em um portfólio e restrições científicas. RDKit fornece os métodos contemplados de seleção por diversidade de fingerprints.</p>
+<p>Uma estratégia opcional de busca para populações de candidatos pode ser usada depois que sua adequação ao problema científico pretendido tiver sido estabelecida. Ela pode usar medidas de ordenação e de aglomeração (crowding) para selecionar os indivíduos que darão origem a novas gerações e escolher quais candidatos permanecem na população com base no desempenho. Regras separadas orientam a exploração e o teste de hipóteses.</p>
+<p>Gerar moléculas, escolher investigações e programar o trabalho ao longo de um projeto continuam sendo tarefas separadas. Os candidatos selecionados são verificados em relação ao problema científico original, incluindo seus objetivos, critérios de inclusão e restrições científicas. Mudar um método de otimização exige preservar esse problema e estabelecer que o substituto se comporta de forma adequada ao uso pretendido antes de adotá-lo.</p></div></section>
+            <section class="mechanism-row" aria-labelledby="mechanism-investigations"><h3 id="mechanism-investigations">Seleção de investigações</h3><div class="prose"><p>Verificações explícitas avaliam as evidências necessárias, a aplicabilidade dos métodos, os pré-requisitos, a incerteza fundamentada e a adequação científica. As evidências existentes e o trabalho já em andamento são considerados antes de selecionar trabalho adicional.</p><p>Esforço computacional, custo e prazo são comparados entre alternativas adequadas segundo as regras acordadas para o projeto. Um método de menor custo só é útil se puder fornecer evidências apropriadas à decisão.</p></div></section>
+            <section class="mechanism-row" aria-labelledby="mechanism-adaptation"><h3 id="mechanism-adaptation">Adaptação à medida que as evidências se acumulam</h3><div class="prose"><p>Novas evidências mudam as avaliações dos objetivos afetados, as prioridades entre candidatos e as questões ainda não resolvidas. A busca pode se concentrar em química promissora ou explorar alternativas com um papel justificado na obtenção de informações.</p><p>Isso equilibra o avanço das linhas mais promissoras no momento com a exploração e o teste de hipóteses. Restrições químicas obrigatórias e a autorização do pesquisador continuam a reger mudanças de escopo.</p></div></section>
+            <section class="mechanism-row" aria-labelledby="mechanism-execution"><h3 id="mechanism-execution">Execução e proveniência</h3><div class="prose"><p>A concepção da execução inclui <a href="https://aiida.readthedocs.io/projects/aiida-core/en/stable/intro/index.html">AiiDA</a> para fluxos de trabalho computacionais e rastreamento de proveniência, com recursos locais, de computação de alto desempenho (HPC) e de nuvem previstos na concepção.</p><p>O trabalho delegado continua sujeito a limites científicos e de recursos estabelecidos, com reavaliação em pontos de revisão relevantes. A infraestrutura de execução realiza o trabalho autorizado; as regras de decisão científica determinam qual trabalho se justifica.</p></div></section>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section control-section" id="researcher-control" aria-labelledby="control-title">
+      <div class="container"><div class="section-heading"><div><p class="eyebrow">04 / Participação do pesquisador</p><h2 id="control-title">Controle do pesquisador e automação útil</h2></div></div>
+        <p class="section-intro lead">O sistema oferece diferentes níveis de participação do pesquisador, dependendo do contexto científico e das permissões já acordadas para o projeto.</p>
+        <dl class="control-modes"><div><dt><span>01</span> Direto</dt><dd>O pesquisador escolhe explicitamente o trabalho.</dd></div><div><dt><span>02</span> Assistido</dt><dd>O sistema propõe uma investigação, explica seu raciocínio e aguarda autorização.</dd></div><div><dt><span>03</span> Delegado</dt><dd>O trabalho que atende aos critérios acordados avança automaticamente dentro dos limites científicos e de recursos estabelecidos.</dd></div></dl>
+        <div class="editorial-grid control-notes"><p class="aside-note">Base científica.<br>Restrições estabelecidas.<br>Permissões acordadas.</p><div class="prose"><p>A automação opera somente onde a base científica, os limites e as permissões necessários já foram estabelecidos.</p><p>As investigações propostas mostram seu propósito, as evidências que as sustentam, a incerteza e os recursos esperados. A intervenção de especialistas permanece disponível quando mudar uma premissa, um método ou uma escolha científica puder afetar de forma relevante o resultado.</p><p>A execução local e a execução em nuvem fazem parte da concepção, enquanto os resultados permanecem conectados ao mesmo registro científico.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="status" aria-labelledby="status-title"><div class="container">
+      <div class="section-heading"><div><p class="eyebrow">05 / Estágio de desenvolvimento</p><h2 id="status-title">Estágio atual</h2></div><span class="current-label"><span class="status-dot" aria-hidden="true"></span> Validação com profissionais da área em andamento</span></div>
+      <ol class="status-stages"><li class="developed"><span class="stage-marker" aria-hidden="true">✓</span><h3>Concepção do sistema</h3><p>Substancialmente desenvolvida</p></li><li class="in-progress"><span class="stage-marker" aria-hidden="true"></span><h3>Validação com profissionais da área</h3><p>Em andamento</p></li><li><span class="stage-marker" aria-hidden="true"></span><h3>Implementação e<br>avaliação empírica</h3><p>Próxima etapa</p></li></ol>
+      <div class="editorial-grid"><p class="aside-note">A concepção central do sistema<br>está substancialmente desenvolvida.</p><div class="prose"><p>O trabalho científico que o sistema pretende apoiar, o fluxo de descoberta, a organização das informações científicas, as interações dos pesquisadores, os recursos computacionais e a base para a tomada de decisões foram elaborados em detalhe e documentados como requisitos, descrições do comportamento do sistema e fluxos completos de pesquisa.</p><p>A concepção está sendo confrontada com situações realistas de descoberta para identificar inconsistências, lacunas no trabalho que precisa apoiar e premissas frágeis antes que sejam incorporadas à implementação.</p><p>O foco atual é a <strong>validação com profissionais da área</strong>.</p><p>Estou buscando contribuições de químicos medicinais, químicos computacionais e cientistas que atuam em descoberta de fármacos para comparar o fluxo de trabalho concebido com a prática real de pesquisa e identificar onde o sistema deve ser refinado.</p><p>A implementação poderá, então, partir de uma concepção estabelecida, sem que decisões fundamentais de projeto precisem ser resolvidas durante a construção do software.</p><p>A usabilidade prática, o desempenho computacional e o valor científico ainda precisarão ser demonstrados por meio da implementação e da avaliação empírica.</p></div></div>
+    </div></section>
+
+    <section class="section work-section" id="previous-work" aria-labelledby="work-title"><div class="container">
+      <div class="section-heading"><div><p class="eyebrow">06 / Implementações anteriores</p><h2 id="work-title">Trabalhos anteriores</h2></div><span class="margin-label">Software científico e simulação numérica</span></div>
+      <article class="project project-featured" aria-labelledby="protein-title"><div class="project-visual" data-project-image="protein"><a class="screenshot-link" href="../assets/protein-membrane-workspace.png" target="_blank" rel="noopener" aria-label="Ver a captura de tela do Protein–Membrane Workspace em tamanho original (abre em uma nova aba)"><img src="../assets/protein-membrane-workspace.png" width="2866" height="1788" loading="lazy" decoding="async" alt="Protein–Membrane Workspace exibindo a estrutura de origem 2PGH, com controles de seleção de cadeias proteicas, um visualizador de estruturas moleculares e o painel de avaliação da proteína."><span class="screenshot-caption">Protein–Membrane Workspace <span>Ver captura de tela em tamanho original ↗</span></span></a></div><div class="project-copy prose"><span class="eyebrow">Aplicação científica</span><h3 id="protein-title">Protein–Membrane Workspace</h3><p class="lead">Uma aplicação científica local para preparar sistemas proteína–membrana com representação de todos os átomos.</p><p>O ambiente conecta preparação de proteínas, especificação de membranas, posicionamento molecular, construção explícita do sistema, minimização de energia e inspeção estrutural em um único fluxo de trabalho.</p><p>Integra <strong>PACKMOL-Memgen por meio do AmberTools</strong>, <strong>OpenMM</strong> e <strong>Mol*</strong>, mantendo os resultados concluídos conectados aos seus dados e arquivos moleculares, parâmetros e proveniência.</p><a class="text-link" data-project-link="protein" href="https://github.com/martin1cifuentes/protein-membrane-system" aria-label="Explore o Protein–Membrane Workspace no GitHub">Explore o projeto no GitHub <span aria-hidden="true">↗</span></a></div></article>
+      <article class="project project-secondary" aria-labelledby="particle-title"><div class="project-visual" data-project-image="particle"><a class="screenshot-link" href="../assets/particle-simulator.png" target="_blank" rel="noopener"><img src="../assets/particle-simulator.png" width="2880" height="1798" loading="lazy" decoding="async" alt="Ambiente do Particle Simulator mostrando 64 partículas no passo de tempo registrado 1000, com controles de simulação e uma tabela de energia."><span class="screenshot-caption">Particle Simulator <span>Ver captura de tela em tamanho original ↗ (nova aba)</span></span></a></div><div class="project-copy prose"><span class="eyebrow">Simulação numérica</span><h3 id="particle-title">Particle Simulator</h3><p class="lead">Uma aplicação interativa para simular e explorar pequenos sistemas de partículas.</p><p>A aplicação implementa interações de Lennard–Jones e integração velocity-Verlet em uma caixa de simulação periódica. Os usuários podem configurar um sistema, executar a simulação e inspecionar as trajetórias e grandezas físicas resultantes.</p><p>O projeto combina simulação numérica, computação em segundo plano e exploração interativa.</p><a class="text-link" data-project-link="particle" href="https://github.com/martin1cifuentes/Particle-Simulation" aria-label="Explore o Particle Simulator no GitHub">Explore o projeto no GitHub <span aria-hidden="true">↗</span></a></div></article>
+    </div></section>
+
+    <section class="section validation-section" id="validation" aria-labelledby="validation-title"><div class="container editorial-grid"><div class="section-aside"><p class="eyebrow">07 / Validação com profissionais da área</p><h2 id="validation-title">O que estou validando</h2><a class="text-link" href="mailto:martincifuentesgomez1@gmail.com">Converse sobre a concepção <span aria-hidden="true">↗</span></a></div><div class="prose"><p class="lead">O sistema está sendo confrontado com a prática de químicos medicinais, químicos computacionais e cientistas que atuam em descoberta de fármacos.</p><p>O fluxo científico subjacente e as principais limitações das abordagens existentes já estão refletidos na concepção. O objetivo atual é determinar se ela de fato atende às necessidades de quem realiza esse trabalho na prática.</p><p>Estou particularmente interessado em identificar pontos em que o fluxo proposto diverge da pesquisa real, recursos ou informações que faltam, premissas que não se sustentam e requisitos que determinariam se os pesquisadores poderiam confiar no sistema e utilizá-lo de forma eficaz.</p><p>Críticas concretas são especialmente valiosas: fluxos de trabalho importantes que o sistema não contempla, decisões que trata incorretamente ou recursos que precisariam ser adicionados ou alterados para que pudesse se tornar útil na prática.</p><blockquote>O objetivo é refinar uma concepção de sistema já desenvolvida em torno dos requisitos dos profissionais da área, antes de avançar mais na implementação e na avaliação empírica.</blockquote></div></div></section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title"><div class="container about-layout"><img class="about-portrait" src="../assets/martin-cifuentes.webp" width="532" height="630" loading="lazy" decoding="async" alt="Martin Cifuentes"><div class="section-aside"><p class="eyebrow">08 / Sobre</p><h2 id="about-title">Martin Cifuentes</h2><p class="aside-note">Engenharia de software<br>Modelagem molecular computacional</p></div><div class="prose"><p>Atualmente, estou desenvolvendo este sistema e conversando com pesquisadores e profissionais da indústria para comparar o fluxo de trabalho concebido com a prática real de descoberta.</p><p>Se você trabalha com química medicinal, química computacional, planejamento de fármacos auxiliado por computador (CADD) ou descoberta de pequenas moléculas e tiver interesse em discutir seu fluxo de trabalho, questionar a abordagem proposta ou identificar requisitos que possam estar faltando no sistema, gostaria de conversar com você.</p><div class="contact-links"><a href="https://github.com/martin1cifuentes">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/martin-cifuentes-3029b9334/">LinkedIn <span aria-hidden="true">↗</span></a><a href="mailto:martincifuentesgomez1@gmail.com">E-mail <span aria-hidden="true">↗</span></a></div></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>Descoberta Computacional Acessível de Fármacos</span><span>Martin Cifuentes</span><a href="#top">Voltar ao início <span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>

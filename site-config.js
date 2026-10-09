@@ -1,6 +1,6 @@
 /* Only user-supplied or verified project assets and destinations belong here.
- * Add screenshots under dist/assets, then set image to "assets/filename.webp".
- * Unavailable assets stay visibly labeled; no fabricated screenshots are used.
+ * Project URLs are shared across languages. Screenshots and their translated
+ * descriptions are linked directly in each static HTML page.
  */
 window.PROJECT_ASSETS = {
   protein: { url: "https://github.com/martin1cifuentes/protein-membrane-system", image: "assets/protein-membrane-workspace.png", width: 2866, height: 1788, alt: "Protein–Membrane Workspace displaying source structure 2PGH, with protein-chain selection controls, a molecular structure viewer and the protein assessment panel." },
