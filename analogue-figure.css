@@ -1,0 +1,114 @@
+.problem-example {
+  display: grid;
+  grid-template-columns: minmax(0, .93fr) minmax(0, 1.07fr);
+  align-items: start;
+  gap: clamp(30px, 5vw, 72px);
+  margin-top: 30px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.analogue-figure {
+  --connector: #9bb4c3;
+  margin: 0;
+  padding: clamp(16px, 2vw, 26px);
+  border: 1px solid var(--line);
+  background: #f7f9fa;
+}
+
+.analogue-figure figcaption {
+  color: var(--ink);
+  font: 500 clamp(22px, 2.2vw, 29px)/1.25 var(--serif);
+}
+
+.analogue-figure .figure-label {
+  display: block;
+  margin: 0 0 7px;
+  color: var(--accent);
+  font: 11px/1.5 var(--mono);
+  letter-spacing: .07em;
+}
+
+.analogue-origin,
+.analogue-question {
+  margin: 0;
+  text-align: center;
+}
+
+.analogue-origin {
+  margin-top: 18px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.analogue-fork {
+  position: relative;
+  height: 22px;
+}
+
+.analogue-fork::before,
+.analogue-fork::after {
+  content: "";
+  position: absolute;
+}
+
+.analogue-fork::before {
+  left: 50%;
+  height: 11px;
+  border-left: 1px solid var(--connector);
+}
+
+.analogue-fork::after {
+  inset: 10px 25% 0;
+  border: 1px solid var(--connector);
+  border-bottom: 0;
+}
+
+.analogue-fork-join {
+  transform: scaleY(-1);
+}
+
+.analogue-results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.analogue-results li {
+  padding: 12px 10px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.analogue-results li:first-child { margin-right: 5px; }
+.analogue-results li:last-child { margin-left: 5px; }
+.analogue-results strong { display: block; margin-bottom: 5px; }
+.analogue-results strong span { color: var(--accent); }
+
+.analogue-question {
+  padding: 10px 12px;
+  border-block: 1px solid #b6ccd9;
+  background: #eaf2f6;
+  color: var(--ink);
+  font: 500 clamp(17px, 1.5vw, 20px)/1.4 var(--serif);
+}
+
+@media (max-width: 850px) {
+  .problem-example { grid-template-columns: 1fr; gap: 22px; }
+  .analogue-figure { width: 100%; max-width: 600px; }
+}
+
+@media (max-width: 480px) {
+  .analogue-results li { padding: 10px 7px; font-size: 13px; }
+  .analogue-origin { margin-top: 15px; }
+  .analogue-fork { height: 19px; }
+}
+
+@media print {
+  .analogue-figure { break-inside: avoid; }
+}

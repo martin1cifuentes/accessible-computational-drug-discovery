@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description" xml:lang="pt-BR">
+  <title id="title">Descoberta Autônoma de Fármacos Assistida por Computador</title>
+  <desc id="description">Projeto de Martin Cifuentes. O software interpreta as evidências, aprende como as relações variam conforme o contexto e escolhe o que vale a pena investigar. Os novos resultados orientam a próxima decisão. O núcleo de raciocínio científico está implementado e sua verificação está em andamento.</desc>
+  <rect x="0" y="0" width="1200" height="630" fill="#fff" />
+  <rect x="0" y="0" width="1200" height="6" fill="#132d49" />
+  <text x="63" y="64" font-family="Consolas, monospace" font-size="17" font-weight="normal" fill="#245f87" text-anchor="start">DESCOBERTA COMPUTACIONAL DE FÁRMACOS</text>
+  <text x="60" y="154" font-family="Georgia, serif" font-size="68" font-weight="normal" fill="#132d49" text-anchor="start">Descoberta Autônoma de Fármacos</text>
+  <text x="60" y="236" font-family="Georgia, serif" font-size="68" font-weight="normal" fill="#132d49" text-anchor="start">Assistida por Computador</text>
+  <text x="64" y="293" font-family="Segoe UI, sans-serif" font-size="27" font-weight="normal" fill="#40566b" text-anchor="start">Quais mudanças moleculares importam e o que vale a pena investigar a seguir.</text>
+  <polyline points="64,326 1136,326" fill="none" stroke="#d5e0e6" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+  <rect x="64" y="355" width="300" height="104" fill="#f4f7f9" stroke="#c1d2dc" stroke-width="1" />
+  <text x="82" y="386" font-family="Consolas, monospace" font-size="16" font-weight="normal" fill="#245f87" text-anchor="start">01 / EVIDÊNCIAS</text>
+  <text x="82" y="431" font-family="Georgia, serif" font-size="26" font-weight="normal" fill="#132d49" text-anchor="start">Interpretar resultados</text>
+  <rect x="418" y="355" width="334" height="104" fill="#f4f7f9" stroke="#c1d2dc" stroke-width="1" />
+  <text x="436" y="386" font-family="Consolas, monospace" font-size="16" font-weight="normal" fill="#245f87" text-anchor="start">02 / CONHECIMENTO</text>
+  <text x="436" y="431" font-family="Georgia, serif" font-size="26" font-weight="normal" fill="#132d49" text-anchor="start">Identificar relações</text>
+  <rect x="806" y="355" width="330" height="104" fill="#f4f7f9" stroke="#c1d2dc" stroke-width="1" />
+  <text x="824" y="386" font-family="Consolas, monospace" font-size="16" font-weight="normal" fill="#245f87" text-anchor="start">03 / PRÓXIMA AÇÃO</text>
+  <text x="824" y="431" font-family="Georgia, serif" font-size="26" font-weight="normal" fill="#132d49" text-anchor="start">Escolher o que investigar</text>
+  <polyline points="374,407 406,407 399,400" fill="none" stroke="#245f87" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" />
+  <polyline points="406,407 399,414" fill="none" stroke="#245f87" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" />
+  <polyline points="762,407 794,407 787,400" fill="none" stroke="#245f87" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" />
+  <polyline points="794,407 787,414" fill="none" stroke="#245f87" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" />
+  <polyline points="971,469 971,493 214,493 214,470" fill="none" stroke="#7297a8" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+  <polyline points="208,477 214,469 220,477" fill="none" stroke="#7297a8" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" />
+  <rect x="380.5" y="478" width="439" height="29" fill="#fff" />
+  <text x="600" y="500" font-family="Segoe UI, sans-serif" font-size="19" font-weight="normal" fill="#40566b" text-anchor="middle">Os novos resultados orientam a próxima decisão</text>
+  <polyline points="64,544 1136,544" fill="none" stroke="#c1d2dc" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+  <text x="64" y="592" font-family="Georgia, serif" font-size="22" font-weight="normal" fill="#132d49" text-anchor="start">Martin Cifuentes</text>
+  <text x="1136" y="592" font-family="Segoe UI, sans-serif" font-size="19" font-weight="normal" fill="#27736e" text-anchor="end">Núcleo de raciocínio científico implementado  ·  Verificação em andamento</text>
+</svg>

@@ -1,0 +1,54 @@
+.relationship-example {
+  margin: 30px 0 22px;
+  border: 1px solid #c5d6dc;
+  background: #fbfcfd;
+}
+
+.relationship-example > header,
+.relationship-example > figcaption,
+.relationship-example .pair-row {
+  padding-inline: clamp(14px, 2.4vw, 30px);
+}
+
+.relationship-example > header { padding-block: 17px 14px; }
+.relationship-example h3 { margin: 5px 0; scroll-margin-top: 48px; }
+.relationship-example .figure-label { color: var(--accent); }
+.relationship-example header p,
+.relationship-example figcaption { font-size: 14px; }
+
+.relationship-example .pair-row {
+  display: grid;
+  grid-template-columns: minmax(130px, .75fr) minmax(260px, 1.6fr) minmax(170px, 1fr);
+  align-items: center;
+  gap: clamp(10px, 2vw, 28px);
+  padding-block: 10px;
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.relationship-example .pair-row:last-of-type { background: var(--soft); }
+.pair-row h4 { margin: 0 0 4px; font: 500 20px/1.25 var(--serif); }
+.pair-row p { font-size: 14px; line-height: 1.5; }
+.pair-row .pair-outcome strong { display: block; }
+.relationship-example > figcaption { padding-block: 10px; border-top: 1px solid var(--line); }
+.relationship-example .molecule-key { position: absolute; width: 0; height: 0; overflow: hidden; }
+.relationship-example .molecule-pair { display: block; width: 100%; max-width: 420px; height: auto; justify-self: center; }
+
+.molecule-pair text { fill: var(--ink); font: 17px Arial, sans-serif; }
+.molecule-pair .edit-label { fill: var(--accent); font-weight: 600; }
+.molecule-pair .rest-label { font-family: var(--serif); font-style: italic; }
+
+@media (max-width: 780px) {
+  .relationship-example .pair-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 7px;
+    padding-block: 15px;
+  }
+  .pair-row h4, .pair-row .pair-outcome strong { display: inline; margin-inline-end: .35em; }
+  .pair-row .pair-context { display: inline; }
+  .relationship-example .molecule-pair { max-width: 365px; justify-self: start; }
+}
+
+@media print {
+  .relationship-example .pair-row { break-inside: avoid; }
+}

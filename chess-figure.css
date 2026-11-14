@@ -1,0 +1,149 @@
+.search-comparison {
+  --panel-gap: clamp(24px, 4vw, 56px);
+  --panel-divider: #b6c9d5;
+  container-type: inline-size;
+  margin-block: 26px;
+  border: 1px solid var(--line);
+  background: #fbfcfd;
+}
+
+.search-comparison__panels {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.85fr) minmax(0, 1.2fr);
+  gap: var(--panel-gap);
+  padding: clamp(16px, 2.4vw, 30px);
+}
+
+.search-comparison h3 {
+  margin: 0;
+  font: 500 clamp(23px, 2.2vw, 30px)/1.2 var(--serif);
+  color: var(--ink);
+}
+
+.search-comparison__context {
+  margin: 5px 0 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.search-comparison__board {
+  display: block;
+  width: min(100%, 208px);
+  height: auto;
+}
+
+.search-comparison__coordinates {
+  fill: var(--text);
+  font: 13px var(--mono);
+}
+
+.search-comparison__moves {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.search-comparison__moves li {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 9px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.search-comparison__line {
+  width: 20px;
+  border-top: 2px solid var(--accent);
+  transform: translateY(-0.25em);
+}
+
+.search-comparison__line--other {
+  border-top: 2px dashed #647985;
+}
+
+.search-comparison__chemistry dl {
+  margin: 13px 0 0;
+}
+
+.search-comparison__chemistry dl > div {
+  padding-block: 11px;
+  border-top: 1px solid var(--line);
+}
+
+.search-comparison__chemistry dt {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.search-comparison__chemistry dd {
+  margin: 3px 0 0;
+  max-width: 65ch;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.search-comparison__chemistry .search-comparison__focus {
+  padding-inline: 12px;
+  border-top: 0;
+  border-left: 2px solid var(--accent);
+  background: #edf4f8;
+}
+
+.search-comparison figcaption {
+  margin: 0;
+  padding: 12px clamp(16px, 2.4vw, 30px);
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+@container (width > 600px) {
+  .search-comparison__chemistry {
+    position: relative;
+  }
+
+  .search-comparison__chemistry::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: calc(var(--panel-gap) / -2);
+    border-inline-start: 1px solid var(--panel-divider);
+  }
+}
+
+@container (min-width: 920px) {
+  .search-comparison__chess {
+    display: grid;
+    grid-template-columns: 208px minmax(0, 1fr);
+    gap: 0 18px;
+    align-content: start;
+  }
+
+  .search-comparison__chess h3,
+  .search-comparison__context {
+    grid-column: 1 / -1;
+  }
+
+  .search-comparison__moves {
+    align-self: center;
+    gap: 16px;
+    margin: 0;
+  }
+}
+
+@container (max-width: 600px) {
+  .search-comparison__panels {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .search-comparison__chemistry {
+    border-top: 1px solid var(--panel-divider);
+    padding-top: 18px;
+  }
+}
