@@ -35,7 +35,9 @@
   <link rel="stylesheet" href="../styles.css?v=20261115-landscape-modern">
   <link rel="stylesheet" href="../analogue-figure.css">
   <link rel="stylesheet" href="../acadd-page.css?v=20261125-visible">
-  <link rel="stylesheet" href="../acadd-diagrams.css?v=20261125-visible">
+  <link rel="stylesheet" href="../acadd-diagrams.css?v=20261125-scale">
+  <link rel="stylesheet" href="../acadd-efficiency.css?v=20261125-scale">
+  <link rel="stylesheet" href="../acadd-scale.css?v=20261125-scale">
   <script src="../site-config.js" defer></script>
   <script src="../acadd-diagrams.js?v=20261125" defer></script>
   <script src="../site.js?v=20261125-visible" defer></script>
@@ -119,8 +121,8 @@
       <div class="section-heading"><div><h2 id="workflow-title">Define el objetivo. Deja que cada resultado oriente la siguiente decisión.</h2></div></div>
       <div class="prose discovery-essay"><p class="lead">El ciclo parte del objetivo y de la evidencia disponible. Cada investigación puede mejorar la evaluación de un compuesto y orientar la elección de los estudios siguientes.</p></div>
         <figure class="ac-figure ac-loop" aria-labelledby="discovery-loop-title discovery-loop-caption">
-  <header class="ac-figure-heading"><span class="ac-figure-label">Ejemplo conceptual</span><h3 id="discovery-loop-title">Un proceso continuo de descubrimiento</h3></header>
-  <div class="ac-loop-goal"><strong>Objetivo científico y límites</strong><span>Diana · propiedades requeridas · trabajo permitido · presupuesto</span></div>
+  <header class="ac-figure-heading"><span class="ac-figure-label">Ejemplo conceptual</span><h3 id="discovery-loop-title">El ciclo de descubrimiento</h3></header>
+  <div class="ac-loop-goal"><strong>Objetivo y límites definidos por el investigador</strong><span>Diana · propiedades requeridas · requisitos de evidencia</span><span>Química y métodos permitidos · presupuesto computacional</span></div>
   <div class="ac-loop-sources">
     <div><strong>Sus compuestos y resultados</strong><span>Evidencia experimental y computacional</span></div>
     <div><strong>Bibliotecas químicas permitidas</strong><span>Estructuras desde las que comenzar la exploración</span></div>
@@ -129,9 +131,8 @@
   <div class="ac-loop-cycle"><ol class="ac-loop-stages"><li><h4>Construir conocimiento científico</h4><p>Relacionar estructuras, observaciones e incertidumbre.</p></li>
 <li><h4>Proponer investigaciones</h4><p>Cambios moleculares, comparaciones y evidencia que falta.</p></li>
 <li><h4>Elegir trabajo útil</h4><p>Comparar consecuencias, dependencias y coste total.</p></li>
-<li><h4>Ejecutar e interpretar</h4><p>Obtener resultados y conservar su contexto científico.</p></li></ol>
-    <div class="ac-loop-return"><span aria-hidden="true">↻</span><p>La nueva evidencia actualiza el conocimiento y las decisiones posteriores</p></div>
-  </div>
+<li><h4>Ejecutar e interpretar</h4><p>Obtener resultados y conservar su contexto científico.</p></li></ol><span class="ac-loop-return" aria-hidden="true"></span></div>
+  <p class="ac-loop-feedback"><span aria-hidden="true">↻</span>La nueva evidencia cambia qué conviene investigar después.</p>
   <div class="ac-loop-outputs"><h4>Qué recibe el investigador</h4><ul><li>Evaluaciones de candidatos vinculadas a la evidencia</li><li>Relaciones dependientes del contexto</li><li>Razones para las próximas investigaciones</li><li>Registro del uso de recursos</li></ul></div>
   <figcaption id="discovery-loop-caption">La conexión de retorno forma parte del proceso. Las investigaciones independientes pueden avanzar a la vez, y cada resultado actualiza las decisiones a las que aporta información.</figcaption>
 </figure>
@@ -243,6 +244,22 @@
   <div class="ac-parallel-lane"><h4>Serie química independiente</h4><div class="ac-parallel-stages"><div><strong>El trabajo autorizado continúa</strong><p>Dispone de los datos de entrada y de la base científica necesarios, y se ajusta a los recursos restantes.</p></div><span aria-hidden="true">→</span><div><strong>Reevaluar con su propio resultado</strong><p>La siguiente decisión responde a su propia evidencia y sus dependencias.</p></div></div></div>
   <figcaption id="allocation-example-caption">Son resultados ilustrativos alternativos. La elección depende de la aplicabilidad, de la evidencia existente y pendiente, y del coste completo del trabajo. El trabajo independiente puede continuar mientras se resuelve la primera pregunta.</figcaption>
 </figure>
+          <figure class="ac-figure ac-efficiency" aria-labelledby="efficiency-figure-title" aria-describedby="efficiency-figure-caption">
+  <header class="ac-figure-heading"><span class="ac-figure-label">Asignación ilustrativa</span><h3 id="efficiency-figure-title">Asignar el trabajo computacional a medida que cambia la evidencia</h3><p class="ac-eff-intro">Cada fila corresponde a un candidato y cada columna a un cálculo posible. Ambas vistas muestran las mismas opciones para las series químicas A y B.</p></header>
+  <div class="ac-eff-comparison">
+    <section class="ac-eff-panel" aria-labelledby="ac-eff-preplanned-title"><div class="ac-eff-panel-heading"><h4 id="ac-eff-preplanned-title">Trabajo planificado de antemano</h4><p>Se elige un lote de cálculos por adelantado.</p></div><table class="ac-eff-matrix" aria-labelledby="ac-eff-preplanned-title">
+    <thead><tr><th scope="col"><span class="ac-eff-sr">Candidato</span></th><th scope="col" aria-label="Estimación de solubilidad"><span class="ac-eff-column-full" aria-hidden="true">Estimación de solubilidad</span><span class="ac-eff-column-short" aria-hidden="true">Solubilidad</span></th><th scope="col" aria-label="Refinamiento de unión"><span class="ac-eff-column-full" aria-hidden="true">Refinamiento de unión</span><span class="ac-eff-column-short" aria-hidden="true">Unión</span></th><th scope="col" aria-label="Análisis de poses"><span class="ac-eff-column-full" aria-hidden="true">Análisis de poses</span><span class="ac-eff-column-short" aria-hidden="true">Poses</span></th></tr></thead>
+    <tbody><tr><th scope="row"><span class="ac-eff-sr">Candidato </span>A1</th><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planificado de antemano</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planificado de antemano</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planificado de antemano</span></td></tr><tr><th scope="row"><span class="ac-eff-sr">Candidato </span>A2</th><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planificado de antemano</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planificado de antemano</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planificado de antemano</span></td></tr><tr><th scope="row"><span class="ac-eff-sr">Candidato </span>B1</th><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planificado de antemano</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planificado de antemano</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planificado de antemano</span></td></tr><tr><th scope="row"><span class="ac-eff-sr">Candidato </span>B2</th><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planificado de antemano</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planificado de antemano</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planificado de antemano</span></td></tr></tbody>
+  </table></section>
+    <section class="ac-eff-panel" aria-labelledby="ac-eff-adaptive-title"><div class="ac-eff-panel-heading"><h4 id="ac-eff-adaptive-title">Asignación adaptativa</h4><p>Elegir el trabajo según la evidencia, las dependencias y los recursos disponibles.</p></div><table class="ac-eff-matrix" aria-labelledby="ac-eff-adaptive-title">
+    <thead><tr><th scope="col"><span class="ac-eff-sr">Candidato</span></th><th scope="col" aria-label="Estimación de solubilidad"><span class="ac-eff-column-full" aria-hidden="true">Estimación de solubilidad</span><span class="ac-eff-column-short" aria-hidden="true">Solubilidad</span></th><th scope="col" aria-label="Refinamiento de unión"><span class="ac-eff-column-full" aria-hidden="true">Refinamiento de unión</span><span class="ac-eff-column-short" aria-hidden="true">Unión</span></th><th scope="col" aria-label="Análisis de poses"><span class="ac-eff-column-full" aria-hidden="true">Análisis de poses</span><span class="ac-eff-column-short" aria-hidden="true">Poses</span></th></tr></thead>
+    <tbody><tr><th scope="row"><span class="ac-eff-sr">Candidato </span>A1</th><td class="ac-eff-cell ac-eff-cell-selected"><span class="ac-eff-mark ac-eff-selected" aria-hidden="true">●</span><span class="ac-eff-sr">Seleccionado ahora</span></td><td class="ac-eff-cell ac-eff-cell-waiting"><span class="ac-eff-mark ac-eff-waiting" aria-hidden="true">Ⅱ</span><span class="ac-eff-sr">Esperar un resultado</span></td><td class="ac-eff-cell ac-eff-cell-possible"><span class="ac-eff-mark ac-eff-possible" aria-hidden="true">○</span><span class="ac-eff-sr">Otro trabajo posible</span></td></tr><tr><th scope="row"><span class="ac-eff-sr">Candidato </span>A2</th><td class="ac-eff-cell ac-eff-cell-reused"><span class="ac-eff-mark ac-eff-reused" aria-hidden="true">✓</span><span class="ac-eff-sr">Reutilizar evidencia existente</span></td><td class="ac-eff-cell ac-eff-cell-possible"><span class="ac-eff-mark ac-eff-possible" aria-hidden="true">○</span><span class="ac-eff-sr">Otro trabajo posible</span></td><td class="ac-eff-cell ac-eff-cell-possible"><span class="ac-eff-mark ac-eff-possible" aria-hidden="true">○</span><span class="ac-eff-sr">Otro trabajo posible</span></td></tr><tr><th scope="row"><span class="ac-eff-sr">Candidato </span>B1</th><td class="ac-eff-cell ac-eff-cell-possible"><span class="ac-eff-mark ac-eff-possible" aria-hidden="true">○</span><span class="ac-eff-sr">Otro trabajo posible</span></td><td class="ac-eff-cell ac-eff-cell-selected"><span class="ac-eff-mark ac-eff-selected" aria-hidden="true">●</span><span class="ac-eff-sr">Seleccionado ahora</span></td><td class="ac-eff-cell ac-eff-cell-possible"><span class="ac-eff-mark ac-eff-possible" aria-hidden="true">○</span><span class="ac-eff-sr">Otro trabajo posible</span></td></tr><tr><th scope="row"><span class="ac-eff-sr">Candidato </span>B2</th><td class="ac-eff-cell ac-eff-cell-reused"><span class="ac-eff-mark ac-eff-reused" aria-hidden="true">✓</span><span class="ac-eff-sr">Reutilizar evidencia existente</span></td><td class="ac-eff-cell ac-eff-cell-possible"><span class="ac-eff-mark ac-eff-possible" aria-hidden="true">○</span><span class="ac-eff-sr">Otro trabajo posible</span></td><td class="ac-eff-cell ac-eff-cell-reused"><span class="ac-eff-mark ac-eff-reused" aria-hidden="true">✓</span><span class="ac-eff-sr">Reutilizar evidencia existente</span></td></tr></tbody>
+  </table></section>
+  </div>
+  <div class="ac-eff-legend"><h4>Cómo leer las celdas</h4><ul><li><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span>Planificado de antemano</span></li><li><span class="ac-eff-mark ac-eff-selected" aria-hidden="true">●</span><span>Seleccionado ahora</span></li><li><span class="ac-eff-mark ac-eff-reused" aria-hidden="true">✓</span><span>Reutilizar evidencia existente</span></li><li><span class="ac-eff-mark ac-eff-waiting" aria-hidden="true">Ⅱ</span><span>Esperar un resultado</span></li><li><span class="ac-eff-mark ac-eff-possible" aria-hidden="true">○</span><span>Otro trabajo posible</span></li></ul></div>
+  <div class="ac-eff-dependency"><h4>Una dependencia en la asignación adaptativa</h4><div class="ac-eff-dependency-path"><div><strong>A1 · Resultado de solubilidad</strong><span>Esperar el cálculo seleccionado.</span></div><span class="ac-eff-dashed-arrow" aria-hidden="true"></span><div><strong>A1 · Refinamiento de unión</strong><span>Reconsiderar si vale la pena realizar este trabajo.</span></div></div><p>El cálculo de unión seleccionado para B1 puede avanzar de forma independiente.</p></div>
+  <figcaption id="efficiency-figure-caption">Un resultado pendiente puede cambiar qué conviene hacer después, mientras que la evidencia suficiente puede reutilizarse. Las celdas ilustran decisiones de asignación, no cargas de trabajo ni ahorros medidos. Las decisiones reales dependen de la aplicabilidad científica y del costo completo del trabajo.</figcaption>
+</figure>
         </section>
         <section class="reading-block" aria-labelledby="resource-title">
           <h3 id="resource-title">Trabajo en paralelo con una razón</h3>
@@ -279,6 +296,40 @@
           <p>La escala útil es la cantidad de alternativas científicas que pueden considerarse y de las que se puede aprender. El grado real de concurrencia depende de los métodos, los recursos y el valor de esperar los resultados.</p>
           <p>Estos son beneficios previstos que deben evaluarse. La capacidad de trabajo, la mejora en el descubrimiento y el ahorro de costos se comunicarán a partir de estudios medidos, en lugar de inferirse del tamaño de una biblioteca o de la cantidad de cálculos ejecutados.</p>
         </div>
+
+<figure class="ac-scale" aria-labelledby="scale-figure-title scale-figure-caption">
+  <h3 id="scale-figure-title">Razonamiento científico a escala</h3>
+  <div class="ac-scale-stages">
+    <div class="ac-scale-stage ac-scale-questions">
+      <h4>Plantear preguntas concretas</h4>
+      <ul>
+        <li>¿Podría este hallazgo aplicarse a otro esqueleto molecular?</li>
+        <li>¿Una estimación de solubilidad cambiaría qué análogo conviene estudiar?</li>
+      </ul>
+    </div>
+    <div class="ac-scale-stage ac-scale-selection">
+      <h4>Seleccionar trabajo útil</h4>
+      <p>Comparar la relevancia científica, la evidencia disponible y el costo total.</p>
+      <svg class="ac-scale-field" viewBox="0 0 216 124" role="img" aria-label="Conjunto de investigaciones posibles, con cuatro selecciones ilustrativas representadas mediante rombos rellenos. Las marcas son conceptuales y no representan una medición del rendimiento.">
+        <circle class="ac-scale-possible" cx="18" cy="14" r="4.5"/><circle class="ac-scale-possible" cx="48" cy="14" r="4.5"/><circle class="ac-scale-possible" cx="78" cy="14" r="4.5"/><circle class="ac-scale-possible" cx="108" cy="14" r="4.5"/><circle class="ac-scale-possible" cx="138" cy="14" r="4.5"/><circle class="ac-scale-possible" cx="168" cy="14" r="4.5"/><circle class="ac-scale-possible" cx="198" cy="14" r="4.5"/><circle class="ac-scale-possible" cx="18" cy="38" r="4.5"/><circle class="ac-scale-possible" cx="48" cy="38" r="4.5"/><circle class="ac-scale-possible" cx="78" cy="38" r="4.5"/><path class="ac-scale-selected" d="M108 32 l6 6-6 6-6-6Z"/><circle class="ac-scale-possible" cx="138" cy="38" r="4.5"/><circle class="ac-scale-possible" cx="168" cy="38" r="4.5"/><circle class="ac-scale-possible" cx="198" cy="38" r="4.5"/><circle class="ac-scale-possible" cx="18" cy="62" r="4.5"/><circle class="ac-scale-possible" cx="48" cy="62" r="4.5"/><path class="ac-scale-selected" d="M78 56 l6 6-6 6-6-6Z"/><circle class="ac-scale-possible" cx="108" cy="62" r="4.5"/><path class="ac-scale-selected" d="M138 56 l6 6-6 6-6-6Z"/><circle class="ac-scale-possible" cx="168" cy="62" r="4.5"/><circle class="ac-scale-possible" cx="198" cy="62" r="4.5"/><circle class="ac-scale-possible" cx="18" cy="86" r="4.5"/><circle class="ac-scale-possible" cx="48" cy="86" r="4.5"/><circle class="ac-scale-possible" cx="78" cy="86" r="4.5"/><path class="ac-scale-selected" d="M108 80 l6 6-6 6-6-6Z"/><circle class="ac-scale-possible" cx="138" cy="86" r="4.5"/><circle class="ac-scale-possible" cx="168" cy="86" r="4.5"/><circle class="ac-scale-possible" cx="198" cy="86" r="4.5"/><circle class="ac-scale-possible" cx="18" cy="110" r="4.5"/><circle class="ac-scale-possible" cx="48" cy="110" r="4.5"/><circle class="ac-scale-possible" cx="78" cy="110" r="4.5"/><circle class="ac-scale-possible" cx="108" cy="110" r="4.5"/><circle class="ac-scale-possible" cx="138" cy="110" r="4.5"/><circle class="ac-scale-possible" cx="168" cy="110" r="4.5"/><circle class="ac-scale-possible" cx="198" cy="110" r="4.5"/>
+      </svg>
+      <ul class="ac-scale-legend">
+        <li><span class="ac-scale-key ac-scale-key-possible" aria-hidden="true"></span>Investigación posible</li>
+        <li><span class="ac-scale-key ac-scale-key-selected" aria-hidden="true"></span>Seleccionada dentro del presupuesto</li>
+      </ul>
+    </div>
+    <div class="ac-scale-stage ac-scale-parallel">
+      <h4>Trabajo independiente en paralelo</h4>
+      <ul class="ac-scale-work">
+        <li><strong>Estimar la solubilidad</strong><span>Análogo propuesto</span></li>
+        <li><strong>Comparar la unión</strong><span>Serie química independiente</span></li>
+      </ul>
+      <p>Cada resultado informa las decisiones que dependen de él.</p>
+    </div>
+  </div>
+  <figcaption id="scale-figure-caption">Ilustración conceptual. El subconjunto seleccionado está limitado por el presupuesto autorizado. Las investigaciones independientes pueden ejecutarse en paralelo cuando disponen de los datos de entrada, los métodos y los recursos de ejecución necesarios.</figcaption>
+</figure>
+
       </section>
     </div>
   </section>

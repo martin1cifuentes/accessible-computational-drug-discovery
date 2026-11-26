@@ -18,7 +18,8 @@ Open `index.html` in a browser, or run `python -m http.server 4173` from this fo
 - `es/index.html`: complete Spanish translation.
 - `pt-br/index.html`: complete Brazilian Portuguese translation.
 - `engineering/`: engineering methodology in English, Spanish and Brazilian Portuguese.
-- `styles.css`, `acadd-page.css` and `acadd-diagrams.css`: shared typography, layout and scientific diagrams.
+- `styles.css` and `acadd-page.css`: shared typography and page layout.
+- `acadd-diagrams.css`, `acadd-efficiency.css` and `acadd-scale.css`: styles for the scientific diagrams.
 - `acadd-diagrams.js`: adds the outcome selector to the resource allocation example. All outcomes remain available without JavaScript.
 - `site.js`: optional active navigation and section-preserving language links.
 - `site-config.js`: verified project destinations (translated link labels stay in HTML).

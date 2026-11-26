@@ -35,7 +35,9 @@
   <link rel="stylesheet" href="styles.css?v=20261115-landscape-modern">
   <link rel="stylesheet" href="analogue-figure.css">
   <link rel="stylesheet" href="acadd-page.css?v=20261125-visible">
-  <link rel="stylesheet" href="acadd-diagrams.css?v=20261125-visible">
+  <link rel="stylesheet" href="acadd-diagrams.css?v=20261125-scale">
+  <link rel="stylesheet" href="acadd-efficiency.css?v=20261125-scale">
+  <link rel="stylesheet" href="acadd-scale.css?v=20261125-scale">
   <script src="site-config.js" defer></script>
   <script src="acadd-diagrams.js?v=20261125" defer></script>
   <script src="site.js?v=20261125-visible" defer></script>
@@ -123,8 +125,8 @@
           <p class="lead">Start with a discovery objective and the evidence available. Each investigation can improve both the assessment of particular compounds and the knowledge used to choose subsequent work.</p>
         </div>
         <figure class="ac-figure ac-loop" aria-labelledby="discovery-loop-title discovery-loop-caption">
-  <header class="ac-figure-heading"><span class="ac-figure-label">Conceptual example</span><h3 id="discovery-loop-title">A continuing discovery process</h3></header>
-  <div class="ac-loop-goal"><strong>Research objective and limits</strong><span>Target · required properties · permitted work · budget</span></div>
+  <header class="ac-figure-heading"><span class="ac-figure-label">Conceptual example</span><h3 id="discovery-loop-title">The discovery loop</h3></header>
+  <div class="ac-loop-goal"><strong>Researcher-defined objective and limits</strong><span>Target · required properties · evidence requirements</span><span>Permitted chemistry and methods · computational budget</span></div>
   <div class="ac-loop-sources">
     <div><strong>Your compounds and results</strong><span>Experimental and computational evidence</span></div>
     <div><strong>Permitted chemical libraries</strong><span>Structures from which to begin exploration</span></div>
@@ -133,9 +135,8 @@
   <div class="ac-loop-cycle"><ol class="ac-loop-stages"><li><h4>Build scientific knowledge</h4><p>Relate structures, observations and uncertainty.</p></li>
 <li><h4>Propose investigations</h4><p>Molecular changes, comparisons and evidence gaps.</p></li>
 <li><h4>Choose worthwhile work</h4><p>Compare consequences, dependencies and total cost.</p></li>
-<li><h4>Execute and interpret</h4><p>Acquire results and retain their scientific context.</p></li></ol>
-    <div class="ac-loop-return"><span aria-hidden="true">↻</span><p>New evidence updates knowledge and subsequent choices</p></div>
-  </div>
+<li><h4>Execute and interpret</h4><p>Acquire results and retain their scientific context.</p></li></ol><span class="ac-loop-return" aria-hidden="true"></span></div>
+  <p class="ac-loop-feedback"><span aria-hidden="true">↻</span>New evidence changes what we investigate next.</p>
   <div class="ac-loop-outputs"><h4>What the researcher receives</h4><ul><li>Evidence-linked candidate assessments</li><li>Context-dependent relationships</li><li>Reasons for subsequent investigations</li><li>Recorded resource use</li></ul></div>
   <figcaption id="discovery-loop-caption">The return path is part of the process. Independent investigations can proceed together, and each result updates the decisions it informs.</figcaption>
 </figure>
@@ -232,6 +233,22 @@
   <div class="ac-parallel-lane"><h4>Independent chemical series</h4><div class="ac-parallel-stages"><div><strong>Authorized work continues</strong><p>Its inputs and scientific basis are available, and it fits the remaining resources.</p></div><span aria-hidden="true">→</span><div><strong>Reassess on its own return</strong><p>Its next choice follows its own evidence and dependencies.</p></div></div></div>
   <figcaption id="allocation-example-caption">These are alternative illustrative outcomes. The choice depends on applicability, existing and pending evidence, and the complete cost of the work. Independent work can continue while the first question is resolved.</figcaption>
 </figure>
+          <figure class="ac-figure ac-efficiency" aria-labelledby="efficiency-figure-title" aria-describedby="efficiency-figure-caption">
+  <header class="ac-figure-heading"><span class="ac-figure-label">Illustrative allocation</span><h3 id="efficiency-figure-title">Allocate computation as evidence changes</h3><p class="ac-eff-intro">Rows show candidates from chemical series A and B. Columns show the same possible calculations in both views.</p></header>
+  <div class="ac-eff-comparison">
+    <section class="ac-eff-panel" aria-labelledby="ac-eff-preplanned-title"><div class="ac-eff-panel-heading"><h4 id="ac-eff-preplanned-title">Preplanned work</h4><p>A batch of calculations is chosen in advance.</p></div><table class="ac-eff-matrix" aria-labelledby="ac-eff-preplanned-title">
+    <thead><tr><th scope="col"><span class="ac-eff-sr">Candidate</span></th><th scope="col" aria-label="Solubility estimate"><span class="ac-eff-column-full" aria-hidden="true">Solubility estimate</span><span class="ac-eff-column-short" aria-hidden="true">Solubility</span></th><th scope="col" aria-label="Binding refinement"><span class="ac-eff-column-full" aria-hidden="true">Binding refinement</span><span class="ac-eff-column-short" aria-hidden="true">Binding</span></th><th scope="col" aria-label="Pose analysis"><span class="ac-eff-column-full" aria-hidden="true">Pose analysis</span><span class="ac-eff-column-short" aria-hidden="true">Poses</span></th></tr></thead>
+    <tbody><tr><th scope="row"><span class="ac-eff-sr">Candidate </span>A1</th><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planned upfront</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planned upfront</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planned upfront</span></td></tr><tr><th scope="row"><span class="ac-eff-sr">Candidate </span>A2</th><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planned upfront</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planned upfront</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planned upfront</span></td></tr><tr><th scope="row"><span class="ac-eff-sr">Candidate </span>B1</th><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planned upfront</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planned upfront</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planned upfront</span></td></tr><tr><th scope="row"><span class="ac-eff-sr">Candidate </span>B2</th><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planned upfront</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planned upfront</span></td><td class="ac-eff-cell ac-eff-cell-planned"><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span class="ac-eff-sr">Planned upfront</span></td></tr></tbody>
+  </table></section>
+    <section class="ac-eff-panel" aria-labelledby="ac-eff-adaptive-title"><div class="ac-eff-panel-heading"><h4 id="ac-eff-adaptive-title">Adaptive allocation</h4><p>Choose work using evidence, dependencies and available resources.</p></div><table class="ac-eff-matrix" aria-labelledby="ac-eff-adaptive-title">
+    <thead><tr><th scope="col"><span class="ac-eff-sr">Candidate</span></th><th scope="col" aria-label="Solubility estimate"><span class="ac-eff-column-full" aria-hidden="true">Solubility estimate</span><span class="ac-eff-column-short" aria-hidden="true">Solubility</span></th><th scope="col" aria-label="Binding refinement"><span class="ac-eff-column-full" aria-hidden="true">Binding refinement</span><span class="ac-eff-column-short" aria-hidden="true">Binding</span></th><th scope="col" aria-label="Pose analysis"><span class="ac-eff-column-full" aria-hidden="true">Pose analysis</span><span class="ac-eff-column-short" aria-hidden="true">Poses</span></th></tr></thead>
+    <tbody><tr><th scope="row"><span class="ac-eff-sr">Candidate </span>A1</th><td class="ac-eff-cell ac-eff-cell-selected"><span class="ac-eff-mark ac-eff-selected" aria-hidden="true">●</span><span class="ac-eff-sr">Selected now</span></td><td class="ac-eff-cell ac-eff-cell-waiting"><span class="ac-eff-mark ac-eff-waiting" aria-hidden="true">Ⅱ</span><span class="ac-eff-sr">Wait for a result</span></td><td class="ac-eff-cell ac-eff-cell-possible"><span class="ac-eff-mark ac-eff-possible" aria-hidden="true">○</span><span class="ac-eff-sr">Other possible work</span></td></tr><tr><th scope="row"><span class="ac-eff-sr">Candidate </span>A2</th><td class="ac-eff-cell ac-eff-cell-reused"><span class="ac-eff-mark ac-eff-reused" aria-hidden="true">✓</span><span class="ac-eff-sr">Reuse existing evidence</span></td><td class="ac-eff-cell ac-eff-cell-possible"><span class="ac-eff-mark ac-eff-possible" aria-hidden="true">○</span><span class="ac-eff-sr">Other possible work</span></td><td class="ac-eff-cell ac-eff-cell-possible"><span class="ac-eff-mark ac-eff-possible" aria-hidden="true">○</span><span class="ac-eff-sr">Other possible work</span></td></tr><tr><th scope="row"><span class="ac-eff-sr">Candidate </span>B1</th><td class="ac-eff-cell ac-eff-cell-possible"><span class="ac-eff-mark ac-eff-possible" aria-hidden="true">○</span><span class="ac-eff-sr">Other possible work</span></td><td class="ac-eff-cell ac-eff-cell-selected"><span class="ac-eff-mark ac-eff-selected" aria-hidden="true">●</span><span class="ac-eff-sr">Selected now</span></td><td class="ac-eff-cell ac-eff-cell-possible"><span class="ac-eff-mark ac-eff-possible" aria-hidden="true">○</span><span class="ac-eff-sr">Other possible work</span></td></tr><tr><th scope="row"><span class="ac-eff-sr">Candidate </span>B2</th><td class="ac-eff-cell ac-eff-cell-reused"><span class="ac-eff-mark ac-eff-reused" aria-hidden="true">✓</span><span class="ac-eff-sr">Reuse existing evidence</span></td><td class="ac-eff-cell ac-eff-cell-possible"><span class="ac-eff-mark ac-eff-possible" aria-hidden="true">○</span><span class="ac-eff-sr">Other possible work</span></td><td class="ac-eff-cell ac-eff-cell-reused"><span class="ac-eff-mark ac-eff-reused" aria-hidden="true">✓</span><span class="ac-eff-sr">Reuse existing evidence</span></td></tr></tbody>
+  </table></section>
+  </div>
+  <div class="ac-eff-legend"><h4>How to read the cells</h4><ul><li><span class="ac-eff-mark ac-eff-planned" aria-hidden="true">■</span><span>Planned upfront</span></li><li><span class="ac-eff-mark ac-eff-selected" aria-hidden="true">●</span><span>Selected now</span></li><li><span class="ac-eff-mark ac-eff-reused" aria-hidden="true">✓</span><span>Reuse existing evidence</span></li><li><span class="ac-eff-mark ac-eff-waiting" aria-hidden="true">Ⅱ</span><span>Wait for a result</span></li><li><span class="ac-eff-mark ac-eff-possible" aria-hidden="true">○</span><span>Other possible work</span></li></ul></div>
+  <div class="ac-eff-dependency"><h4>One dependency in the adaptive allocation</h4><div class="ac-eff-dependency-path"><div><strong>A1 · Solubility result</strong><span>Await the selected calculation.</span></div><span class="ac-eff-dashed-arrow" aria-hidden="true"></span><div><strong>A1 · Binding refinement</strong><span>Reconsider whether this work is worthwhile.</span></div></div><p>The selected binding calculation for B1 can proceed independently.</p></div>
+  <figcaption id="efficiency-figure-caption">A pending result can change what is worth doing next, while adequate evidence can be reused. The cells illustrate allocation decisions, not measured workloads or cost savings. Actual choices depend on scientific applicability and the full cost of the work.</figcaption>
+</figure>
           <div class="prose discovery-essay">
             <h3 id="resource-title">Parallel work with a reason</h3>
             <p>Some investigations are worth running together. Others should wait because an earlier result could change whether they are still useful. Work on another series can proceed while this solubility question is resolved.</p>
@@ -243,15 +260,51 @@
     </div>
 
     <section class="section" id="value" aria-labelledby="value-title">
-      <div class="container editorial-grid">
-        <div class="section-aside"><h2 id="value-title">More scientific possibilities within a finite research budget</h2></div>
-        <div class="prose">
-          <p class="lead">Researchers can follow the evidence for a compound, see which findings may carry over, and understand why the system is proposing its next investigation.</p>
-          <p>Local refinement, searches for different scaffolds, and tests of uncertain relationships can inform one another. For research organizations, the intended benefits are less hands-on coordination and repeated work, more deliberate use of expensive calculations and experiments, and a clearer record of which decisions the evidence supports.</p>
-          <h3 id="scale-title">Scaling the search</h3>
-          <p>The architecture is designed to keep track of thousands of potential investigations, progressively examine them, and select a subset within the available budget. Independent work can run concurrently where the methods, resources, and value of waiting allow it.</p>
-          <p>Researchers retain control of objectives, permitted work, resources, and stopping conditions. Measured studies will establish throughput, improvements in discovery, and any cost savings.</p>
+      <div class="container">
+        <div class="editorial-grid">
+          <div class="section-aside"><h2 id="value-title">More scientific possibilities within a finite research budget</h2></div>
+          <div class="prose">
+            <p class="lead">Researchers can follow the evidence for a compound, see which findings may carry over, and understand why the system is proposing its next investigation.</p>
+            <p>Local refinement, searches for different scaffolds, and tests of uncertain relationships can inform one another. For research organizations, the intended benefits are less hands-on coordination and repeated work, more deliberate use of expensive calculations and experiments, and a clearer record of which decisions the evidence supports.</p>
+            <h3 id="scale-title">Scaling the search</h3>
+            <p>The architecture is designed to keep track of thousands of potential investigations, progressively examine them, and select a subset within the available budget. Independent work can run concurrently where the methods, resources, and value of waiting allow it.</p>
+            <p>Researchers retain control of objectives, permitted work, resources, and stopping conditions. Measured studies will establish throughput, improvements in discovery, and any cost savings.</p>
+          </div>
         </div>
+
+<figure class="ac-scale" aria-labelledby="scale-figure-title scale-figure-caption">
+  <h3 id="scale-figure-title">Scientific reasoning at scale</h3>
+  <div class="ac-scale-stages">
+    <div class="ac-scale-stage ac-scale-questions">
+      <h4>Frame concrete questions</h4>
+      <ul>
+        <li>Could this finding carry over to another scaffold?</li>
+        <li>Would a solubility estimate change which analogue advances?</li>
+      </ul>
+    </div>
+    <div class="ac-scale-stage ac-scale-selection">
+      <h4>Select worthwhile work</h4>
+      <p>Compare scientific relevance, available evidence and total cost.</p>
+      <svg class="ac-scale-field" viewBox="0 0 216 124" role="img" aria-label="A field of possible investigations, with four illustrative selections distinguished by filled diamonds. The marks are conceptual and imply no throughput measurement.">
+        <circle class="ac-scale-possible" cx="18" cy="14" r="4.5"/><circle class="ac-scale-possible" cx="48" cy="14" r="4.5"/><circle class="ac-scale-possible" cx="78" cy="14" r="4.5"/><circle class="ac-scale-possible" cx="108" cy="14" r="4.5"/><circle class="ac-scale-possible" cx="138" cy="14" r="4.5"/><circle class="ac-scale-possible" cx="168" cy="14" r="4.5"/><circle class="ac-scale-possible" cx="198" cy="14" r="4.5"/><circle class="ac-scale-possible" cx="18" cy="38" r="4.5"/><circle class="ac-scale-possible" cx="48" cy="38" r="4.5"/><circle class="ac-scale-possible" cx="78" cy="38" r="4.5"/><path class="ac-scale-selected" d="M108 32 l6 6-6 6-6-6Z"/><circle class="ac-scale-possible" cx="138" cy="38" r="4.5"/><circle class="ac-scale-possible" cx="168" cy="38" r="4.5"/><circle class="ac-scale-possible" cx="198" cy="38" r="4.5"/><circle class="ac-scale-possible" cx="18" cy="62" r="4.5"/><circle class="ac-scale-possible" cx="48" cy="62" r="4.5"/><path class="ac-scale-selected" d="M78 56 l6 6-6 6-6-6Z"/><circle class="ac-scale-possible" cx="108" cy="62" r="4.5"/><path class="ac-scale-selected" d="M138 56 l6 6-6 6-6-6Z"/><circle class="ac-scale-possible" cx="168" cy="62" r="4.5"/><circle class="ac-scale-possible" cx="198" cy="62" r="4.5"/><circle class="ac-scale-possible" cx="18" cy="86" r="4.5"/><circle class="ac-scale-possible" cx="48" cy="86" r="4.5"/><circle class="ac-scale-possible" cx="78" cy="86" r="4.5"/><path class="ac-scale-selected" d="M108 80 l6 6-6 6-6-6Z"/><circle class="ac-scale-possible" cx="138" cy="86" r="4.5"/><circle class="ac-scale-possible" cx="168" cy="86" r="4.5"/><circle class="ac-scale-possible" cx="198" cy="86" r="4.5"/><circle class="ac-scale-possible" cx="18" cy="110" r="4.5"/><circle class="ac-scale-possible" cx="48" cy="110" r="4.5"/><circle class="ac-scale-possible" cx="78" cy="110" r="4.5"/><circle class="ac-scale-possible" cx="108" cy="110" r="4.5"/><circle class="ac-scale-possible" cx="138" cy="110" r="4.5"/><circle class="ac-scale-possible" cx="168" cy="110" r="4.5"/><circle class="ac-scale-possible" cx="198" cy="110" r="4.5"/>
+      </svg>
+      <ul class="ac-scale-legend">
+        <li><span class="ac-scale-key ac-scale-key-possible" aria-hidden="true"></span>Possible investigation</li>
+        <li><span class="ac-scale-key ac-scale-key-selected" aria-hidden="true"></span>Selected within budget</li>
+      </ul>
+    </div>
+    <div class="ac-scale-stage ac-scale-parallel">
+      <h4>Independent work in parallel</h4>
+      <ul class="ac-scale-work">
+        <li><strong>Estimate solubility</strong><span>Proposed analogue</span></li>
+        <li><strong>Compare binding</strong><span>Independent chemical series</span></li>
+      </ul>
+      <p>Each result informs the decisions that depend on it.</p>
+    </div>
+  </div>
+  <figcaption id="scale-figure-caption">Conceptual illustration. The selected subset is bounded by the authorized budget. Independent investigations can run concurrently when their inputs, methods and execution resources are available.</figcaption>
+</figure>
+
       </div>
     </section>
 

@@ -1,0 +1,222 @@
+/* The investigation field illustrates selection, without encoding performance. */
+.ac-scale {
+  container-type: inline-size;
+  margin-block: 28px 0;
+  padding: 24px;
+  border: 1px solid var(--line);
+  background: #f8fafb;
+}
+
+.ac-scale > h3 {
+  max-width: 40ch;
+  margin: 0 0 24px;
+  font-size: clamp(23px, 2.3vw, 29px);
+}
+
+.ac-scale-stages {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px;
+  align-items: stretch;
+}
+
+.ac-scale-stage {
+  position: relative;
+  min-width: 0;
+}
+
+.ac-scale-stage h4 {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.ac-scale-stage + .ac-scale-stage::before {
+  position: absolute;
+  top: 14px;
+  left: -27px;
+  width: 20px;
+  border-top: 1px solid #9bb4bf;
+  content: "";
+}
+
+.ac-scale-stage + .ac-scale-stage::after {
+  position: absolute;
+  top: 11px;
+  left: -13px;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid #9bb4bf;
+  border-right: 1px solid #9bb4bf;
+  transform: rotate(45deg);
+  content: "";
+}
+
+.ac-scale-stage p,
+.ac-scale-stage li {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.ac-scale-stage p {
+  margin: 0;
+}
+
+.ac-scale-questions ul {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ac-scale-questions li {
+  padding-left: 12px;
+  border-left: 2px solid var(--line);
+}
+
+.ac-scale-field {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  margin: 13px auto 10px;
+  overflow: visible;
+}
+
+.ac-scale-possible {
+  fill: #f8fafb;
+  stroke: #819eab;
+  stroke-width: 1.2;
+}
+
+.ac-scale-selected {
+  fill: var(--teal);
+}
+
+.ac-scale-legend {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ac-scale-legend li {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.ac-scale-key {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+}
+
+.ac-scale-key-possible {
+  border: 1px solid #819eab;
+  border-radius: 50%;
+}
+
+.ac-scale-key-selected {
+  background: var(--teal);
+  transform: rotate(45deg);
+}
+
+.ac-scale-work {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 17px;
+  padding: 0 0 0 14px;
+  list-style: none;
+  border-left: 1px solid #afc8cc;
+}
+
+.ac-scale-work li {
+  position: relative;
+}
+
+.ac-scale-work li::before {
+  position: absolute;
+  top: 10px;
+  left: -14px;
+  width: 9px;
+  border-top: 1px solid #afc8cc;
+  content: "";
+}
+
+.ac-scale-work strong,
+.ac-scale-work span {
+  display: block;
+}
+
+.ac-scale-work strong {
+  color: var(--teal);
+  font-size: 14px;
+}
+
+.ac-scale-work span {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.ac-scale > figcaption {
+  margin-top: 23px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+@container (max-width: 650px) {
+  .ac-scale-stages {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .ac-scale-stage h4 {
+    margin-bottom: 10px;
+  }
+
+  .ac-scale-questions ul {
+    gap: 12px;
+  }
+
+  .ac-scale-stage + .ac-scale-stage::before {
+    top: -25px;
+    left: 8px;
+    width: 0;
+    height: 17px;
+    border: 0;
+    border-left: 1px solid #9bb4bf;
+  }
+
+  .ac-scale-stage + .ac-scale-stage::after {
+    top: -14px;
+    left: 5px;
+    transform: rotate(135deg);
+  }
+
+  .ac-scale-field {
+    max-width: 240px;
+    margin-left: 0;
+  }
+
+  .ac-scale-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  .ac-scale {
+    padding: 18px;
+  }
+}
