@@ -34,11 +34,11 @@
   <link rel="icon" href="../assets/favicon.svg?v=20261115-landscape-modern" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css?v=20261115-landscape-modern">
   <link rel="stylesheet" href="../analogue-figure.css">
-  <link rel="stylesheet" href="../acadd-page.css?v=20261125">
-  <link rel="stylesheet" href="../acadd-diagrams.css?v=20261125">
+  <link rel="stylesheet" href="../acadd-page.css?v=20261125-visible">
+  <link rel="stylesheet" href="../acadd-diagrams.css?v=20261125-visible">
   <script src="../site-config.js" defer></script>
   <script src="../acadd-diagrams.js?v=20261125" defer></script>
-  <script src="../site.js?v=20261125" defer></script>
+  <script src="../site.js?v=20261125-visible" defer></script>
 </head>
 <body class="acadd-home">
   <a class="skip-link" href="#main">Ir para o conteúdo</a>
@@ -207,7 +207,7 @@
       <path class="ac-space-region" d="M252 29C263 5 323 2 354 22S376 82 338 95 255 90 250 64Z"/>
       <circle class="ac-space-open" cx="58" cy="45" r="5.5"/><circle class="ac-space-open" cx="86" cy="26" r="5.5"/><circle class="ac-space-open" cx="100" cy="66" r="5.5"/><circle class="ac-space-open" cx="130" cy="43" r="5.5"/><circle class="ac-space-open" cx="88" cy="116" r="5.5"/><circle class="ac-space-open" cx="120" cy="97" r="5.5"/><circle class="ac-space-open" cx="154" cy="125" r="5.5"/><circle class="ac-space-open" cx="277" cy="44" r="5.5"/><circle class="ac-space-open" cx="315" cy="26" r="5.5"/><circle class="ac-space-open" cx="345" cy="65" r="5.5"/><circle class="ac-space-open" cx="297" cy="82" r="5.5"/><circle class="ac-space-open" cx="238" cy="119" r="5.5"/><circle class="ac-space-open" cx="337" cy="128" r="5.5"/>
     </svg><div class="ac-space-legend"><span><i class="ac-mark ac-mark-observed" aria-hidden="true"></i>Observação obtida</span><span><i class="ac-mark ac-mark-prediction" aria-hidden="true"></i>Previsão atualizada</span><span><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Não resolvido</span></div></div><div class="ac-unresolved-grid"><div><strong>Ambiente A</strong><span><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Efeito não resolvido</span></div><div><strong>Ambiente B</strong><span><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Efeito não resolvido</span></div><div><strong>Outro ambiente</strong><span><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Efeito não resolvido</span></div></div></div>
-  <details class="ac-evidence-reveal"><summary>Revelar as evidências e seu efeito nas previsões relacionadas</summary><div class="ac-revealed"><h4 class="ac-revealed-title">Após obter as evidências ilustrativas</h4><div class="ac-space-band"><svg class="ac-space-map" viewBox="0 0 400 155" aria-hidden="true" focusable="false">
+  <div class="ac-revealed"><h4 class="ac-revealed-title">Após obter as evidências ilustrativas</h4><div class="ac-space-band"><svg class="ac-space-map" viewBox="0 0 400 155" aria-hidden="true" focusable="false">
       <path class="ac-space-region" d="M29 36C39 9 99 0 140 20S162 80 124 85 45 85 29 63Z"/>
       <path class="ac-space-region" d="M58 112C58 88 99 78 139 86S186 141 145 145 66 141 58 112Z"/>
       <path class="ac-space-region" d="M252 29C263 5 323 2 354 22S376 82 338 95 255 90 250 64Z"/>
@@ -217,7 +217,7 @@
 <div class="ac-relation-row"><div><span class="ac-state"><i class="ac-mark ac-mark-observed" aria-hidden="true"></i>Observação obtida</span><h4>Ambiente B</h4><p>Efeito desfavorável observado</p></div><span class="ac-rel-arrow" aria-hidden="true">→</span><div><span class="ac-state"><i class="ac-mark ac-mark-prediction" aria-hidden="true"></i>Previsão atualizada</span><h4>Ambiente B compatível</h4><p>As previsões relacionadas mudam em uma direção desfavorável.</p></div></div>
     <div class="ac-transfer-note"><h4>Entre arcabouços moleculares</h4><p>Um arcabouço diferente pode permitir uma comparação quando o ambiente local relevante e as evidências sobre a propriedade se aplicam. A transferência permanece condicional.</p></div>
     <div class="ac-unresolved-note"><span class="ac-state"><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Não resolvido</span><h4>Ambiente sem respaldo suficiente</h4><p>Um ambiente diferente ou não estudado permanece não resolvido quando as evidências disponíveis não sustentam a transferência.</p></div>
-  </div></details>
+  </div>
   <figcaption id="relationship-example-caption">X → Y representa uma substituição. Os símbolos distinguem evidências obtidas, previsões inferidas e questões abertas. Todos os resultados são ilustrativos, sem implicar medições numéricas.</figcaption>
 </figure>
         </div>
@@ -297,8 +297,8 @@
         <span class="section-alias" id="mechanisms" aria-hidden="true"></span>
         <div class="section-heading"><h2 id="coverage-title">Detalhes científicos</h2></div>
         <div class="scientific-details">
-          <details id="reasoning-representation">
-            <summary>Como o raciocínio é representado?</summary>
+          <section id="reasoning-representation">
+            <h3>Como o raciocínio é representado?</h3>
             <div class="prose">
               <p>O conhecimento científico combina observações preservadas, relações estruturais e predições probabilísticas.</p>
               <p>A política de investigação usa essas contribuições para construir alternativas, estimar as consequências de adquirir evidências e escolher o próximo trabalho.</p>
@@ -306,9 +306,9 @@
               <p>A estrutura preditiva representa a incerteza e a dependência entre questões moleculares para as quais há respaldo. Assim, uma observação pode informar predições relacionadas sem tratar todos os compostos semelhantes como idênticos.</p>
               <p>A avaliação de decisões considera como os resultados possíveis poderiam mudar as escolhas futuras. A exploração, o refinamento local e a seleção de métodos usam essa mesma estrutura.</p>
             </div>
-          </details>
-          <details id="biological-effect">
-            <summary>Quais métodos podem contribuir?</summary>
+          </section>
+          <section id="biological-effect">
+            <h3>Quais métodos podem contribuir?</h3>
             <div class="prose">
               <p>Conforme a pergunta e as capacidades configuradas e disponíveis, as investigações podem recorrer a diferentes métodos e fontes de evidência.</p>
               <ul>
@@ -321,23 +321,23 @@
               <p>Esses métodos contribuem com tipos diferentes de evidência e são selecionados de acordo com a pergunta e seus pré-requisitos.</p>
               <p>A concepção mecanística inicial abrange uma relação de inibição enzimática competitiva com respaldo definido e uma relação condicional entre concentração e resposta. Cada uma exige as premissas biológicas, os parâmetros e as condições pertinentes. Mecanismos biológicos mais amplos precisam de modelos próprios com respaldo científico.</p>
             </div>
-          </details>
-          <details id="uncertainty">
-            <summary>Como a incerteza é tratada?</summary>
+          </section>
+          <section id="uncertainty">
+            <h3>Como a incerteza é tratada?</h3>
             <div class="prose">
               <p>A incerteza pode tornar uma investigação útil quando esclarecê-la pode mudar uma decisão.</p>
               <p>O sistema também distingue a incerteza dentro de um modelo com respaldo de uma questão que o modelo disponível não consegue sustentar. Cálculos adicionais não corrigem automaticamente essa ausência de base científica.</p>
               <p>As predições preservam sua origem, suas condições e suas limitações para que decisões posteriores possam utilizá-las de maneira apropriada.</p>
             </div>
-          </details>
-          <details id="researcher-control">
-            <summary id="control-title">O que permanece sob responsabilidade do pesquisador?</summary>
+          </section>
+          <section id="researcher-control">
         <span class="section-anchor" id="mechanism-execution" aria-hidden="true"></span>
+            <h3 id="control-title">O que permanece sob responsabilidade do pesquisador?</h3>
             <div class="prose">
               <p>O pesquisador define o objetivo, os requisitos de evidência, a química e os métodos permitidos, a autorização de gastos e os critérios de parada.</p>
               <p>Os resultados computacionais preservam seu alcance efetivo. As decisões sobre síntese, validação experimental e afirmações biológicas continuam vinculadas às evidências e às responsabilidades do programa de pesquisa.</p>
             </div>
-          </details>
+          </section>
         </div>
         <p class="prose reading-block">Para conhecer a organização do software, a implementação numérica e a metodologia de desenvolvimento, consulte a <a href="../engineering/pt-br/#programmers">página de engenharia</a>.</p>
       </div>

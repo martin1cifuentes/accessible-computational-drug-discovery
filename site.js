@@ -20,15 +20,6 @@ function retainSection() {
 retainSection();
 window.addEventListener('hashchange', retainSection);
 
-// Direct links to technical details expose the requested content immediately.
-function revealLinkedDetails() {
-  const target = document.getElementById(location.hash.slice(1));
-  const details = target?.closest('details');
-  if (details) details.open = true;
-}
-revealLinkedDetails();
-window.addEventListener('hashchange', revealLinkedDetails);
-
 const navLinks = [...document.querySelectorAll('.main-nav a')];
 const observedSections = [
   document.getElementById('top'),

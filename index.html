@@ -34,11 +34,11 @@
   <link rel="icon" href="assets/favicon.svg?v=20261115-landscape-modern" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=20261115-landscape-modern">
   <link rel="stylesheet" href="analogue-figure.css">
-  <link rel="stylesheet" href="acadd-page.css?v=20261125">
-  <link rel="stylesheet" href="acadd-diagrams.css?v=20261125">
+  <link rel="stylesheet" href="acadd-page.css?v=20261125-visible">
+  <link rel="stylesheet" href="acadd-diagrams.css?v=20261125-visible">
   <script src="site-config.js" defer></script>
   <script src="acadd-diagrams.js?v=20261125" defer></script>
-  <script src="site.js?v=20261125" defer></script>
+  <script src="site.js?v=20261125-visible" defer></script>
 </head>
 <body class="acadd-home">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -191,7 +191,7 @@
       <path class="ac-space-region" d="M252 29C263 5 323 2 354 22S376 82 338 95 255 90 250 64Z"/>
       <circle class="ac-space-open" cx="58" cy="45" r="5.5"/><circle class="ac-space-open" cx="86" cy="26" r="5.5"/><circle class="ac-space-open" cx="100" cy="66" r="5.5"/><circle class="ac-space-open" cx="130" cy="43" r="5.5"/><circle class="ac-space-open" cx="88" cy="116" r="5.5"/><circle class="ac-space-open" cx="120" cy="97" r="5.5"/><circle class="ac-space-open" cx="154" cy="125" r="5.5"/><circle class="ac-space-open" cx="277" cy="44" r="5.5"/><circle class="ac-space-open" cx="315" cy="26" r="5.5"/><circle class="ac-space-open" cx="345" cy="65" r="5.5"/><circle class="ac-space-open" cx="297" cy="82" r="5.5"/><circle class="ac-space-open" cx="238" cy="119" r="5.5"/><circle class="ac-space-open" cx="337" cy="128" r="5.5"/>
     </svg><div class="ac-space-legend"><span><i class="ac-mark ac-mark-observed" aria-hidden="true"></i>Acquired observation</span><span><i class="ac-mark ac-mark-prediction" aria-hidden="true"></i>Updated prediction</span><span><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Unresolved</span></div></div><div class="ac-unresolved-grid"><div><strong>Environment A</strong><span><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Effect unresolved</span></div><div><strong>Environment B</strong><span><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Effect unresolved</span></div><div><strong>Other setting</strong><span><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Effect unresolved</span></div></div></div>
-  <details class="ac-evidence-reveal"><summary>Reveal evidence and its effect on related predictions</summary><div class="ac-revealed"><h4 class="ac-revealed-title">After illustrative evidence is acquired</h4><div class="ac-space-band"><svg class="ac-space-map" viewBox="0 0 400 155" aria-hidden="true" focusable="false">
+  <div class="ac-revealed"><h4 class="ac-revealed-title">After illustrative evidence is acquired</h4><div class="ac-space-band"><svg class="ac-space-map" viewBox="0 0 400 155" aria-hidden="true" focusable="false">
       <path class="ac-space-region" d="M29 36C39 9 99 0 140 20S162 80 124 85 45 85 29 63Z"/>
       <path class="ac-space-region" d="M58 112C58 88 99 78 139 86S186 141 145 145 66 141 58 112Z"/>
       <path class="ac-space-region" d="M252 29C263 5 323 2 354 22S376 82 338 95 255 90 250 64Z"/>
@@ -201,7 +201,7 @@
 <div class="ac-relation-row"><div><span class="ac-state"><i class="ac-mark ac-mark-observed" aria-hidden="true"></i>Acquired observation</span><h4>Environment B</h4><p>Unfavorable effect observed</p></div><span class="ac-rel-arrow" aria-hidden="true">→</span><div><span class="ac-state"><i class="ac-mark ac-mark-prediction" aria-hidden="true"></i>Updated prediction</span><h4>Compatible environment B</h4><p>Related predictions shift in an unfavorable direction.</p></div></div>
     <div class="ac-transfer-note"><h4>Across scaffolds</h4><p>A different scaffold may support a comparison where the relevant local environment and endpoint evidence apply. Transfer remains conditional.</p></div>
     <div class="ac-unresolved-note"><span class="ac-state"><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Unresolved</span><h4>Unsupported setting</h4><p>A different or unstudied environment remains unresolved when the available evidence cannot support transfer.</p></div>
-  </div></details>
+  </div>
   <figcaption id="relationship-example-caption">X → Y represents a substitution. Marks distinguish acquired evidence, inferred predictions and open questions. All outcomes are illustrative, with no numerical measurements implied.</figcaption>
 </figure>
           <p class="prose discovery-essay discovery-takeaway"><strong>A good candidate can reveal a useful relationship. A useful relationship can suggest a better next candidate.</strong></p>
@@ -260,16 +260,16 @@
       <div class="container">
         <header class="section-heading"><h2 id="coverage-title">Scientific details</h2></header>
         <div class="scientific-details">
-          <details id="reasoning-representation">
-            <summary>How is the reasoning represented?</summary>
+          <section id="reasoning-representation">
+            <h3>How is the reasoning represented?</h3>
             <div class="prose">
               <p>Scientific Knowledge combines retained observations, structural relationships, and probabilistic predictions. Investigation Policy uses these to construct alternatives, estimate what acquiring evidence could change, and choose the next work. Execution supplies the actual results and their resource costs.</p>
               <p>The predictive framework represents uncertainty and dependence between supported molecular queries. An observation can therefore inform related predictions to the extent the evidence supports. Exploration, local refinement, and method selection use this shared account of how results could change future choices.</p>
             </div>
-          </details>
-          <details id="biological-effect">
-            <summary>Which methods can contribute?</summary>
+          </section>
+          <section id="biological-effect">
         <span class="section-anchor" id="computational-evidence" aria-hidden="true"></span>
+            <h3>Which methods can contribute?</h3>
             <div class="prose">
             <p>The available methods depend on the question and the capabilities configured for the study.</p>
             <ul>
@@ -281,21 +281,21 @@
             </ul>
               <p>Each contributes a different kind of evidence. The initial mechanistic design covers a supported competitive enzyme inhibition relation and a conditional concentration–response relation. Each requires the relevant biological assumptions, parameters, and conditions. Broader biological mechanisms require their own supported models.</p>
             </div>
-          </details>
-          <details id="uncertainty">
-            <summary>How is uncertainty handled?</summary>
+          </section>
+          <section id="uncertainty">
+            <h3>How is uncertainty handled?</h3>
             <div class="prose">
               <p>Resolving uncertainty is useful when it could change a decision. The system distinguishes estimates with uncertainty from questions for which it lacks a supported model. A missing scientific basis calls for appropriate evidence or a supported model.</p>
               <p>Predictions retain their source, conditions, and limitations so that later decisions can use them appropriately.</p>
             </div>
-          </details>
-          <details id="researcher-control">
-            <summary id="control-title">What remains with the researcher?</summary>
+          </section>
+          <section id="researcher-control">
         <span class="section-anchor" id="mechanism-execution" aria-hidden="true"></span>
+            <h3 id="control-title">What remains with the researcher?</h3>
             <div class="prose">
               <p>The researcher sets the objective, evidence requirements, permitted chemistry and methods, spending authority, and stopping conditions. Decisions about synthesis, experimental validation, and biological claims remain tied to the evidence and responsibilities of the research program.</p>
             </div>
-          </details>
+          </section>
         </div>
         <p class="prose discovery-essay engineering-link"><a class="text-link" href="engineering/#programmers">Read about the software engineering behind ACADD</a></p>
       </div>

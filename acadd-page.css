@@ -169,30 +169,19 @@
   border-top: 1px solid var(--line);
 }
 
-.scientific-details details {
+.scientific-details > section {
+  padding-block: 18px 20px;
   border-bottom: 1px solid var(--line);
 }
 
-.scientific-details summary {
-  padding: 17px 10px;
-  color: var(--ink);
-  font-weight: 650;
-  cursor: pointer;
+.scientific-details h3 {
+  margin-bottom: 8px;
+  font-size: 1.35rem;
+  line-height: 1.35;
 }
 
-.scientific-details summary::marker { color: var(--accent); }
-
-.scientific-details summary:hover {
-  background: var(--soft);
-}
-
-.scientific-details details[open] summary {
-  background: var(--soft);
-}
-
-.scientific-details details .prose {
+.scientific-details .prose {
   max-width: 72ch;
-  padding: 14px 10px 20px;
 }
 
 .engineering-link {

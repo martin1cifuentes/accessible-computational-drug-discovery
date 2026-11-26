@@ -94,11 +94,7 @@
 .ac-mark-prediction { transform: rotate(45deg); border: 1.5px solid var(--accent); background: #e4eef5; }
 .ac-mark-open { border-radius: 50%; border: 1.5px dashed #5b7181; background: transparent; }
 .ac-state { display: flex; gap: 9px; align-items: center; margin-bottom: 6px; color: var(--muted); font-size: 12px; line-height: 1.5; }
-.ac-evidence-reveal { margin-top: 20px; border-top: 1px solid var(--line); }
-.ac-evidence-reveal summary { cursor: pointer; padding: 15px 4px; color: var(--accent); font-weight: 600; font-size: 14px; }
-.ac-evidence-reveal summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-.ac-evidence-reveal[open] summary { border-bottom: 1px solid var(--line); }
-.ac-revealed { padding-top: 18px; }
+.ac-revealed { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
 .ac-revealed-title { margin-bottom: 14px !important; }
 .ac-relation-row { display: grid; grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1.25fr); gap: 12px; align-items: center; padding: 17px 0; border-bottom: 1px solid var(--line); }
 .ac-relation-row p { margin-top: 4px; font-size: 14px; line-height: 1.6; }
@@ -167,14 +163,12 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .ac-evidence-reveal[open] .ac-rel-arrow { animation: ac-evidence-arrives 240ms ease-out; }
   .ac-outcome-panel.ac-outcome-changed { animation: ac-evidence-arrives 240ms ease-out; }
   @keyframes ac-evidence-arrives { from { opacity: .45; } to { opacity: 1; } }
 }
 
 @media print {
   .ac-figure { break-inside: avoid; background: white; }
-  .ac-evidence-reveal > .ac-revealed { display: block !important; }
   .ac-outcome-controls { display: none !important; }
   .ac-figure .ac-outcome-panel[hidden] { display: block !important; }
 }
