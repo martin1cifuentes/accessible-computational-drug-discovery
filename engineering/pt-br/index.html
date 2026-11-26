@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#132d49">
+  <meta name="description" content="Como estruturo software científico complexo, conecto o projeto à implementação e uso IA com verificação independente.">
+  <title>Engenharia do ACADD — Martin Cifuentes</title>
+  <!-- Sharing metadata is static so crawlers do not need JavaScript.
+       When moving hosts, run: node scripts/set-site-url.mjs https://your-host/your-project/ -->
+  <link rel="canonical" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/engineering/pt-br/">
+  <link rel="alternate" hreflang="en" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/engineering/">
+  <link rel="alternate" hreflang="es" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/engineering/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/engineering/pt-br/">
+  <link rel="alternate" hreflang="x-default" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/engineering/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Descoberta Autônoma de Fármacos Assistida por Computador">
+  <meta property="og:title" content="Engenharia do ACADD — Martin Cifuentes">
+  <meta property="og:description" content="Como estruturo software científico complexo, conecto o projeto à implementação e uso IA com verificação independente.">
+  <meta property="og:url" content="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/engineering/pt-br/">
+  <meta property="og:image" content="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/assets/autonomous-discovery-pt-br.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Descoberta Autônoma de Fármacos Assistida por Computador, por Martin Cifuentes. Interpretar resultados, aprender relações e escolher uma investigação. Núcleo de raciocínio científico implementado, em fase de verificação.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Engenharia do ACADD — Martin Cifuentes">
+  <meta name="twitter:description" content="Como estruturo software científico complexo, conecto o projeto à implementação e uso IA com verificação independente.">
+  <meta name="twitter:image" content="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/assets/autonomous-discovery-pt-br.jpg">
+  <meta name="twitter:image:alt" content="Descoberta Autônoma de Fármacos Assistida por Computador, por Martin Cifuentes. Interpretar resultados, aprender relações e escolher uma investigação. Núcleo de raciocínio científico implementado, em fase de verificação.">
+  <link rel="icon" href="../../assets/favicon.svg?v=20261125" type="image/svg+xml">
+  <link rel="stylesheet" href="../../styles.css?v=20261125">
+  <link rel="stylesheet" href="../../acadd-page.css?v=20261125">
+  <link rel="stylesheet" href="../../programmers.css?v=20261125">
+  <script src="../../site.js?v=20261125" defer></script>
+</head>
+<body class="acadd-engineering">
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <header class="site-header" id="top">
+    <div class="language-bar">
+      <nav class="container language-switcher" aria-label="Idioma do site">
+        <a href="../" hreflang="en" lang="en" aria-label="English"><img src="../../assets/flags/gb.svg" width="20" height="15" alt="" aria-hidden="true"><span>English</span></a>
+        <a href="../es/" hreflang="es" lang="es" aria-label="Español"><img src="../../assets/flags/es.svg" width="20" height="15" alt="" aria-hidden="true"><span>Español</span></a>
+        <a href="../pt-br/" hreflang="pt-BR" lang="pt-BR" aria-label="Português (Brasil)" aria-current="page"><img src="../../assets/flags/br.svg" width="20" height="15" alt="" aria-hidden="true"><span>Português</span></a>
+      </nav>
+    </div>
+    <div class="container header-inner">
+      <a class="brand" href="../../pt-br/#top" aria-label="Descoberta Autônoma de Fármacos Assistida por Computador, início">
+        <img class="brand-mark" src="../../assets/chemical-landscape.svg?v=20261115-landscape-modern" width="64" height="46" alt="" aria-hidden="true">
+        <span>Descoberta Autônoma de Fármacos<br>Assistida por Computador</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="../../pt-br/#workflow">Como funciona</a><a href="#programmers">Engenharia</a>
+      </nav>
+      <a class="header-contact" href="../../pt-br/#contact">Entre em contato <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main" class="container engineering-main">
+    <div id="programmers">
+      <article class="programmers-section" id="for-programmers" aria-labelledby="programmers-title">
+          <header class="programmers-heading">
+            <p class="eyebrow">Como desenvolvo software complexo</p>
+            <h1 id="programmers-title">Para os programadores que estão lendo</h1>
+          </header>
+          <div class="prose programmers-prose">
+            <p>Se você programa, talvez esteja se perguntando como consigo desenvolver sozinho um sistema com um comportamento tão dinâmico. Pense em um único resultado experimental. Um análogo parecia promissor pela previsão de ligação ao alvo, mas uma medição mostra que ele não atende ao requisito de solubilidade da equipe. Esse resultado pode mudar quais compostos o software prioriza, se ainda vale a pena executar um cálculo de ligação já planejado e qual modificação molecular ele explora a seguir. Enquanto isso, o trabalho em outra série química pode continuar. Como estruturo essas decisões para conseguir acompanhar o raciocínio, expressá-lo em código e testar o que acontece quando as evidências mudam?</p>
+            <p>Nos últimos meses, venho desenvolvendo e refinando uma forma de pensar sobre problemas como esse. Ela se apoia no que aprendi em livros de programação e engenharia de software e na minha própria experiência ao colocar essas ideias em prática em projetos complexos.</p>
+            <p>Começo pelo que o software precisa realizar. Depois, pergunto o que cada parte precisa estabelecer para que a próxima consiga cumprir seu papel. Sempre que uma resposta ainda é vaga demais para implementar ou testar, pego essa parte e repito o mesmo processo.</p>
+            <p>Pense em um foguete cuja missão é decolar e pousar em um local de recuperação definido. <strong>O que deve acontecer?</strong> O plano da missão define o objetivo e as restrições. <strong>O que está acontecendo agora?</strong> O software usa observações do voo para estimar o estado do foguete. <strong>O que deve acontecer a seguir?</strong> Isso depende tanto do plano quanto da estimativa.</p>
+            <figure class="rocket-figure" id="rocket-abstractions" aria-labelledby="rocket-caption">
+              <figcaption id="rocket-caption">Três perguntas, três abstrações</figcaption>
+              <div class="rocket-inputs">
+                <div class="rocket-node">
+                  <p class="rocket-question">O que deve acontecer?</p>
+                  <h4 lang="en">Mission plan</h4>
+                  <p>Define o objetivo e as restrições.</p>
+                </div>
+                <div class="rocket-node">
+                  <p class="rocket-question">O que está acontecendo agora?</p>
+                  <h4 lang="en">State estimate</h4>
+                  <p>Resume o que as observações permitem estimar sobre o estado atual.</p>
+                </div>
+              </div>
+              <div class="rocket-connector" aria-hidden="true"></div>
+              <div class="rocket-node rocket-action">
+                <p class="rocket-question">O que deve acontecer a seguir?</p>
+                <h4 lang="en">Action selection</h4>
+                <p>Escolhe a próxima ação com base no plano e no estado estimado.</p>
+              </div>
+            </figure>
+            <p>Agora, vamos aprofundar a segunda pergunta. Suponha que eu queira determinar apenas um aspecto do estado do foguete. Em certo momento, ele estava subindo ou descendo? Uma nova informação indica que estava subindo. A anterior indicava que estava descendo. A estimativa mudou?</p>
+            <p>A primeira coisa que eu perguntaria é <em>quando cada observação foi feita</em>. A informação que chegou por último pode se referir a um momento anterior do voo. Nesse caso, as duas observações podem estar corretas. Depois, eu perguntaria <em>de onde veio cada informação</em>. A mesma observação pode chegar ao software duas vezes, e receber uma segunda cópia não acrescenta evidência. Se duas observações distintas e utilizáveis realmente descrevem o mesmo momento e discordam, essa divergência precisa fazer parte da estimativa.</p>
+            <p>Essas perguntas me dão três abstrações com as quais posso trabalhar. Uma <strong>observação</strong> informa o que foi observado, a que momento se refere e de onde veio. Um <strong>registro do voo</strong> mantém essas observações disponíveis à medida que chegam novas informações. Uma <strong>estimativa do estado</strong> expressa o que o registro permite concluir sobre determinado momento e preserva as evidências que sustentam essa conclusão. Cada parte responde a uma pergunta que, de outro modo, a próxima teria de resolver por conta própria.</p>
+            <figure class="rocket-figure rocket-inside" id="rocket-abstractions-expanded" aria-labelledby="rocket-expanded-caption">
+              <figcaption id="rocket-expanded-caption">Um olhar dentro de State estimate</figcaption>
+              <div class="rocket-node rocket-enclosing">
+                <p class="rocket-question">O que está acontecendo agora?</p>
+                <h4 lang="en">State estimate</h4>
+                <p>Resume o que as observações permitem estimar sobre o estado atual.</p>
+                <ol class="rocket-parts">
+                  <li><h5 lang="en">Observations</h5><p>O que foi observado, a que momento se refere e de onde veio.</p></li>
+                  <li><h5 lang="en">Flight registry</h5><p>Mantém as observações originais disponíveis à medida que chegam novas informações.</p></li>
+                  <li><h5 lang="en">State estimation</h5><p>Usa o registro para avaliar um momento específico, sem ocultar a falta de dados nem as divergências.</p></li>
+                </ol>
+              </div>
+            </figure>
+            <p>Agora posso expressar uma parte desse raciocínio em C++. Suponha que as observações já tenham sido verificadas e que cada uma identifique a fase do voo que sustenta.</p>
+            <figure class="programmers-code">
+              <figcaption id="programmers-code-caption">C++ · Um exemplo de parte da estimativa do estado</figcaption>
+              <pre tabindex="0" role="region" aria-labelledby="programmers-code-caption"><code class="language-cpp">PhaseEstimate assessPhaseAt(Time time, const FlightRecord&amp; flight)
+{
+    std::map&lt;FlightPhase, std::set&lt;ObservationId&gt;&gt; evidence;
+
+    for (const auto&amp; observation : flight.phaseObservationsAt(time)) {
+        evidence[observation.phase].insert(observation.originalId);
+    }
+
+    if (evidence.empty()) return PhaseEstimate::unknown(time);
+    if (evidence.size() == 1) return PhaseEstimate::supported(time, evidence);
+    return PhaseEstimate::disputed(time, evidence);
+}</code></pre>
+            </figure>
+            <p>O interessante, para mim, é saber como colocar esse código à prova. Se eu fornecer a mesma observação duas vezes, as evidências devem continuar contendo apenas um registro original. Se uma observação antiga chegar atrasada, ela poderá mudar o que sabemos sobre aquele momento anterior. Se eu fornecer observações conflitantes sobre o momento que estamos avaliando, a estimativa deverá preservar ambas para que possamos examinar a divergência.</p>
+            <p>Esse mesmo raciocínio importa na descoberta de moléculas. Dois relatos podem ter origem na mesma medição de um ensaio. Dois resultados aparentemente conflitantes podem ter sido obtidos em condições diferentes. Antes que qualquer um deles mude qual composto o software propõe a seguir, é preciso estabelecer o que as evidências realmente permitem concluir. É assim que passo de uma intenção ampla, como “aprender com novos resultados”, para um comportamento que consigo implementar e testar.</p>
+            <p>Como engenheiros de software, construímos sobre os ombros de gigantes. Se um projeto precisa de um banco de dados relacional, podemos usar PostgreSQL. Se eu dissesse a outro programador que estava escrevendo todo este sistema de descoberta em assembly, esperaria que a primeira pergunta fosse “Por quê?”. Uma linguagem como C++ permite expressar o comportamento que desejo, e o compilador cuida da tradução para instruções de máquina. Posso dedicar meu tempo ao problema que me propus a resolver.</p>
+            <p>Para programadores que enfrentam problemas complexos e de grande responsabilidade, que normalmente exigiriam uma equipe numerosa, <strong>acredito que saber usar IA com rigor já é uma competência essencial de engenharia.</strong> Isso amplia o que um engenheiro consegue realizar sozinho e a velocidade com que uma equipe pode avançar. Podemos usá-la para pesquisar uma questão, organizar evidências, explorar alternativas e traduzir um projeto detalhado em código. Um compilador segue regras definidas de tradução. Um assistente de IA gera sugestões de forma probabilística, então uma explicação convincente ou uma implementação bem escrita ainda pode estar errada. Parte dessa competência é saber conferir uma afirmação na fonte e testar o código com base em um comportamento que definimos de forma independente.</p>
+            <p>O valor dessa velocidade está no que podemos fazer com o tempo que ela libera. Pelo que cada abstração é responsável? O que uma parte pode confiar que a outra fará? Quando um resultado experimental muda, quais decisões o sistema deve rever e quais continuam válidas? Na minha experiência, até os modelos mais capazes têm dificuldade para responder a essas perguntas de forma consistente. É aí que o discernimento desenvolvido com a prática faz mais diferença. Combinar esse discernimento com a capacidade da IA de transformar um projeto bem especificado em uma implementação é uma parte importante do que me permite desenvolver sozinho um sistema como este.</p>
+            <p class="programmers-contact">Se quiser saber mais sobre essa abordagem ou receber orientações sobre como estruturar um projeto de software complexo, fique à vontade para <a href="mailto:martincifuentesgomez1@gmail.com">me escrever por e-mail</a>.</p>
+          </div>
+        </article>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><span>Descoberta Autônoma de Fármacos Assistida por Computador</span><span>Martin Cifuentes</span><a href="#top">Voltar ao início <span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>

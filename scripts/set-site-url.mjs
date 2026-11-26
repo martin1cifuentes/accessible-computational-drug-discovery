@@ -14,9 +14,11 @@ if (base.protocol !== 'https:' || base.username || base.password || base.search 
 }
 base.pathname = base.pathname.replace(/\/?$/, '/');
 const languages = [{code:'en', path:''}, {code:'es', path:'es/'}, {code:'pt-BR', path:'pt-br/'}];
-for (const language of languages) {
-const page = new URL(`../${language.path}index.html`, import.meta.url);
-const pageUrl = new URL(language.path, base).href;
+const sections = ['', 'engineering/'];
+for (const { section, language } of sections.flatMap(section => languages.map(language => ({ section, language })))) {
+const pagePath = section + language.path;
+const page = new URL(`../${pagePath}index.html`, import.meta.url);
+const pageUrl = new URL(pagePath, base).href;
 let html = await readFile(page, 'utf8');
 const imageMatch = html.match(/<meta property="og:image" content="([^"]+)">/);
 if (!imageMatch) throw new Error('The page must contain an Open Graph image.');
@@ -34,7 +36,7 @@ for (const [pattern, replacement] of replacements) {
 }
 html = html.replace(/<link rel="alternate" hreflang="([^"]+)" href="[^"]+">/g, (_, code) => {
   const path = languages.find(item => item.code === code)?.path || '';
-  return `<link rel="alternate" hreflang="${code}" href="${new URL(path, base).href}">`;
+  return `<link rel="alternate" hreflang="${code}" href="${new URL(section + path, base).href}">`;
 });
 await writeFile(page, html, 'utf8');
 console.log(`Sharing URLs updated for ${pageUrl}`);

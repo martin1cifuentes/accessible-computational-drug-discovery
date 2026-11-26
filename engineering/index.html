@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#132d49">
+  <meta name="description" content="How I structure complex scientific software, connect design to implementation, and use AI with independent verification.">
+  <title>Engineering ACADD — Martin Cifuentes</title>
+  <!-- Sharing metadata is static so crawlers do not need JavaScript.
+       When moving hosts, run: node scripts/set-site-url.mjs https://your-host/your-project/ -->
+  <link rel="canonical" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/engineering/">
+  <link rel="alternate" hreflang="en" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/engineering/">
+  <link rel="alternate" hreflang="es" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/engineering/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/engineering/pt-br/">
+  <link rel="alternate" hreflang="x-default" href="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/engineering/">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Autonomous Computational Aided Drug Discovery">
+  <meta property="og:title" content="Engineering ACADD — Martin Cifuentes">
+  <meta property="og:description" content="How I structure complex scientific software, connect design to implementation, and use AI with independent verification.">
+  <meta property="og:url" content="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/engineering/">
+  <meta property="og:image" content="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/assets/autonomous-discovery-en.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Autonomous Computational Aided Drug Discovery by Martin Cifuentes. Interpret results, learn relationships and choose an investigation. Scientific reasoning core implemented; verification in progress.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Engineering ACADD — Martin Cifuentes">
+  <meta name="twitter:description" content="How I structure complex scientific software, connect design to implementation, and use AI with independent verification.">
+  <meta name="twitter:image" content="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/assets/autonomous-discovery-en.jpg">
+  <meta name="twitter:image:alt" content="Autonomous Computational Aided Drug Discovery by Martin Cifuentes. Interpret results, learn relationships and choose an investigation. Scientific reasoning core implemented; verification in progress.">
+  <link rel="icon" href="../assets/favicon.svg?v=20261125" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css?v=20261125">
+  <link rel="stylesheet" href="../acadd-page.css?v=20261125">
+  <link rel="stylesheet" href="../programmers.css?v=20261125">
+  <script src="../site.js?v=20261125" defer></script>
+</head>
+<body class="acadd-engineering">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="language-bar">
+      <nav class="container language-switcher" aria-label="Website language">
+        <a href="./" hreflang="en" lang="en" aria-label="English" aria-current="page"><img src="../assets/flags/gb.svg" width="20" height="15" alt="" aria-hidden="true"><span>English</span></a>
+        <a href="./es/" hreflang="es" lang="es" aria-label="Español"><img src="../assets/flags/es.svg" width="20" height="15" alt="" aria-hidden="true"><span>Español</span></a>
+        <a href="./pt-br/" hreflang="pt-BR" lang="pt-BR" aria-label="Português (Brasil)"><img src="../assets/flags/br.svg" width="20" height="15" alt="" aria-hidden="true"><span>Português</span></a>
+      </nav>
+    </div>
+    <div class="container header-inner">
+      <a class="brand" href="../#top" aria-label="Autonomous Computational Aided Drug Discovery, home">
+        <img class="brand-mark" src="../assets/chemical-landscape.svg?v=20261115-landscape-modern" width="64" height="46" alt="" aria-hidden="true">
+        <span>Autonomous Computational<br>Aided Drug Discovery</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="../#workflow">How it works</a><a href="#programmers">Engineering</a>
+      </nav>
+      <a class="header-contact" href="../#contact">Get in touch <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main" class="container engineering-main">
+    <div id="programmers">
+      <article class="programmers-section" id="for-programmers" aria-labelledby="programmers-title">
+          <header class="programmers-heading">
+            <p class="eyebrow">How I build complex software</p>
+            <h1 id="programmers-title">For the programmers reading this</h1>
+          </header>
+          <div class="prose programmers-prose">
+            <p>If you write software, you might be wondering how I build a system with this much dynamic behavior on my own. Take one experimental result. An analogue looked promising because of its predicted binding, but a measurement shows it falls below the team’s solubility requirement. That one result can change which compounds the software prioritizes, whether a planned binding calculation is still worth running, and which molecular change it explores next. Meanwhile, work on another chemical series can continue. How do I design those decisions so I can follow the reasoning, express it in code, and test what happens when the evidence changes?</p>
+            <p>Over the past few months, I’ve been developing and refining a way to think through problems like this. It draws on what I’ve learned from books on programming and software engineering, and on my own experience putting those ideas to work on complex projects.</p>
+            <p>I start with what the software needs to accomplish. Then I ask what each part needs to establish for the next part to do its job. Whenever an answer is still too vague to implement or test, I take that part and work through it the same way.</p>
+            <p>Take a rocket whose mission is to launch and land at a designated recovery site. <strong>What is supposed to happen?</strong> The mission plan defines the objective and its constraints. <strong>What is happening now?</strong> The software uses observations from the flight to estimate the rocket’s state. <strong>What should happen next?</strong> That depends on both the plan and the estimate.</p>
+            <figure class="rocket-figure" id="rocket-abstractions" aria-labelledby="rocket-caption">
+              <figcaption id="rocket-caption">Three questions, three abstractions</figcaption>
+              <div class="rocket-inputs">
+                <div class="rocket-node">
+                  <p class="rocket-question">What should happen?</p>
+                  <h4 lang="en">Mission plan</h4>
+                  <p>Defines the objective and constraints.</p>
+                </div>
+                <div class="rocket-node">
+                  <p class="rocket-question">What is happening now?</p>
+                  <h4 lang="en">State estimate</h4>
+                  <p>Summarizes what flight observations support about the current state.</p>
+                </div>
+              </div>
+              <div class="rocket-connector" aria-hidden="true"></div>
+              <div class="rocket-node rocket-action">
+                <p class="rocket-question">What should happen next?</p>
+                <h4 lang="en">Action selection</h4>
+                <p>Chooses the next action using the plan and estimated state.</p>
+              </div>
+            </figure>
+            <p>Now take the second question one level deeper. Suppose I want to establish just one part of the rocket’s state. Was it ascending or descending at a particular moment? A new report says it was ascending. The previous report said it was descending. Has the estimate changed?</p>
+            <p>The first thing I’d ask is <em>when each observation was made</em>. The report that arrived last might describe an earlier part of the flight. In that case, both observations can be right. Then I’d ask <em>where each report came from</em>. The same observation can reach the software twice, and receiving a second copy gives me no additional evidence. If two distinct, usable observations really do describe the same moment and disagree, that disagreement belongs in the estimate.</p>
+            <p>Those questions give me three abstractions I can work with. An <strong>observation</strong> says what was observed, when it applies, and where it came from. A <strong>flight record</strong> keeps those observations available as new reports arrive. A <strong>state estimate</strong> says what the record supports at a particular time and keeps the evidence behind that judgment. Each part answers a question the next part would otherwise have to work out for itself.</p>
+            <figure class="rocket-figure rocket-inside" id="rocket-abstractions-expanded" aria-labelledby="rocket-expanded-caption">
+              <figcaption id="rocket-expanded-caption">A look inside State estimate</figcaption>
+              <div class="rocket-node rocket-enclosing">
+                <p class="rocket-question">What is happening now?</p>
+                <h4 lang="en">State estimate</h4>
+                <p>Summarizes what flight observations support about the current state.</p>
+                <ol class="rocket-parts">
+                  <li><h5 lang="en">Observations</h5><p>What was observed, when it applies, and where it came from.</p></li>
+                  <li><h5 lang="en">Flight registry</h5><p>Keeps the original observations available as new reports arrive.</p></li>
+                  <li><h5 lang="en">State estimation</h5><p>Uses the record to assess a particular moment, keeping gaps and disagreements visible.</p></li>
+                </ol>
+              </div>
+            </figure>
+            <p>I can now express one piece of that reasoning in C++. Suppose the observations have already been checked and each one identifies the flight phase it supports.</p>
+            <figure class="programmers-code">
+              <figcaption id="programmers-code-caption">C++ · An illustrative part of the state estimate</figcaption>
+              <pre tabindex="0" role="region" aria-labelledby="programmers-code-caption"><code class="language-cpp">PhaseEstimate assessPhaseAt(Time time, const FlightRecord&amp; flight)
+{
+    std::map&lt;FlightPhase, std::set&lt;ObservationId&gt;&gt; evidence;
+
+    for (const auto&amp; observation : flight.phaseObservationsAt(time)) {
+        evidence[observation.phase].insert(observation.originalId);
+    }
+
+    if (evidence.empty()) return PhaseEstimate::unknown(time);
+    if (evidence.size() == 1) return PhaseEstimate::supported(time, evidence);
+    return PhaseEstimate::disputed(time, evidence);
+}</code></pre>
+            </figure>
+            <p>The interesting part for me is that I know how to challenge this code. If I deliver the same observation twice, the evidence should still contain one original record. If an older observation arrives late, it can change what we know about the earlier moment. If I deliver conflicting observations for the moment we’re assessing, the estimate should preserve both so we can examine the disagreement.</p>
+            <p>That same reasoning matters in molecular discovery. Two reports might trace back to the same assay measurement. Two apparently conflicting results might have been obtained under different conditions. Before either result changes which compound the software proposes next, it needs to establish what the evidence actually supports. That’s how I move from a broad intention like “learn from new results” to behavior I can implement and test.</p>
+            <p>As software engineers, we build on the shoulders of giants. If a project needs a relational database, we can use PostgreSQL. If I told another programmer I was writing this entire discovery system in assembly, I’d expect their first question to be “Why?” A language like C++ lets me express the behavior I want, and a compiler handles the translation into machine instructions. I can spend my time on the problem I set out to solve.</p>
+            <p>For programmers taking on complex, consequential problems that would ordinarily require a large team, <strong>I believe the ability to use AI rigorously is now an essential engineering skill.</strong> It expands how much one engineer can take on and how quickly a team can move. We can use it to research a question, organize evidence, explore alternatives, and translate a detailed design into code. A compiler follows defined translation rules. An AI assistant generates suggestions probabilistically, so a convincing explanation or a neatly written implementation can still be wrong. Part of the skill is knowing how to check a claim against its source and how to test code against behavior we’ve worked out independently.</p>
+            <p>What makes that speed valuable is where we can put the time it saves. What is each abstraction responsible for? What can one part safely rely on another to do? When an experimental result changes, which decisions should the system revisit, and which should still hold? In my experience, even the most capable models struggle to answer those questions consistently. That’s where judgment developed through practice matters most. Combining that judgment with AI’s ability to carry a well-specified design into implementation is a large part of how I can build a system like this on my own.</p>
+            <p class="programmers-contact">If you’d like more information about this approach or advice on structuring a complex software project, feel free to <a href="mailto:martincifuentesgomez1@gmail.com">email me</a>.</p>
+          </div>
+        </article>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><span>Autonomous Computational Aided Drug Discovery</span><span>Martin Cifuentes</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>

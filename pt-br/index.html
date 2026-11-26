@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#132d49">
-  <meta name="description" content="Software autônomo para a descoberta de fármacos de pequenas moléculas. Medições e previsões orientam a proposta de compostos e a escolha dos estudos à medida que as evidências mudam.">
+  <meta name="description" content="O ACADD conecta evidências moleculares, perguntas científicas e alocação de recursos em um ciclo de descoberta adaptado aos objetivos e ao orçamento do pesquisador.">
   <title>Descoberta Autônoma de Fármacos Assistida por Computador — Martin Cifuentes</title>
   <!-- Sharing metadata is static so crawlers do not need JavaScript.
        When moving hosts, run: node scripts/set-site-url.mjs https://your-host/your-project/ -->
@@ -19,7 +19,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Descoberta Autônoma de Fármacos Assistida por Computador">
   <meta property="og:title" content="Descoberta Autônoma de Fármacos Assistida por Computador">
-  <meta property="og:description" content="Software autônomo para a descoberta de fármacos de pequenas moléculas. Medições e previsões orientam a proposta de compostos e a escolha dos estudos à medida que as evidências mudam.">
+  <meta property="og:description" content="O ACADD conecta evidências moleculares, perguntas científicas e alocação de recursos em um ciclo de descoberta adaptado aos objetivos e ao orçamento do pesquisador.">
   <meta property="og:url" content="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/pt-br/">
   <meta property="og:image" content="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/assets/autonomous-discovery-pt-br.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -28,21 +28,19 @@
   <meta property="og:image:alt" content="Descoberta Autônoma de Fármacos Assistida por Computador, por Martin Cifuentes. Interpretar resultados, aprender relações e escolher uma investigação. Núcleo de raciocínio científico implementado, em fase de verificação.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Descoberta Autônoma de Fármacos Assistida por Computador">
-  <meta name="twitter:description" content="Software autônomo para a descoberta de fármacos de pequenas moléculas. Medições e previsões orientam a proposta de compostos e a escolha dos estudos à medida que as evidências mudam.">
+  <meta name="twitter:description" content="O ACADD conecta evidências moleculares, perguntas científicas e alocação de recursos em um ciclo de descoberta adaptado aos objetivos e ao orçamento do pesquisador.">
   <meta name="twitter:image" content="https://martin1cifuentes.github.io/accessible-computational-drug-discovery/assets/autonomous-discovery-pt-br.jpg">
   <meta name="twitter:image:alt" content="Descoberta Autônoma de Fármacos Assistida por Computador, por Martin Cifuentes. Interpretar resultados, aprender relações e escolher uma investigação. Núcleo de raciocínio científico implementado, em fase de verificação.">
   <link rel="icon" href="../assets/favicon.svg?v=20261115-landscape-modern" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css?v=20261115-landscape-modern">
-  <link rel="stylesheet" href="../discovery.css?v=20261113">
-  <link rel="stylesheet" href="../decision-figure.css?v=20261113-autonomy">
   <link rel="stylesheet" href="../analogue-figure.css">
-  <link rel="stylesheet" href="../chess-figure.css?v=20261113-divider">
-  <link rel="stylesheet" href="../relationship-figure.css">
-  <link rel="stylesheet" href="../programmers.css?v=20261114-inside">
+  <link rel="stylesheet" href="../acadd-page.css?v=20261125">
+  <link rel="stylesheet" href="../acadd-diagrams.css?v=20261125">
   <script src="../site-config.js" defer></script>
-  <script src="../site.js?v=20261113-locales" defer></script>
+  <script src="../acadd-diagrams.js?v=20261125" defer></script>
+  <script src="../site.js?v=20261125" defer></script>
 </head>
-<body>
+<body class="acadd-home">
   <a class="skip-link" href="#main">Ir para o conteúdo</a>
   <header class="site-header">
     <div class="language-bar">
@@ -58,9 +56,9 @@
         <span>Descoberta Autônoma de Fármacos<br>Assistida por Computador</span>
       </a>
       <nav class="main-nav" aria-label="Navegação principal">
-        <a href="#problem">Projeto</a><a href="#workflow">Fluxo de trabalho</a><a href="#status">Estágio atual</a><a href="#previous-work">Trabalhos anteriores</a><a href="#about">Sobre</a>
+        <a href="#workflow">Como funciona</a><a href="#explore">Raciocínio científico</a><a href="#status">Desenvolvimento e evidências</a><a href="#about">Sobre mim</a>
       </nav>
-      <a class="header-contact" href="mailto:martincifuentesgomez1@gmail.com">Entre em contato <span aria-hidden="true">↗</span></a>
+      <a class="header-contact" href="#contact">Contato</a>
     </div>
   </header>
 
@@ -68,13 +66,14 @@
     <section class="hero container" id="top" aria-labelledby="project-title">
       <div class="hero-main">
         <div class="hero-copy">
-          <p class="eyebrow">Descoberta adaptativa · Decisões científicas</p>
-          <h1 id="project-title">Descoberta Autônoma de Fármacos <span class="title-phrase">Assistida por Computador</span></h1>
-          <p class="hero-intro">Um sistema autônomo que usa evidências para orientar a descoberta de fármacos de pequenas moléculas.</p>
-          <p class="hero-summary">O software interpreta medições e previsões computacionais para aprender como mudanças na estrutura molecular afetam a ligação ao alvo, as respostas biológicas e propriedades como a solubilidade. Quando essas relações se aplicam, orientam a proposta de compostos e a escolha dos estudos. Novas evidências podem mudar ambas as decisões.</p>
+          <h1 id="project-title">Ampliando o alcance do raciocínio científico na descoberta de fármacos</h1>
+          <p class="acadd-name">ACADD — Descoberta Autônoma de Fármacos Assistida por Computador</p>
+          <p class="hero-intro">Um sistema autônomo de descoberta computacional concebido para aprender com evidências moleculares, escolher investigações úteis e adaptar sua busca aos objetivos e ao orçamento computacional definidos pelo pesquisador.</p>
+          <p class="hero-summary">Comece pelos seus compostos e resultados existentes ou explore bibliotecas químicas permitidas. O ACADD conecta relações moleculares às evidências disponíveis para identificar o que vale a pena investigar a seguir e muda de direção à medida que chegam novos resultados.</p>
+
           <div class="hero-actions">
-            <a class="button button-primary" href="#problem">Como funciona <span aria-hidden="true">↓</span></a>
-            <a class="text-link" href="#status">Desenvolvimento e evidências <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#workflow">Explore o ciclo de descoberta</a>
+            <a class="text-link" href="#contact">Converse sobre colaboração científica</a>
           </div>
         </div>
         <figure class="hero-figure">
@@ -83,475 +82,339 @@
         </figure>
       </div>
       <div class="hero-context prose">
-        <p>O objetivo é avançar na otimização molecular antes da síntese, em menos tempo e com menos recursos, para que as equipes concentrem seu tempo, seus experimentos e os cálculos mais caros nas decisões que fazem diferença para o projeto.</p>
-        <div>
-          <p><strong>O núcleo de raciocínio científico já foi implementado.</strong> A verificação está em andamento. Avaliações futuras mostrarão como ele se sai em problemas químicos reais.</p>
-          <a class="text-link hero-collaboration" href="#collaboration">Conversar sobre colaboração <span aria-hidden="true">↗</span></a>
-        </div>
+        <p>O objetivo é ajudar equipes de pesquisa a explorar mais possibilidades científicas e direcionar cálculos e experimentos de alto custo às decisões que fazem diferença.</p>
+        <p><strong>Mecanismos centrais implementados.</strong> A verificação controlada e a integração das campanhas estão em andamento. O desempenho científico continua em avaliação.</p>
       </div>
     </section>
 
     <section class="section" id="problem" aria-labelledby="problem-title">
       <div class="container">
-        <div class="editorial-grid">
-          <div class="section-aside">
-            <p class="eyebrow">01 / O desafio da descoberta</p>
-            <h2 id="problem-title">Qual composto vale a pena sintetizar a seguir?</h2>
-          </div>
-          <div class="prose">
-            <p class="lead">Uma equipe de química medicinal começa pelo efeito biológico que pretende obter, como inibir uma enzima. Seus compostos também precisam atender a requisitos práticos. Mesmo um inibidor promissor precisa se dissolver o suficiente para o uso pretendido.</p>
-            <p>Suponha que a equipe altere um grupo químico de um composto, sintetize a nova molécula e a teste. Esse análogo apresenta maior atividade no ensaio e menor solubilidade que o composto de partida. Quais desses efeitos se manteriam no próximo análogo?</p>
-            <p class="lab-cycle" aria-label="Planejar, sintetizar, testar, interpretar e modificar"><span>Planejar</span> → <span>Sintetizar</span> → <span>Testar</span> → <span>Interpretar</span> → <span>Modificar</span></p>
-          </div>
+        <span class="section-alias" id="chess-comparison" aria-hidden="true"></span>
+        <div class="section-heading"><h2 id="problem-title">Cada novo composto traz outra pergunta</h2></div>
+        <div class="prose">
+          <p class="lead">Uma modificação molecular pode melhorar uma propriedade e piorar outra. Uma predição promissora de afinidade de ligação pode deixar em aberto a resposta biológica ou a solubilidade. Uma descoberta útil em uma série química pode não se aplicar à seguinte.</p>
+          <p>Os pesquisadores precisam decidir quais evidências anteriores se aplicam, o que continua incerto e se outra investigação mudaria a direção do trabalho. Também precisam escolher entre refinar uma série conhecida, examinar um arcabouço molecular diferente ou interromper os gastos com um caminho pouco produtivo.</p>
+          <p>O ACADD foi concebido para apoiar esse raciocínio integrado em um conjunto muito maior de possibilidades.</p>
+          <p><strong>A pergunta central é o que devemos aprender a seguir para avançar rumo ao objetivo de descoberta a um custo justificável.</strong></p>
         </div>
         <div class="problem-example">
-          <figure class="analogue-figure" id="analogue-example" data-translated-section="problem">
-            <figcaption><span class="figure-label">Fig. 01 · Exemplo ilustrativo</span>Uma modificação, duas medições</figcaption>
-            <p class="analogue-origin">Altere um grupo químico e teste o análogo.</p>
-            <div class="analogue-fork" aria-hidden="true"></div>
-            <ul class="analogue-results" role="list">
-              <li><strong><span aria-hidden="true">↑</span> Maior atividade no ensaio</strong>O próximo análogo manteria esse ganho?</li>
-              <li><strong><span aria-hidden="true">↓</span> Menor solubilidade</strong>O próximo análogo se dissolveria o suficiente?</li>
-            </ul>
-            <div class="analogue-fork analogue-fork-join" aria-hidden="true"></div>
-            <p class="analogue-question">Qual resposta mudaria a escolha do próximo composto a sintetizar?</p>
-          </figure>
-          <div class="prose">
-            <p>A cada rodada, a equipe aprende como a estrutura molecular afeta a atividade. Cada rodada também exige materiais, equipamentos, profissionais qualificados e tempo. A equipe consegue projetar muito mais análogos do que pode sintetizar e testar. Ferramentas computacionais já ajudam os químicos a explorar essas possibilidades antes da síntese. Com elas, é possível examinar como um análogo proposto se encaixaria no alvo ou estimar sua solubilidade.</p>
-            <p>Ainda assim, a equipe tem mais perguntas do que consegue responder. <strong>O que precisamos descobrir para decidir qual composto sintetizar a seguir?</strong> Se compostos relacionados já fornecem boas evidências sobre a ligação ao alvo, uma estimativa de solubilidade pode influenciar a decisão de síntese mais do que outro cálculo de ligação.</p>
-            <p>Escolher o que investigar exige discernimento em química medicinal. Quais resultados anteriores se aplicam a este análogo? Que incerteza poderia mudar a escolha e que medição ou cálculo poderia esclarecê-la? Uma descoberta sobre um composto pode mudar quais perguntas merecem atenção em toda a série.</p>
-          </div>
+          <figure class="analogue-figure" id="analogue-example">
+              <figcaption>Uma mudança, duas medições</figcaption>
+              <p class="analogue-origin">Substitui-se um grupo químico e testa-se o análogo.</p>
+              <div class="analogue-fork" aria-hidden="true"></div>
+              <ul class="analogue-results">
+                <li><strong><span aria-hidden="true">↑</span> Maior atividade no ensaio</strong>O próximo composto pode manter esse ganho?</li>
+                <li><strong><span aria-hidden="true">↓</span> Menor solubilidade</strong>O próximo composto terá solubilidade suficiente?</li>
+              </ul>
+              <div class="analogue-fork analogue-fork-join" aria-hidden="true"></div>
+              <p class="analogue-question">Qual incerteza vale investigar primeiro?</p>
+            </figure>
+          <div class="prose"><p>Imagine que uma equipe substitua um grupo químico e teste o análogo resultante. A atividade aumenta, mas a solubilidade cai. O próximo desenho depende da possibilidade de preservar o ganho de atividade e recuperar a solubilidade.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-label="Busca seletiva">
+    <section class="section" id="workflow" aria-labelledby="workflow-title">
       <div class="container">
-        <div class="editorial-grid">
-          <div class="section-aside">
-            <p class="eyebrow">02 / Busca seletiva</p>
-            <h2>O que faz uma jogada valer a pena?</h2>
-          </div>
+        <div class="section-heading"><h2 id="workflow-title">Defina o objetivo. Deixe cada resultado orientar a próxima decisão.</h2></div>
+        <div class="prose discovery-essay"><p class="lead">O ciclo parte do objetivo e das evidências disponíveis. Cada investigação pode melhorar a avaliação de um composto e orientar a escolha dos próximos estudos.</p></div>
+        <figure class="ac-figure ac-loop" aria-labelledby="discovery-loop-title discovery-loop-caption">
+  <header class="ac-figure-heading"><span class="ac-figure-label">Exemplo conceitual</span><h3 id="discovery-loop-title">Um processo contínuo de descoberta</h3></header>
+  <div class="ac-loop-goal"><strong>Objetivo científico e limites</strong><span>Alvo · propriedades exigidas · trabalho permitido · orçamento</span></div>
+  <div class="ac-loop-sources">
+    <div><strong>Seus compostos e resultados</strong><span>Evidências experimentais e computacionais</span></div>
+    <div><strong>Bibliotecas químicas permitidas</strong><span>Estruturas para iniciar a exploração</span></div>
+  </div>
+  <div class="ac-source-merge" aria-hidden="true"><span></span></div>
+  <div class="ac-loop-cycle"><ol class="ac-loop-stages"><li><h4>Construir conhecimento científico</h4><p>Relacionar estruturas, observações e incerteza.</p></li>
+<li><h4>Propor investigações</h4><p>Alterações moleculares, comparações e lacunas de evidência.</p></li>
+<li><h4>Escolher trabalho útil</h4><p>Comparar consequências, dependências e custo total.</p></li>
+<li><h4>Executar e interpretar</h4><p>Obter resultados e preservar seu contexto científico.</p></li></ol>
+    <div class="ac-loop-return"><span aria-hidden="true">↻</span><p>Novas evidências atualizam o conhecimento e as escolhas seguintes</p></div>
+  </div>
+  <div class="ac-loop-outputs"><h4>O que o pesquisador recebe</h4><ul><li>Avaliações de candidatos vinculadas às evidências</li><li>Relações dependentes do contexto</li><li>Razões para as próximas investigações</li><li>Registro do uso de recursos</li></ul></div>
+  <figcaption id="discovery-loop-caption">O caminho de retorno faz parte do processo. Investigações independentes podem avançar juntas, e cada resultado atualiza as decisões para as quais contribui.</figcaption>
+</figure>
+        <ol class="discovery-steps">
+          <li id="establish">
+            <h3>Defina o objetivo científico e os limites</h3>
+            <div class="prose"><p>Especifique o alvo, as propriedades moleculares exigidas, as evidências necessárias para sustentar a escolha de um candidato, o escopo químico e os métodos permitidos e o orçamento computacional.</p><p>O objetivo pode exigir várias propriedades no mesmo composto. Uma estimativa favorável de ligação, por si só, não cumpre um objetivo de descoberta mais amplo.</p></div>
+          </li>
+          <li id="starting-knowledge">
+            <h3>Reúna o conhecimento inicial</h3>
+            <div class="prose"><p>Utilize compostos da empresa ou do grupo de pesquisa e seus resultados experimentais ou computacionais, incluindo descobertas desfavoráveis e incertas.</p><p>Quando as evidências forem escassas, comece por estruturas de bibliotecas permitidas e selecione investigações iniciais informativas. Medições experimentais existentes são dados de entrada úteis. A exploração computacional pode começar sem exigir, em todos os casos, um novo resultado experimental de referência.</p></div>
+          </li>
+          <li id="interpret">
+            <h3>Relacione estruturas e evidências</h3>
+            <div class="prose"><p>Analise modificações moleculares, características espaciais, forma, eletrostática e interações com o alvo disponíveis.</p><p>Conecte essas relações às observações das propriedades pertinentes, preservando as condições, a origem e a incerteza de cada resultado. A análise das informações já disponíveis é reutilizada. Uma medição ausente continua sendo uma questão em aberto.</p></div>
+          </li>
+          <li id="mechanism-exploration">
+            <h3>Formule investigações com propósito científico</h3>
+            <div class="prose"><p>Busque candidatos, aplique transformações moleculares sustentadas pelas evidências, compare compostos relacionados ou selecione um método que responda a uma lacuna específica de informação.</p><p>Procure candidatos estruturalmente diversos e investigações cientificamente complementares, incluindo comparações que possam colocar à prova uma relação útil.</p></div>
+          </li>
+          <li id="investigate">
+            <h3>Selecione e execute trabalho útil</h3>
+            <div class="prose"><p>Compare o que as investigações propostas poderiam revelar, como isso afetaria as escolhas posteriores e quanto custaria todo o trabalho necessário.</p><p>Reutilize o trabalho concluído, leve em conta resultados pendentes e etapas de preparação compartilhadas e execute os cálculos aplicáveis às investigações selecionadas. Trabalhos independentes podem avançar juntos quando os recursos e as dependências científicas permitem.</p></div>
+          </li>
+          <li id="decide">
+            <h3>Aprenda e reavalie</h3>
+            <div class="prose"><p>Incorpore os resultados efetivamente recebidos, atualize as predições e relações afetadas e reavalie as próximas investigações.</p><p>Um resultado pode reforçar uma direção promissora, revelar uma limitação ou redirecionar a busca. O trabalho cuja base científica continua válida pode prosseguir.</p></div>
+          </li>
+        </ol>
+        <div class="reading-block">
+          <h3 id="outcomes-title">O que o processo produz</h3>
+          <dl class="outcome-list">
+            <div><dt>Avaliações de candidatos vinculadas às evidências</dt><dd>Quais propriedades têm respaldo, quais são incertas e quais ainda estão em aberto.</dd></div>
+            <div><dt>Relações moleculares dependentes do contexto</dt><dd>Descobertas que podem orientar novas investigações.</dd></div>
+            <div><dt>Justificativas para as próximas investigações</dt><dd>O que elas poderiam esclarecer e por que isso importa.</dd></div>
+            <div><dt>Registro do uso de recursos</dt><dd>O trabalho realizado e os custos associados.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <div id="explore">
+      <section class="section" id="mechanism-adaptation" aria-labelledby="learning-title">
+        <span class="section-anchor" id="patterns-across-a-series" aria-hidden="true"></span><span class="section-anchor" id="mechanism-prioritization" aria-hidden="true"></span>
+        <div class="container">
+          <div class="section-heading"><h2 id="learning-title">Um resultado útil pode informar mais de um composto</h2></div>
+          <div class="prose"><p class="lead">O modelo de conhecimento do ACADD conecta diferentes perspectivas complementares da estrutura molecular. Cada uma oferece uma forma de formular uma pergunta e avaliar se uma informação pode se aplicar a outro composto.</p></div>
+          <table class="science-table">
+            <caption>Relações moleculares e as perguntas que ajudam a formular</caption>
+            <thead><tr><th scope="col">Relação molecular</th><th scope="col">Pergunta científica</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Transformações químicas locais</th><td>Quais substituições parecem úteis e em quais ambientes moleculares?</td></tr>
+              <tr><th scope="row">Farmacóforos</th><td>Arcabouços moleculares diferentes podem apresentar um arranjo relevante de características químicas?</td></tr>
+              <tr><th scope="row">Forma e eletrostática</th><td>As semelhanças espaciais e de distribuição de carga sustentam uma comparação útil?</td></tr>
+              <tr><th scope="row">Interações com o alvo</th><td>O que as poses disponíveis em relação ao alvo revelam sobre os contatos envolvidos?</td></tr>
+            </tbody>
+          </table>
           <div class="prose">
-            <p class="lead">Um enxadrista reconhece padrões em uma posição e analisa as jogadas que parecem promissoras. Um motor de xadrez aplica esse princípio a uma escala que nenhum jogador consegue acompanhar por conta própria. A partir do que identifica na posição, decide quais continuações merecem uma análise mais detalhada.</p>
-            <p>O software aplica essa ideia tanto às modificações moleculares quanto aos estudos que podem ajudar a equipe a escolher entre elas. Ele incorpora os critérios que os especialistas em química medicinal usam e os aplica a mais possibilidades do que uma equipe conseguiria acompanhar manualmente. Quando um resultado muda a avaliação de onde uma modificação pode ser útil, o software pode reexaminar os análogos afetados e os estudos propostos para eles.</p>
+            <p>As relações estruturais têm significado distinto das evidências sobre um desfecho. Uma semelhança de forma não demonstra, por si só, a ligação ao alvo. Uma pontuação de docking é uma observação computacional com um significado específico.</p>
+            <h3 id="context-title">Essa substituição ajuda neste ambiente molecular?</h3>
+            <p>Suponha que a mesma substituição esteja associada a resultados favoráveis em um ambiente local e desfavoráveis em outro.</p>
+            <p>O sistema pode preservar essa distinção, propor moléculas relacionadas e identificar uma comparação que esclareça onde a descoberta se aplica.</p>
+            <p>Uma investigação pode envolver vários cálculos, pois responder à pergunta exige uma comparação. Seu resultado informa uma estimativa do efeito da relação e da incerteza associada em um contexto definido.</p>
+            <p>Quando há respaldo, esse conhecimento pode informar predições sobre outros compostos. Casos ainda inexplorados ou sem respaldo continuam em aberto.</p>
+            <p><strong>Um bom candidato pode revelar uma relação útil. Uma relação útil pode sugerir um próximo candidato melhor.</strong></p>
+          </div>
+          <figure class="ac-figure ac-relationship" aria-labelledby="relationship-example-title relationship-example-caption">
+  <header class="ac-figure-heading"><span class="ac-figure-label">Exemplo conceitual</span><h3 id="relationship-example-title">Uma substituição, diferentes ambientes químicos</h3></header>
+  <div class="ac-substitution"><span>A mesma substituição ilustrativa</span><div aria-label="A mesma substituição ilustrativa"><span>Núcleo—<b>X</b></span><span aria-hidden="true">→</span><span>Núcleo—<b>Y</b></span></div></div>
+  <div class="ac-before"><h4>Antes da comparação</h4><p>A substituição é conhecida. Seu efeito em cada ambiente continua sendo uma questão em aberto.</p><div class="ac-space-band"><svg class="ac-space-map" viewBox="0 0 400 155" aria-hidden="true" focusable="false">
+      <path class="ac-space-region" d="M29 36C39 9 99 0 140 20S162 80 124 85 45 85 29 63Z"/>
+      <path class="ac-space-region" d="M58 112C58 88 99 78 139 86S186 141 145 145 66 141 58 112Z"/>
+      <path class="ac-space-region" d="M252 29C263 5 323 2 354 22S376 82 338 95 255 90 250 64Z"/>
+      <circle class="ac-space-open" cx="58" cy="45" r="5.5"/><circle class="ac-space-open" cx="86" cy="26" r="5.5"/><circle class="ac-space-open" cx="100" cy="66" r="5.5"/><circle class="ac-space-open" cx="130" cy="43" r="5.5"/><circle class="ac-space-open" cx="88" cy="116" r="5.5"/><circle class="ac-space-open" cx="120" cy="97" r="5.5"/><circle class="ac-space-open" cx="154" cy="125" r="5.5"/><circle class="ac-space-open" cx="277" cy="44" r="5.5"/><circle class="ac-space-open" cx="315" cy="26" r="5.5"/><circle class="ac-space-open" cx="345" cy="65" r="5.5"/><circle class="ac-space-open" cx="297" cy="82" r="5.5"/><circle class="ac-space-open" cx="238" cy="119" r="5.5"/><circle class="ac-space-open" cx="337" cy="128" r="5.5"/>
+    </svg><div class="ac-space-legend"><span><i class="ac-mark ac-mark-observed" aria-hidden="true"></i>Observação obtida</span><span><i class="ac-mark ac-mark-prediction" aria-hidden="true"></i>Previsão atualizada</span><span><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Não resolvido</span></div></div><div class="ac-unresolved-grid"><div><strong>Ambiente A</strong><span><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Efeito não resolvido</span></div><div><strong>Ambiente B</strong><span><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Efeito não resolvido</span></div><div><strong>Outro ambiente</strong><span><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Efeito não resolvido</span></div></div></div>
+  <details class="ac-evidence-reveal"><summary>Revelar as evidências e seu efeito nas previsões relacionadas</summary><div class="ac-revealed"><h4 class="ac-revealed-title">Após obter as evidências ilustrativas</h4><div class="ac-space-band"><svg class="ac-space-map" viewBox="0 0 400 155" aria-hidden="true" focusable="false">
+      <path class="ac-space-region" d="M29 36C39 9 99 0 140 20S162 80 124 85 45 85 29 63Z"/>
+      <path class="ac-space-region" d="M58 112C58 88 99 78 139 86S186 141 145 145 66 141 58 112Z"/>
+      <path class="ac-space-region" d="M252 29C263 5 323 2 354 22S376 82 338 95 255 90 250 64Z"/>
+      <path class="ac-space-local" d="M58 45 86 26M58 45 100 66M88 116 120 97M277 44 315 26"/>
+      <path class="ac-space-transfer" d="M58 45C120 0 212 2 277 44"/><circle class="ac-space-observed" cx="58" cy="45" r="5.5"/><path class="ac-space-prediction" d="M86 19l7 7-7 7-7-7Z"/><path class="ac-space-prediction" d="M100 59l7 7-7 7-7-7Z"/><circle class="ac-space-open" cx="130" cy="43" r="5.5"/><circle class="ac-space-observed" cx="88" cy="116" r="5.5"/><path class="ac-space-prediction" d="M120 90l7 7-7 7-7-7Z"/><circle class="ac-space-open" cx="154" cy="125" r="5.5"/><path class="ac-space-prediction" d="M277 37l7 7-7 7-7-7Z"/><path class="ac-space-prediction" d="M315 19l7 7-7 7-7-7Z"/><circle class="ac-space-open" cx="345" cy="65" r="5.5"/><circle class="ac-space-open" cx="297" cy="82" r="5.5"/><circle class="ac-space-open" cx="238" cy="119" r="5.5"/><circle class="ac-space-open" cx="337" cy="128" r="5.5"/>
+    </svg><div class="ac-space-legend"><span><i class="ac-mark ac-mark-observed" aria-hidden="true"></i>Observação obtida</span><span><i class="ac-mark ac-mark-prediction" aria-hidden="true"></i>Previsão atualizada</span><span><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Não resolvido</span></div></div><div class="ac-relation-row"><div><span class="ac-state"><i class="ac-mark ac-mark-observed" aria-hidden="true"></i>Observação obtida</span><h4>Ambiente A</h4><p>Efeito favorável observado</p></div><span class="ac-rel-arrow" aria-hidden="true">→</span><div><span class="ac-state"><i class="ac-mark ac-mark-prediction" aria-hidden="true"></i>Previsão atualizada</span><h4>Ambiente A compatível</h4><p>As previsões relacionadas mudam em uma direção favorável.</p></div></div>
+<div class="ac-relation-row"><div><span class="ac-state"><i class="ac-mark ac-mark-observed" aria-hidden="true"></i>Observação obtida</span><h4>Ambiente B</h4><p>Efeito desfavorável observado</p></div><span class="ac-rel-arrow" aria-hidden="true">→</span><div><span class="ac-state"><i class="ac-mark ac-mark-prediction" aria-hidden="true"></i>Previsão atualizada</span><h4>Ambiente B compatível</h4><p>As previsões relacionadas mudam em uma direção desfavorável.</p></div></div>
+    <div class="ac-transfer-note"><h4>Entre arcabouços moleculares</h4><p>Um arcabouço diferente pode permitir uma comparação quando o ambiente local relevante e as evidências sobre a propriedade se aplicam. A transferência permanece condicional.</p></div>
+    <div class="ac-unresolved-note"><span class="ac-state"><i class="ac-mark ac-mark-open" aria-hidden="true"></i>Não resolvido</span><h4>Ambiente sem respaldo suficiente</h4><p>Um ambiente diferente ou não estudado permanece não resolvido quando as evidências disponíveis não sustentam a transferência.</p></div>
+  </div></details>
+  <figcaption id="relationship-example-caption">X → Y representa uma substituição. Os símbolos distinguem evidências obtidas, previsões inferidas e questões abertas. Todos os resultados são ilustrativos, sem implicar medições numéricas.</figcaption>
+</figure>
+        </div>
+      </section>
+
+      <section class="section" id="decision-selection" aria-labelledby="selection-title">
+        <span class="section-anchor" id="campaign" aria-hidden="true"></span><span class="section-anchor" id="mechanism-investigations" aria-hidden="true"></span>
+        <div class="container">
+          <span class="section-alias" id="resources" aria-hidden="true"></span>
+          <span class="section-alias" id="resource-title" aria-hidden="true"></span>
+          <div class="section-heading"><h2 id="selection-title">Escolha a investigação que pode mudar a próxima decisão</h2></div>
+          <div class="prose">
+            <p class="lead">O cálculo mais barato nem sempre leva ao caminho mais econômico. Uma investigação cara pode evitar gastos maiores adiante. Um cálculo barato pode acrescentar pouco ao que já se sabe.</p>
+            <p>O ACADD avalia os resultados possíveis, as atualizações de conhecimento que produziriam e o trabalho posterior que essas atualizações poderiam justificar.</p>
+            <p>Ele compara conjuntos úteis de investigações, considerando evidências complementares, sobreposição de informações e trabalho pendente.</p>
+            <h3 id="campaign-title">Uma escolha ilustrativa</h3>
+            <p>Um análogo proposto tem evidências promissoras de ligação ao alvo, mas a solubilidade pode determinar se ele avança.</p>
+            <p>Neste exemplo, um preditor de menor custo se aplica à química e às condições consideradas. Sua estimativa ajuda a priorizar candidatos, enquanto um refinamento adicional da ligação deixaria a pergunta decisiva em aberto.</p>
+            <p>O sistema pode investigar primeiro a solubilidade.</p>
+            <ul>
+              <li>Uma <strong>estimativa favorável</strong> pode sustentar uma caracterização adicional.</li>
+              <li>Uma <strong>estimativa desfavorável</strong> pode direcionar a atenção a uma modificação molecular permitida.</li>
+              <li>Um <strong>resultado ambíguo</strong> pode manter a necessidade de evidências melhores.</li>
+            </ul>
+            <p>Trabalho independente em outra série pode prosseguir enquanto essa questão é resolvida.</p>
+          </div>
+          <figure class="ac-figure ac-allocation" aria-labelledby="allocation-example-title allocation-example-caption">
+  <header class="ac-figure-heading"><span class="ac-figure-label">Exemplo conceitual</span><h3 id="allocation-example-title">Deixar a resposta mudar o próximo trabalho</h3></header>
+  <div class="ac-allocation-start"><h4>Análogo proposto</h4><p>Evidências promissoras de ligação · solubilidade não resolvida</p></div>
+  <h4 class="ac-options-heading">Comparar as investigações</h4>
+  <div class="ac-investigation-options"><div><h4>Refinar a ligação</h4><p>Poderia tornar a estimativa de ligação mais precisa. A questão sobre solubilidade continuaria em aberto.</p></div><div class="ac-selected-investigation"><h4>Estimar a solubilidade primeiro</h4><p>Um preditor aplicável e de menor custo pode orientar se esse análogo avança.</p></div></div>
+  <div class="ac-outcome-demo" data-ac-outcomes>
+    <fieldset class="ac-outcome-controls" hidden><legend>Explorar um resultado ilustrativo</legend><div><label><input type="radio" name="ac-outcome" value="0" aria-controls="ac-outcome-0" checked><span>Estimativa favorável</span></label><label><input type="radio" name="ac-outcome" value="1" aria-controls="ac-outcome-1" ><span>Estimativa desfavorável</span></label><label><input type="radio" name="ac-outcome" value="2" aria-controls="ac-outcome-2" ><span>Estimativa ambígua</span></label></div></fieldset>
+    <div class="ac-outcome-panels" aria-live="polite" aria-atomic="true"><div class="ac-outcome-panel" id="ac-outcome-0"><span class="ac-state"><i class="ac-mark ac-mark-prediction" aria-hidden="true"></i>Estimativa favorável</span><h4>Considerar caracterização adicional</h4><p>A estimativa sustenta a priorização. Verificar os requisitos de evidência restantes antes de avançar com o análogo.</p></div>
+<div class="ac-outcome-panel" id="ac-outcome-1"><span class="ac-state"><i class="ac-mark ac-mark-prediction" aria-hidden="true"></i>Estimativa desfavorável</span><h4>Considerar uma modificação molecular</h4><p>Explorar uma alteração permitida que possa recuperar a solubilidade e preservar a ideia promissora de ligação.</p></div>
+<div class="ac-outcome-panel" id="ac-outcome-2"><span class="ac-state"><i class="ac-mark ac-mark-prediction" aria-hidden="true"></i>Estimativa ambígua</span><h4>Buscar melhores evidências se fizer diferença</h4><p>Preservar a incerteza. Comparar uma investigação mais informativa com outros trabalhos úteis.</p></div></div>
+  </div>
+  <div class="ac-parallel-lane"><h4>Série química independente</h4><div class="ac-parallel-stages"><div><strong>O trabalho autorizado continua</strong><p>Seus dados de entrada e sua base científica estão disponíveis, e ele cabe nos recursos restantes.</p></div><span aria-hidden="true">→</span><div><strong>Reavaliar com seu próprio resultado</strong><p>A próxima escolha segue suas próprias evidências e dependências.</p></div></div></div>
+  <figcaption id="allocation-example-caption">São resultados ilustrativos alternativos. A escolha depende da aplicabilidade, das evidências existentes e pendentes e do custo completo do trabalho. O trabalho independente pode continuar enquanto a primeira questão é resolvida.</figcaption>
+</figure>
+          <div class="prose reading-block">
+            <h3>Trabalho em paralelo com uma justificativa</h3>
+            <p>Vale a pena executar algumas investigações em conjunto. Outras devem esperar, pois um resultado anterior pode mudar sua utilidade.</p>
+            <p>A busca foi concebida para administrar ambas as possibilidades dentro dos recursos disponíveis, considerando a preparação compartilhada, os resultados pendentes e o custo completo do trabalho proposto.</p>
+            <p>O objetivo da seleção é reduzir o gasto total esperado para alcançar o resultado especificado, respeitando as restrições científicas e de recursos.</p>
+            <p>Se as evidências ainda não sustentarem que o objetivo foi atingido, a exploração adicional continua dentro do escopo permitido pelo pesquisador.</p>
           </div>
         </div>
-        <figure class="search-comparison" id="chess-comparison" data-translated-section="problem" aria-labelledby="chess-comparison-caption">
-          <div class="search-comparison__panels">
-            <div class="search-comparison__chess">
-              <h3>No tabuleiro</h3>
-              <p class="search-comparison__context">Cada jogador avançou duas casas com o peão à frente do seu rei. Qual deve ser a próxima jogada das brancas?</p>
-              <svg class="search-comparison__board" viewBox="0 0 246 246" role="img" aria-labelledby="search-board-title search-board-description">
-                <title id="search-board-title">Duas jogadas possíveis para o cavalo em g1</title>
-                <desc id="search-board-description">Depois que cada lado avança duas casas com o peão à frente do rei, o cavalo branco pode ir para f3 e atacar o peão em e5, ou para h3, na borda do tabuleiro. A linha contínua leva a f3 e a pontilhada, a h3.</desc>
-                <defs>
-                  <pattern id="search-board-squares" width="56" height="56" patternUnits="userSpaceOnUse">
-                    <rect width="56" height="56" fill="#fafcfd"/>
-                    <path d="M28 0h28v28H28zM0 28h28v28H0z" fill="#dce7eb"/>
-                  </pattern>
-                  <g id="search-board-pawn">
-                    <circle cx="14" cy="8" r="3.6"/><path d="M11.5 12h5c-1 4-.2 6.5 3.4 8.4L21 23H7l1.1-2.6c3.6-1.9 4.4-4.4 3.4-8.4Z"/>
-                  </g>
-                  <g id="search-board-rook">
-                    <path d="M6 5h3.6v3h2.5V5h3.8v3h2.5V5H22v6l-3 2v6l2 2v2H7v-2l2-2v-6l-3-2Z"/>
-                  </g>
-                  <g id="search-board-knight">
-                    <path d="m12 8 1-5 4 3c5.2 2.2 6.4 7.4 4.2 13.5L23 23H6l1.3-3.4c2.5-1.8 4.7-5 5.8-7.1l-5 2.4-3.1-2 4.3-5.1L11 5Z"/>
-                    <circle cx="12" cy="9.6" r=".9" stroke="none" fill="#456074"/>
-                  </g>
-                  <g id="search-board-bishop">
-                    <path d="M14 3.2c.5 2.9 6.4 5.6 6.4 9.2 0 2.7-2.2 4.2-4.4 5v2.1l4.5 1.8.7 1.7H6.8l.7-1.7 4.5-1.8v-2.1c-2.2-.8-4.4-2.3-4.4-5 0-3.6 5.9-6.3 6.4-9.2Z"/>
-                    <path d="m15.9 7.4-3.5 5.1" fill="none"/>
-                  </g>
-                  <g id="search-board-queen">
-                    <path d="m5 7 4.8 4.6L14 4l4.2 7.6L23 7l-3.5 11h-11Z"/><path d="M9 19h10l2.2 4H6.8Z"/>
-                    <circle cx="5" cy="6.6" r="1.3"/><circle cx="14" cy="3.8" r="1.3"/><circle cx="23" cy="6.6" r="1.3"/>
-                  </g>
-                  <g id="search-board-king">
-                    <path d="M12.6 2h2.8v2.6h2.5v2.3h-2.5v2h-2.8v-2h-2.5V4.6h2.5Z"/>
-                    <path d="M14 11c-4-5.1-12.3 0-5.5 7.4h11C26.3 11 18 5.9 14 11ZM9 19.5h10l2.2 3.5H6.8Z"/>
-                  </g>
-                </defs>
-                <g transform="translate(17 2)">
-                  <rect width="224" height="224" fill="url(#search-board-squares)" stroke="#aabdc6"/>
-                  <path d="M142 142h24v24h-24Z" fill="#c0dae8" stroke="#245f87" stroke-width="1.6"/>
-                  <circle cx="210" cy="154" r="7" fill="none" stroke="#576d79" stroke-width="1.5"/>
-                  <path d="m182 210-28-56" fill="none" stroke="#245f87" stroke-width="2"/>
-                  <path d="m182 210 28-56" fill="none" stroke="#647985" stroke-width="1.6" stroke-dasharray="3 3"/>
-                  <circle cx="154" cy="154" r="3.6" fill="#245f87"/>
-                  <g stroke="#273f50" stroke-width="1.35" stroke-linejoin="round">
-                    <g fill="#405768">
-                      <use href="#search-board-rook"/><use href="#search-board-knight" x="28"/><use href="#search-board-bishop" x="56"/><use href="#search-board-queen" x="84"/><use href="#search-board-king" x="112"/><use href="#search-board-bishop" x="140"/><use href="#search-board-knight" x="168"/><use href="#search-board-rook" x="196"/>
-                      <g transform="translate(0 28)"><use href="#search-board-pawn"/><use href="#search-board-pawn" x="28"/><use href="#search-board-pawn" x="56"/><use href="#search-board-pawn" x="84"/><use href="#search-board-pawn" x="140"/><use href="#search-board-pawn" x="168"/><use href="#search-board-pawn" x="196"/></g>
-                      <use href="#search-board-pawn" x="112" y="84"/>
-                    </g>
-                    <g fill="#fff">
-                      <use href="#search-board-pawn" x="112" y="112"/>
-                      <g transform="translate(0 168)"><use href="#search-board-pawn"/><use href="#search-board-pawn" x="28"/><use href="#search-board-pawn" x="56"/><use href="#search-board-pawn" x="84"/><use href="#search-board-pawn" x="140"/><use href="#search-board-pawn" x="168"/><use href="#search-board-pawn" x="196"/></g>
-                      <g transform="translate(0 196)"><use href="#search-board-rook"/><use href="#search-board-knight" x="28"/><use href="#search-board-bishop" x="56"/><use href="#search-board-queen" x="84"/><use href="#search-board-king" x="112"/><use href="#search-board-bishop" x="140"/><use href="#search-board-knight" x="168"/><use href="#search-board-rook" x="196"/></g>
-                    </g>
-                  </g>
-                  <g class="search-comparison__coordinates" text-anchor="middle" aria-hidden="true">
-                    <text x="-9" y="18">8</text><text x="-9" y="46">7</text><text x="-9" y="74">6</text><text x="-9" y="102">5</text><text x="-9" y="130">4</text><text x="-9" y="158">3</text><text x="-9" y="186">2</text><text x="-9" y="214">1</text>
-                    <text x="14" y="239">a</text><text x="42" y="239">b</text><text x="70" y="239">c</text><text x="98" y="239">d</text><text x="126" y="239">e</text><text x="154" y="239">f</text><text x="182" y="239">g</text><text x="210" y="239">h</text>
-                  </g>
-                </g>
-              </svg>
-              <ul class="search-comparison__moves">
-                <li><span class="search-comparison__line" aria-hidden="true"></span><span><strong>Cavalo para f3</strong> ataca o peão em e5.</span></li>
-                <li><span class="search-comparison__line search-comparison__line--other" aria-hidden="true"></span><span><strong>Cavalo para h3</strong> deixa esse peão sem ser atacado.</span></li>
-              </ul>
-            </div>
-            <div class="search-comparison__chemistry">
-              <h3>Na otimização molecular</h3>
-              <dl>
-                <div><dt>Avaliar a posição</dt><dd>O último análogo apresentou maior atividade no ensaio e menor solubilidade. Para o próximo análogo, suponha que as evidências disponíveis já sustentem a previsão de ligação ao alvo.</dd></div>
-                <div><dt>Considerar os próximos passos</dt><dd>Refinar a estimativa de ligação, estimar a solubilidade ou propor outra modificação molecular.</dd></div>
-                <div class="search-comparison__focus"><dt>Investigar a questão decisiva</dt><dd>O próximo análogo se dissolveria o suficiente? Se a resposta puder mudar a decisão de síntese, investigue a solubilidade primeiro.</dd></div>
-              </dl>
-            </div>
-          </div>
-          <figcaption id="chess-comparison-caption"><span class="figure-label">Fig. 02 · Comparação ilustrativa</span> No xadrez, uma característica da posição pode fazer com que uma jogada mereça atenção. Na otimização molecular, uma questão em aberto pode justificar um estudo.</figcaption>
-        </figure>
-        <p class="prose chess-bridge">Na química, o próximo passo pode ser uma modificação na molécula <em>ou</em> uma maneira de saber mais sobre ela antes de sintetizá-la. No caso do próximo análogo, a decisão depende de quão forte é a ligação ao alvo, de ele inibir a enzima ou de se dissolver o suficiente? São três perguntas diferentes. Cada uma exige uma medição ou um cálculo diferente.</p>
+      </section>
+    </div>
+
+    <section class="section" id="value" aria-labelledby="value-title">
+      <div class="container">
+        <div class="section-heading"><h2 id="value-title">Mais possibilidades científicas dentro de um orçamento de pesquisa finito</h2></div>
+        <div class="prose">
+          <p class="lead">Para as equipes de pesquisa, o benefício pretendido é uma visão integrada de compostos, evidências, predições e próximas investigações.</p>
+          <p>O refinamento local, a exploração de diferentes arcabouços moleculares e o teste de relações incertas podem informar uns aos outros ao longo do mesmo processo de descoberta.</p>
+          <p>Para as organizações, o benefício pretendido é maior produtividade na pesquisa.</p>
+          <ul>
+            <li>Menos coordenação manual entre etapas computacionais.</li>
+            <li>Menos repetição de trabalho e de aquisição de informações equivalentes.</li>
+            <li>Uso mais criterioso de cálculos e experimentos de alto custo.</li>
+            <li>Uma conexão mais clara entre as evidências adquiridas e as decisões que elas sustentam.</li>
+          </ul>
+          <p>O pesquisador mantém o controle dos objetivos, do trabalho permitido, dos recursos e dos critérios de parada.</p>
+          <h3 id="scale-title">Ampliando a busca</h3>
+          <p>A arquitetura foi concebida para manter e examinar progressivamente milhares de possibilidades de investigação. Ela foi projetada para selecionar um subconjunto compatível com os limites de recursos e executar trabalhos independentes em paralelo.</p>
+          <p>A escala útil é a quantidade de alternativas científicas que podem ser consideradas e gerar aprendizado. O paralelismo efetivo depende dos métodos, dos recursos e do valor de aguardar os resultados.</p>
+          <p>Esses são benefícios pretendidos que precisam ser avaliados. A capacidade de processamento, os avanços na descoberta e a economia de custos serão relatados a partir de estudos com medições próprias. O tamanho de uma biblioteca ou o número de cálculos executados, por si só, não demonstram esses benefícios.</p>
+        </div>
       </div>
     </section>
 
     <section class="section coverage-section" id="coverage" aria-labelledby="coverage-title">
-      <div class="container" id="computational-evidence">
-        <div class="section-heading" id="mechanisms">
-          <div>
-            <p class="eyebrow">03 / Evidências antes da síntese</p>
-            <h2 id="coverage-title">Três perguntas sobre o mesmo composto</h2>
-          </div>
-        </div>
-        <p class="section-intro lead">Antes de recomendar a síntese, o software verifica o que as medições disponíveis permitem concluir. Se uma questão continua em aberto, um método computacional pode ajudar a estimar parte da resposta.</p>
-
-        <div class="workflow-detail">
-          <div class="step-heading"><h3>Qual seria sua afinidade pelo alvo?</h3></div>
-          <div class="prose">
-            <p><strong>O docking molecular</strong> examina como um composto poderia se encaixar no sítio de ligação do alvo. Suas pontuações aproximadas ajudam na triagem de compostos. O Deep Docking Ultra (DDU) aprende com essas pontuações e leva em conta a incerteza das previsões para escolher os próximos compostos a submeter ao docking.</p>
-            <p>Quando a escolha envolve dois análogos relacionados, um cálculo de <strong>energia livre relativa de ligação (RBFE)</strong> estima a diferença entre suas energias livres de ligação. Um cálculo de <strong>energia livre absoluta de ligação (ABFE)</strong> estima a energia livre de ligação de um composto a um alvo em condições especificadas.</p>
-          </div>
-        </div>
-        <div class="workflow-detail">
-          <div class="step-heading"><h3 id="biological-effect">Ele teria o efeito biológico desejado?</h3></div>
-          <div class="prose">
-            <p>A afinidade de ligação indica com que intensidade um composto se liga ao seu alvo. A equipe também precisa saber o que acontece quando ele se liga. No nosso exemplo, a questão é quanto o composto inibe a enzima. Medições da atividade enzimática na presença de compostos relacionados podem embasar uma previsão empírica para o análogo proposto.</p>
-            <p>O software também inclui uma biblioteca de modelos mecanísticos estabelecidos. Conforme o alvo, esses modelos podem estimar quanta atividade enzimática resta na presença de um inibidor, como um composto favorece o estado ativo de um receptor ou como o bloqueio de um canal iônico altera a corrente que passa por ele. Cada previsão exige um modelo compatível com o mecanismo e com as condições do ensaio, além dos parâmetros necessários para aplicá-lo.</p>
-            <p>Se nenhuma das duas abordagens der base para uma previsão, o software mantém em aberto a questão do efeito biológico. Ainda pode explorar a ligação e outras propriedades, preservando séries químicas distintas para testes futuros.</p>
-          </div>
-        </div>
-        <div class="workflow-detail">
-          <div class="step-heading"><h3>Suas propriedades permitiriam que ele avançasse?</h3></div>
-          <div class="prose">
-            <p>Neste caso, a preocupação é a <strong>solubilidade</strong>. Um modelo adequado pode estimar se o análogo atingiria a solubilidade mínima exigida pela equipe. A permeabilidade ou um risco específico de toxicidade exigiriam evidências próprias para cada desfecho. Cada estimativa tem um conjunto de compostos e condições para os quais é útil.</p>
-          </div>
-        </div>
-        <div class="prose section-intro" id="mechanism-prioritization">
-          <p>O software considera essas respostas em conjunto, respeitando os requisitos obrigatórios da equipe e ponderando as concessões aceitáveis entre objetivos. Registra a origem, as condições e a incerteza de cada estimativa junto com as medições compatíveis. Assim, determina o que as evidências significam para <em>este</em> composto. Para usá-las no próximo análogo, precisa saber em que condições a mesma conclusão continua válida.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="mechanism-adaptation">
       <div class="container">
-        <div class="editorial-grid">
-          <div class="section-aside">
-            <p class="eyebrow">04 / Aprender com diferentes compostos</p>
-            <h2 id="mechanism-adaptation">Quando uma conclusão vale para outro composto?</h2>
-          </div>
-          <div class="prose">
-            <p class="lead">A mesma modificação molecular pode fortalecer a ligação em um ambiente químico e enfraquecê-la em outro. Uma média entre os dois ocultaria uma diferença que poderia orientar a escolha do químico.</p>
-            <p>A Figura 3 acompanha uma substituição em três pares de compostos. No caso do análogo proposto, a estrutura ao redor da substituição dá ao software um motivo para examinar o primeiro par mais de perto.</p>
-          </div>
-        </div>
-        <figure class="relationship-example" aria-labelledby="context-title" aria-describedby="context-caption">
-          <header>
-            <span class="figure-label">Fig. 03 · Exemplo ilustrativo</span>
-            <h3 id="context-title">Essa conclusão pode orientar a escolha do próximo composto?</h3>
-            <p>Em cada par, um hidrogênio (H) é substituído por um grupo metila (CH₃). O contorno azul indica a região da molécula a comparar.</p>
-          </header>
-          <svg class="molecule-key" width="0" height="0" aria-hidden="true" focusable="false">
-            <defs>
-              <g id="sar-ring">
-                <path fill="#edf4f8" stroke="#8baec1" stroke-width="1.2" d="M77 6 Q78 2 84 2 H104 Q110 2 111 9 L114 29 Q115 34 120 37 L147 44 Q152 46 152 52 V65 Q152 72 145 72 H97 Q90 72 87 67 L72 39 Q69 34 71 28 Z"/>
-                <path fill="none" stroke="#132d49" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M38 56 52.5 31 H81.5 L96 56 81.5 81 H52.5 Z M55 36 H79 M89.5 57.5 79.5 75 M54.5 75 44.5 57.5 M21 56 H38 M81.5 31 89.5 17 M96 56 H111"/>
-              </g>
-              <path id="sar-arrow" fill="none" stroke="#596e83" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M159 53 H183 M177 48 183 53 177 58"/>
-            </defs>
-          </svg>
-          <div class="pair-row">
-            <div><h4>Par anterior 1</h4><p class="pair-context">Hidrogênio adjacente (H)</p></div>
-            <svg class="molecule-pair" viewBox="0 0 350 90" role="img" aria-label="Estruturas com o mesmo grupo R e um hidrogênio adjacente. Apenas o sítio destacado muda de H para CH₃.">
-              <g transform="translate(0 0)">
-                <use href="#sar-ring"/>
-                <text class="rest-label" x="18" y="61" text-anchor="end">R</text>
-                <text x="93" y="16">H</text>
-                <text class="edit-label" x="116" y="62">H</text>
-              </g>
-              <use href="#sar-arrow"/>
-              <g transform="translate(196 0)">
-                <use href="#sar-ring"/>
-                <text class="rest-label" x="18" y="61" text-anchor="end">R</text>
-                <text x="93" y="16">H</text>
-                <text class="edit-label" x="116" y="62">CH₃</text>
-              </g>
-            </svg>
-            <p class="pair-outcome"><strong>Ligação mais forte</strong> O análogo metilado se liga ao alvo com maior afinidade que o composto de partida.</p>
-          </div>
-          <div class="pair-row">
-            <div><h4>Par anterior 2</h4><p class="pair-context">Cloro adjacente (Cl)</p></div>
-            <svg class="molecule-pair" viewBox="0 0 350 90" role="img" aria-label="Os dois compostos têm um cloro ao lado do sítio destacado e o mesmo grupo R. A substituição é novamente de H por CH₃.">
-              <g transform="translate(0 0)">
-                <use href="#sar-ring"/>
-                <text class="rest-label" x="18" y="61" text-anchor="end">R</text>
-                <text x="93" y="16">Cl</text>
-                <text class="edit-label" x="116" y="62">H</text>
-              </g>
-              <use href="#sar-arrow"/>
-              <g transform="translate(196 0)">
-                <use href="#sar-ring"/>
-                <text class="rest-label" x="18" y="61" text-anchor="end">R</text>
-                <text x="93" y="16">Cl</text>
-                <text class="edit-label" x="116" y="62">CH₃</text>
-              </g>
-            </svg>
-            <p class="pair-outcome"><strong>Ligação mais fraca</strong> O análogo metilado se liga ao alvo com menor afinidade que seu composto de partida.</p>
-          </div>
-          <div class="pair-row">
-            <div><h4>Análogo proposto</h4><p class="pair-context">Hidrogênio adjacente (H)</p></div>
-            <svg class="molecule-pair" viewBox="0 0 350 90" role="img" aria-label="O par proposto tem um grupo R diferente, indicado por R′, e o mesmo ambiente local do par 1. A modificação proposta também é de H para CH₃.">
-              <g transform="translate(0 0)">
-                <use href="#sar-ring"/>
-                <text class="rest-label" x="18" y="61" text-anchor="end">R′</text>
-                <text x="93" y="16">H</text>
-                <text class="edit-label" x="116" y="62">H</text>
-              </g>
-              <use href="#sar-arrow"/>
-              <g transform="translate(196 0)">
-                <use href="#sar-ring"/>
-                <text class="rest-label" x="18" y="61" text-anchor="end">R′</text>
-                <text x="93" y="16">H</text>
-                <text class="edit-label" x="116" y="62">CH₃</text>
-              </g>
-            </svg>
-            <p class="pair-outcome"><strong>Afinidade ainda desconhecida</strong> A região destacada corresponde à do par 1. Isso justifica investigar se o ganho de afinidade também ocorre aqui.</p>
-          </div>
-          <figcaption id="context-caption">Os pares anteriores apresentam resultados hipotéticos de ligação ao mesmo alvo, em condições de ensaio comparáveis. R representa o restante da molécula. R′ indica uma mudança em outra região do análogo proposto.</figcaption>
-        </figure>
-        <div class="editorial-grid" id="patterns-across-a-series" data-translated-section="mechanism-adaptation">
-          <h3>Como identificar e usar padrões em uma série química</h3>
-          <div class="prose">
-            <p>Na Figura 3, pares moleculares correspondentes mostram como a ligação muda após uma substituição. Comparar essa substituição em diferentes ambientes químicos ajuda a estabelecer onde o efeito se mantém, se inverte ou continua incerto. Uma comparação semelhante em um ensaio de atividade pode revelar um <strong>penhasco de atividade</strong>, em que dois compostos estruturalmente muito próximos apresentam uma grande diferença de atividade. Se as condições dos ensaios forem comparáveis e a diferença superar a incerteza das medições, um novo análogo pode ajudar a identificar onde o efeito muda.</p>
-            <p>Alguns padrões úteis são difíceis de expressar em uma regra simples. Modelos estatísticos e de aprendizado de máquina podem combinar observações de uma série para estimar um resultado específico para um composto proposto. O software considera a incerteza do modelo, seu desempenho ao prever resultados reservados durante o desenvolvimento e se a química e as condições do novo composto estão dentro do seu domínio de aplicação. Quando há uma estrutura adequada do alvo e hipóteses fundamentadas sobre o sítio de ligação, um modelo estrutural pode sugerir como o composto se ligaria. Um modelo de resposta estabelecido pode estimar um efeito biológico específico quando há fundamento para o mecanismo e para os dados exigidos pelo modelo.</p>
-            <p>A escolha do composto que merece o próximo estudo também pode depender de <strong>interações entre modificações</strong>. Se duas mudanças melhoram a ligação separadamente, comparar seus efeitos individuais e combinados pode revelar se o ganho se mantém quando ambas estão presentes. Pode valer a pena avaliar uma combinação ainda não estudada. Uma combinação desfavorável pode orientar a busca para outra estrutura.</p>
-            <p>Um <strong>platô</strong> e uma <strong>lacuna de cobertura</strong> pedem decisões diferentes. Se resultados confiáveis mostram pouco progresso entre as modificações testadas em uma região do espaço químico, o software pode explorar outra química ou encerrar os gastos com essa linha de investigação. Se poucos compostos comparáveis foram estudados, o potencial da região continua em aberto. Uma comparação informativa ou um resultado que já está a caminho pode ajudar a decidir se vale a pena explorá-la mais.</p>
-            <p>Ao examinar muitas propostas, o software recupera as evidências pertinentes ao composto, ao desfecho e às condições em questão. Mantém as exceções fundamentadas junto à conclusão mais ampla e rastreia relatos repetidos até a observação original, para que uma duplicata não conte como evidência independente. Quando novas evidências mudam uma conclusão, o software pode reavaliar as previsões e propostas que dependiam dela, enquanto trabalhos com fundamento independente prosseguem.</p>
-            <p>Voltemos ao análogo da Figura 3. As evidências de ligação dão à equipe um motivo para considerar sua síntese, mas a solubilidade ainda pode determinar se ele avança. O software verifica se um resultado existente já esclarece a questão ou se um estudo em andamento poderá respondê-la. Se a dúvida persistir, qual estudo valeria a pena iniciar?</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section investigation-case" id="workflow" aria-labelledby="workflow-title">
-      <div class="container">
-        <header class="section-heading">
-          <div>
-            <p class="eyebrow">05 / A escolha de um estudo</p>
-            <h2 id="workflow-title">Qual estudo poderia mudar a decisão?</h2>
-          </div>
-        </header>
-
-        <div id="campaign" class="case-brief">
-          <div>
-            <p class="eyebrow" id="decision-caption">Exemplo de decisão</p>
-            <h3 id="campaign-title">O próximo análogo deve avançar?</h3>
-          </div>
-          <div class="prose" id="establish">
-            <p>Voltemos ao análogo proposto pela equipe. Suponha que o ambiente de ligação se pareça com aquele em que a modificação foi favorável e que outra previsão indique maior afinidade. A equipe também precisa que o composto se dissolva o suficiente. As medições de solubilidade disponíveis foram feitas com compostos ou em condições diferentes demais para esclarecer essa questão.</p>
-          </div>
-        </div>
-
-        <div class="case-options" id="explore">
-          <h3 id="mechanism-exploration">Três caminhos possíveis</h3>
-          <dl>
-            <div><dt>Refinar a estimativa de ligação</dt><dd>Um cálculo de energia livre relativa de ligação poderia tornar a comparação mais precisa. Mesmo um resultado favorável deixaria a questão da solubilidade em aberto.</dd></div>
-            <div><dt>Estimar a solubilidade</dt><dd>Há um modelo de menor custo aplicável a essa química e às condições relevantes. Sua estimativa poderia mudar a decisão de avançar com o análogo.</dd></div>
-            <div><dt>Propor outra modificação</dt><dd>Uma nova mudança poderia melhorar a solubilidade. Vale a pena explorá-la se o análogo atual parecer não atingir o mínimo necessário.</dd></div>
-          </dl>
-        </div>
-
-        <div class="case-choice prose" id="investigate">
-          <p id="mechanism-investigations"><strong>Escolher a estimativa de solubilidade.</strong> Neste exemplo, ela aborda, pelo menor custo justificável, o requisito que poderia levar a equipe a descartar o análogo. Se já houvesse evidência compatível que respondesse à pergunta, o software poderia reutilizá-la.</p>
-        </div>
-
-        <figure class="case-paths" aria-labelledby="workflow-caption">
-          <figcaption id="workflow-caption"><span class="figure-label">Fig. 04 · Exemplo de execução dos estudos</span> O que precisa esperar e o que pode continuar?</figcaption>
-          <div class="case-lane">
-            <h4>Análogo proposto</h4>
-            <ol>
-              <li><strong>Estimativa de solubilidade pendente</strong><span>Adiar a decisão sobre o análogo. Uma segunda estimativa duplicaria o trabalho.</span></li>
-              <li id="interpret"><strong>A estimativa fica abaixo do mínimo</strong><span>Manter a previsão de solubilidade insuficiente junto às evidências favoráveis de ligação.</span></li>
-            </ol>
-          </div>
-          <div class="case-lane">
-            <h4>Série independente</h4>
-            <ol>
-              <li><strong>Investigar a ligação em paralelo</strong><span>O estudo está autorizado, os dados necessários estão disponíveis e o custo cabe no orçamento restante.</span></li>
-              <li><strong>Reavaliar a série quando o resultado chegar</strong><span>A próxima decisão sobre essa série independe de quando chegar a estimativa de solubilidade.</span></li>
-            </ol>
-          </div>
-        </figure>
-
-        <div class="case-outcome prose" id="decide">
-          <p><strong>O que muda para o análogo proposto?</strong> Diante da baixa solubilidade estimada neste exemplo, o software adia o avanço do análogo e considera uma modificação que possa recuperar solubilidade e preservar o ganho previsto de afinidade. Registra a qual composto e a quais condições a estimativa se refere e mantém explícita a incerteza até que medições permitam avaliar a previsão.</p>
-        </div>
-
-        <div class="case-limits">
-          <div class="editorial-grid" id="resources">
-            <h3 id="resource-title">Quanto custa obter uma resposta?</h3>
-            <p>O custo da resposta inclui obter os dados que faltam, preparar o cálculo, usar recursos computacionais e analisar o resultado. O software leva em conta o trabalho compartilhado, os atrasos e as consequências de um cálculo que falha. As licenças de software e o orçamento computacional da equipe também podem limitar os métodos disponíveis. Pagar por mais precisão vale a pena quando isso pode mudar a escolha.</p>
-          </div>
-          <div class="editorial-grid" id="researcher-control">
-            <h3 id="control-title">O que os químicos podem delegar ao software?</h3>
-            <div class="prose" id="mechanism-execution">
-              <p>A equipe define o alvo, as propriedades exigidas, o escopo químico e os métodos permitidos, o orçamento e os critérios de parada. Dentro desses limites, o software pode escolher estudos, interpretar seus resultados e continuar trabalhando de forma autônoma. Cada escolha tem uma justificativa ligada às evidências e ao custo.</p>
-              <p>Um compilador permite que os programadores expressem o que um programa deve fazer em uma linguagem de nível mais alto e traduz essas instruções em operações de máquina. Os químicos podem orientar uma otimização em um nível semelhante. Se a solubilidade estimada ficar abaixo do mínimo definido pela equipe, o software pode explorar uma modificação permitida que talvez a melhore. Cabe à equipe decidir se flexibiliza esse mínimo ou se destina mais recursos ao trabalho. Ela controla a síntese e os ensaios e pode usar suas medições para orientar a próxima decisão.</p>
-              <p>O objetivo é reduzir o tempo que os pesquisadores dedicam a orientar cálculos e acompanhar resultados. Assim, a mesma equipe pode explorar mais possibilidades e se concentrar nas decisões capazes de mudar o rumo do projeto.</p>
+        <span class="section-alias" id="computational-evidence" aria-hidden="true"></span>
+        <span class="section-alias" id="mechanisms" aria-hidden="true"></span>
+        <div class="section-heading"><h2 id="coverage-title">Detalhes científicos</h2></div>
+        <div class="scientific-details">
+          <details id="reasoning-representation">
+            <summary>Como o raciocínio é representado?</summary>
+            <div class="prose">
+              <p>O conhecimento científico combina observações preservadas, relações estruturais e predições probabilísticas.</p>
+              <p>A política de investigação usa essas contribuições para construir alternativas, estimar as consequências de adquirir evidências e escolher o próximo trabalho.</p>
+              <p>A execução fornece os resultados efetivos e seus efeitos sobre os recursos, completando o ciclo.</p>
+              <p>A estrutura preditiva representa a incerteza e a dependência entre questões moleculares para as quais há respaldo. Assim, uma observação pode informar predições relacionadas sem tratar todos os compostos semelhantes como idênticos.</p>
+              <p>A avaliação de decisões considera como os resultados possíveis poderiam mudar as escolhas futuras. A exploração, o refinamento local e a seleção de métodos usam essa mesma estrutura.</p>
             </div>
-          </div>
+          </details>
+          <details id="biological-effect">
+            <summary>Quais métodos podem contribuir?</summary>
+            <div class="prose">
+              <p>Conforme a pergunta e as capacidades configuradas e disponíveis, as investigações podem recorrer a diferentes métodos e fontes de evidência.</p>
+              <ul>
+                <li>Docking e análise de poses.</li>
+                <li>Cálculos de energia livre relativa e absoluta de ligação.</li>
+                <li>Preditores de propriedades moleculares aplicáveis ao caso.</li>
+                <li>Resultados experimentais fornecidos.</li>
+                <li>Derivações mecanísticas específicas.</li>
+              </ul>
+              <p>Esses métodos contribuem com tipos diferentes de evidência e são selecionados de acordo com a pergunta e seus pré-requisitos.</p>
+              <p>A concepção mecanística inicial abrange uma relação de inibição enzimática competitiva com respaldo definido e uma relação condicional entre concentração e resposta. Cada uma exige as premissas biológicas, os parâmetros e as condições pertinentes. Mecanismos biológicos mais amplos precisam de modelos próprios com respaldo científico.</p>
+            </div>
+          </details>
+          <details id="uncertainty">
+            <summary>Como a incerteza é tratada?</summary>
+            <div class="prose">
+              <p>A incerteza pode tornar uma investigação útil quando esclarecê-la pode mudar uma decisão.</p>
+              <p>O sistema também distingue a incerteza dentro de um modelo com respaldo de uma questão que o modelo disponível não consegue sustentar. Cálculos adicionais não corrigem automaticamente essa ausência de base científica.</p>
+              <p>As predições preservam sua origem, suas condições e suas limitações para que decisões posteriores possam utilizá-las de maneira apropriada.</p>
+            </div>
+          </details>
+          <details id="researcher-control">
+            <summary id="control-title">O que permanece sob responsabilidade do pesquisador?</summary>
+        <span class="section-anchor" id="mechanism-execution" aria-hidden="true"></span>
+            <div class="prose">
+              <p>O pesquisador define o objetivo, os requisitos de evidência, a química e os métodos permitidos, a autorização de gastos e os critérios de parada.</p>
+              <p>Os resultados computacionais preservam seu alcance efetivo. As decisões sobre síntese, validação experimental e afirmações biológicas continuam vinculadas às evidências e às responsabilidades do programa de pesquisa.</p>
+            </div>
+          </details>
         </div>
-        <p class="case-handoff">O exemplo da solubilidade acompanha uma decisão. Como testar se o que o software aprende muda suas escolhas ao longo de uma <a href="#status">campanha de descoberta</a>?</p>
+        <p class="prose reading-block">Para conhecer a organização do software, a implementação numérica e a metodologia de desenvolvimento, consulte a <a href="../engineering/pt-br/#programmers">página de engenharia</a>.</p>
       </div>
     </section>
 
     <section class="section development-section" id="status" aria-labelledby="status-title">
       <div class="container">
-        <div class="section-heading">
-          <div><p class="eyebrow">06 / Desenvolvimento e evidências</p><h2 id="status-title">Como testar se o aprendizado orienta a próxima decisão?</h2></div>
+        <div class="section-heading"><h2 id="status-title">Testando se o aprendizado melhora a exploração</h2></div>
+        <div class="prose">
+          <p class="lead">Os mecanismos científicos e operacionais centrais foram implementados e exercitados em testes controlados.</p>
+          <p>O trabalho atual se concentra no ciclo de descoberta integrado, desde a escolha de uma investigação com base nas evidências disponíveis até sua execução, a incorporação do resultado e o uso do conhecimento atualizado em uma decisão posterior.</p>
         </div>
-        <div class="prose section-intro">
-          <p class="lead">Quando o software aprende algo útil sobre um composto, faz uma escolha melhor para o próximo? Para testar isso, apresento ao software uma série química para explorar, com um orçamento limitado e apenas parte das evidências.</p>
-          <p>Cada campanha usa estruturas moleculares reais. As relações que determinam a ligação e a solubilidade no teste são definidas previamente e ficam ocultas para o software. Ele parte de observações incompletas e imperfeitas, escolhe quais compostos propor, o que analisar e quais estudos realizar.</p>
-          <p>Quando o software solicita um cálculo, o teste fornece o tipo de resposta que aquele método pode oferecer, com a incerteza correspondente. A resposta chega pela mesma via que um resultado real. Assim, é possível acompanhar várias decisões sucessivas de uma campanha enquanto o software mantém o registro do que aprendeu, dos resultados ainda pendentes e do orçamento restante.</p>
-        </div>
-
-        <section class="editorial-grid reading-block" id="evidence" aria-labelledby="evidence-title">
-          <div><h3 id="evidence-title">O software consegue usar o que aprende para escolher o próximo passo?</h3></div>
+        <section class="reading-block" id="evidence" aria-labelledby="evidence-title">
+          <h3 id="evidence-title">O primeiro benchmark de exploração</h3>
           <div class="prose">
-            <p>O núcleo de raciocínio científico já foi implementado, e suas capacidades foram testadas tanto separadamente quanto em conjunto. Em testes controlados, o software aprendeu em que contexto uma modificação molecular melhorava a ligação, usou essa conclusão para orientar uma escolha relativa a outro composto e reviu suas expectativas quando um resultado contrariou a previsão. A ligação entre essas etapas é o que importa. Algo que o software aprendeu mudou o que ele fez em seguida.</p>
-            <p>É aqui que a analogia com o motor de xadrez ganha forma. O motor usa o que reconhece em uma posição para decidir quais continuações merecem atenção. Na otimização molecular, um padrão útil poderia ser que a alteração de um grupo químico só melhora a ligação quando a estrutura ao redor tem certas características. Depois de aprender essa distinção, o software pode aplicá-la a compostos relacionados para decidir onde vale a pena testar a mesma mudança e onde outro estudo seria mais informativo. Em um teste controlado de aprendizado, o núcleo processou milhares de comparações. Isso dá uma indicação da escala em que ele consegue aprender, enquanto os testes que conectam as etapas mostram como uma conclusão pode orientar uma decisão.</p>
-            <p>Os testes de campanhas completas reúnem essas capacidades em uma busca mais longa. O software parte de observações incompletas e de um orçamento limitado, sem conhecer as relações que deram origem a essas observações. Ao acompanhar os padrões que ele identifica, os compostos que propõe com base neles e os resultados desses compostos, posso avaliar se o conhecimento acumulado direciona a busca para moléculas que atendem melhor aos objetivos.</p>
+            <p>O primeiro benchmark de exploração foi concebido para examinar esse comportamento em um ambiente químico sintético construído a partir de estruturas moleculares reais.</p>
+            <p>Regras de resposta ocultas geram os desfechos. O sistema de descoberta precisa aprender com as observações que adquire. Moléculas geradas podem ser avaliadas sob demanda, além do conjunto inicial.</p>
+            <p>O estudo investiga se o sistema consegue cumprir os seguintes objetivos.</p>
+            <ul>
+              <li><strong>Adquirir informações úteis</strong> sobre o espaço químico.</li>
+              <li><strong>Usar essas informações</strong> em escolhas com consequências relevantes.</li>
+              <li><strong>Mudar o trabalho posterior</strong> quando as evidências sustentam outra direção.</li>
+              <li><strong>Avançar candidatos respaldados por evidências ou o entendimento científico.</strong></li>
+              <li><strong>Usar seus recursos computacionais e de investigação de forma cientificamente útil.</strong></li>
+            </ul>
+            <p>O primeiro marco é uma demonstração delimitada de exploração científica produtiva.</p>
+            <p>Estudos posteriores poderão avaliar a confiabilidade mais ampla, a eficiência quantitativa e a aplicabilidade a problemas reais de pesquisa. Resultados de um ambiente sintético preservam esse alcance e não demonstram eficácia biológica experimental.</p>
           </div>
+          <h3>Evidências a publicar</h3>
+          <div class="prose"><p>O relato da avaliação incluirá as condições do estudo, os métodos e recursos disponíveis, o histórico efetivo de investigações, as previsões e observações recebidas, as mudanças relevantes de decisão, o avanço dos candidatos, os custos e as limitações.</p></div>
         </section>
       </div>
     </section>
 
-    <section class="section work-section" id="previous-work" aria-labelledby="work-title">
-      <div class="container">
-        <div class="section-heading">
-          <div><p class="eyebrow">07 / Experiência em engenharia</p><h2 id="work-title">Trabalhos anteriores</h2></div>
-          <span class="margin-label">Software científico e simulação numérica</span>
-        </div>
-        <p class="prose previous-note">Duas aplicações anteriores ilustram a experiência em software científico que trago para este projeto. Uma integra as etapas de preparação de um sistema molecular. A outra permite examinar como um sistema simulado muda ao longo do tempo.</p>
-      <article class="project project-featured" aria-labelledby="protein-title"><div class="project-visual" data-project-image="protein"><a class="screenshot-link" href="../assets/protein-membrane-workspace.png" target="_blank" rel="noopener" aria-label="Ver a captura de tela do Protein–Membrane Workspace em tamanho original (abre em uma nova aba)"><img src="../assets/protein-membrane-workspace.png" width="2866" height="1788" loading="lazy" decoding="async" alt="Protein–Membrane Workspace exibindo a estrutura de origem 2PGH, os controles de seleção das cadeias da proteína, o visualizador molecular e o painel de avaliação da proteína."><span class="screenshot-caption">Protein–Membrane Workspace <span>Ver captura em tamanho original ↗</span></span></a></div><div class="project-copy prose"><span class="eyebrow">Aplicação científica</span><h3 id="protein-title">Protein–Membrane Workspace</h3><p class="lead">Uma aplicação local para preparar sistemas proteína–membrana com representação de todos os átomos.</p><p>O ambiente reúne em um único fluxo de trabalho a preparação da proteína, a especificação da membrana, o posicionamento molecular, a construção explícita do sistema, a minimização de energia e a inspeção estrutural.</p><p>Integra <strong>PACKMOL-Memgen via AmberTools</strong>, <strong>OpenMM</strong> e <strong>Mol*</strong> e mantém os resultados vinculados aos dados e arquivos moleculares, aos parâmetros e às informações sobre sua origem.</p><a class="text-link" data-project-link="protein" href="https://github.com/martin1cifuentes/protein-membrane-system" aria-label="Explorar o Protein–Membrane Workspace no GitHub">Explorar o projeto no GitHub <span aria-hidden="true">↗</span></a></div></article>
-      <article class="project project-secondary" aria-labelledby="particle-title"><div class="project-visual" data-project-image="particle"><a class="screenshot-link" href="../assets/particle-simulator.png" target="_blank" rel="noopener"><img src="../assets/particle-simulator.png" width="2880" height="1798" loading="lazy" decoding="async" alt="Interface do Particle Simulator mostrando 64 partículas no passo de tempo 1000, com controles de simulação e uma tabela de energias."><span class="screenshot-caption">Particle Simulator <span>Ver captura em tamanho original ↗ (nova aba)</span></span></a></div><div class="project-copy prose"><span class="eyebrow">Simulação numérica</span><h3 id="particle-title">Particle Simulator</h3><p class="lead">Uma aplicação interativa para simular e explorar pequenos sistemas de partículas.</p><p>A aplicação implementa interações de Lennard–Jones e integração pelo método de Verlet em velocidades (velocity-Verlet), em uma caixa de simulação periódica. É possível configurar um sistema, executar a simulação e examinar as trajetórias e as grandezas físicas resultantes.</p><p>O projeto combina simulação numérica, processamento em segundo plano e exploração interativa.</p><a class="text-link" data-project-link="particle" href="https://github.com/martin1cifuentes/Particle-Simulation" aria-label="Explorar o Particle Simulator no GitHub">Explorar o projeto no GitHub <span aria-hidden="true">↗</span></a></div></article>
-        <article class="programmers-section" id="for-programmers" aria-labelledby="programmers-title">
-          <header class="programmers-heading">
-            <p class="eyebrow">Como desenvolvo software complexo</p>
-            <h3 id="programmers-title">Para os programadores que estão lendo</h3>
-          </header>
-          <div class="prose programmers-prose">
-            <p>Se você programa, talvez esteja se perguntando como consigo desenvolver sozinho um sistema com um comportamento tão dinâmico. Pense em um único resultado experimental. Um análogo parecia promissor pela previsão de ligação ao alvo, mas uma medição mostra que ele não atende ao requisito de solubilidade da equipe. Esse resultado pode mudar quais compostos o software prioriza, se ainda vale a pena executar um cálculo de ligação já planejado e qual modificação molecular ele explora a seguir. Enquanto isso, o trabalho em outra série química pode continuar. Como estruturo essas decisões para conseguir acompanhar o raciocínio, expressá-lo em código e testar o que acontece quando as evidências mudam?</p>
-            <p>Nos últimos meses, venho desenvolvendo e refinando uma forma de pensar sobre problemas como esse. Ela se apoia no que aprendi em livros de programação e engenharia de software e na minha própria experiência ao colocar essas ideias em prática em projetos complexos.</p>
-            <p>Começo pelo que o software precisa realizar. Depois, pergunto o que cada parte precisa estabelecer para que a próxima consiga cumprir seu papel. Sempre que uma resposta ainda é vaga demais para implementar ou testar, pego essa parte e repito o mesmo processo.</p>
-            <p>Pense em um foguete cuja missão é decolar e pousar em um local de recuperação definido. <strong>O que deve acontecer?</strong> O plano da missão define o objetivo e as restrições. <strong>O que está acontecendo agora?</strong> O software usa observações do voo para estimar o estado do foguete. <strong>O que deve acontecer a seguir?</strong> Isso depende tanto do plano quanto da estimativa.</p>
-            <figure class="rocket-figure" id="rocket-abstractions" aria-labelledby="rocket-caption">
-              <figcaption id="rocket-caption">Três perguntas, três abstrações</figcaption>
-              <div class="rocket-inputs">
-                <div class="rocket-node">
-                  <p class="rocket-question">O que deve acontecer?</p>
-                  <h4 lang="en">Mission plan</h4>
-                  <p>Define o objetivo e as restrições.</p>
-                </div>
-                <div class="rocket-node">
-                  <p class="rocket-question">O que está acontecendo agora?</p>
-                  <h4 lang="en">State estimate</h4>
-                  <p>Resume o que as observações permitem estimar sobre o estado atual.</p>
-                </div>
-              </div>
-              <div class="rocket-connector" aria-hidden="true"></div>
-              <div class="rocket-node rocket-action">
-                <p class="rocket-question">O que deve acontecer a seguir?</p>
-                <h4 lang="en">Action selection</h4>
-                <p>Escolhe a próxima ação com base no plano e no estado estimado.</p>
-              </div>
-            </figure>
-            <p>Agora, vamos aprofundar a segunda pergunta. Suponha que eu queira determinar apenas um aspecto do estado do foguete. Em certo momento, ele estava subindo ou descendo? Uma nova informação indica que estava subindo. A anterior indicava que estava descendo. A estimativa mudou?</p>
-            <p>A primeira coisa que eu perguntaria é <em>quando cada observação foi feita</em>. A informação que chegou por último pode se referir a um momento anterior do voo. Nesse caso, as duas observações podem estar corretas. Depois, eu perguntaria <em>de onde veio cada informação</em>. A mesma observação pode chegar ao software duas vezes, e receber uma segunda cópia não acrescenta evidência. Se duas observações distintas e utilizáveis realmente descrevem o mesmo momento e discordam, essa divergência precisa fazer parte da estimativa.</p>
-            <p>Essas perguntas me dão três abstrações com as quais posso trabalhar. Uma <strong>observação</strong> informa o que foi observado, a que momento se refere e de onde veio. Um <strong>registro do voo</strong> mantém essas observações disponíveis à medida que chegam novas informações. Uma <strong>estimativa do estado</strong> expressa o que o registro permite concluir sobre determinado momento e preserva as evidências que sustentam essa conclusão. Cada parte responde a uma pergunta que, de outro modo, a próxima teria de resolver por conta própria.</p>
-            <figure class="rocket-figure rocket-inside" id="rocket-abstractions-expanded" aria-labelledby="rocket-expanded-caption">
-              <figcaption id="rocket-expanded-caption">Um olhar dentro de State estimate</figcaption>
-              <div class="rocket-node rocket-enclosing">
-                <p class="rocket-question">O que está acontecendo agora?</p>
-                <h4 lang="en">State estimate</h4>
-                <p>Resume o que as observações permitem estimar sobre o estado atual.</p>
-                <ol class="rocket-parts">
-                  <li><h5 lang="en">Observations</h5><p>O que foi observado, a que momento se refere e de onde veio.</p></li>
-                  <li><h5 lang="en">Flight registry</h5><p>Mantém as observações originais disponíveis à medida que chegam novas informações.</p></li>
-                  <li><h5 lang="en">State estimation</h5><p>Usa o registro para avaliar um momento específico, sem ocultar a falta de dados nem as divergências.</p></li>
-                </ol>
-              </div>
-            </figure>
-            <p>Agora posso expressar uma parte desse raciocínio em C++. Suponha que as observações já tenham sido verificadas e que cada uma identifique a fase do voo que sustenta.</p>
-            <figure class="programmers-code">
-              <figcaption id="programmers-code-caption">C++ · Um exemplo de parte da estimativa do estado</figcaption>
-              <pre tabindex="0" role="region" aria-labelledby="programmers-code-caption"><code class="language-cpp">PhaseEstimate assessPhaseAt(Time time, const FlightRecord&amp; flight)
-{
-    std::map&lt;FlightPhase, std::set&lt;ObservationId&gt;&gt; evidence;
-
-    for (const auto&amp; observation : flight.phaseObservationsAt(time)) {
-        evidence[observation.phase].insert(observation.originalId);
-    }
-
-    if (evidence.empty()) return PhaseEstimate::unknown(time);
-    if (evidence.size() == 1) return PhaseEstimate::supported(time, evidence);
-    return PhaseEstimate::disputed(time, evidence);
-}</code></pre>
-            </figure>
-            <p>O interessante, para mim, é saber como colocar esse código à prova. Se eu fornecer a mesma observação duas vezes, as evidências devem continuar contendo apenas um registro original. Se uma observação antiga chegar atrasada, ela poderá mudar o que sabemos sobre aquele momento anterior. Se eu fornecer observações conflitantes sobre o momento que estamos avaliando, a estimativa deverá preservar ambas para que possamos examinar a divergência.</p>
-            <p>Esse mesmo raciocínio importa na descoberta de moléculas. Dois relatos podem ter origem na mesma medição de um ensaio. Dois resultados aparentemente conflitantes podem ter sido obtidos em condições diferentes. Antes que qualquer um deles mude qual composto o software propõe a seguir, é preciso estabelecer o que as evidências realmente permitem concluir. É assim que passo de uma intenção ampla, como “aprender com novos resultados”, para um comportamento que consigo implementar e testar.</p>
-            <p>Como engenheiros de software, construímos sobre os ombros de gigantes. Se um projeto precisa de um banco de dados relacional, podemos usar PostgreSQL. Se eu dissesse a outro programador que estava escrevendo todo este sistema de descoberta em assembly, esperaria que a primeira pergunta fosse “Por quê?”. Uma linguagem como C++ permite expressar o comportamento que desejo, e o compilador cuida da tradução para instruções de máquina. Posso dedicar meu tempo ao problema que me propus a resolver.</p>
-            <p>Para programadores que enfrentam problemas complexos e de grande responsabilidade, que normalmente exigiriam uma equipe numerosa, <strong>acredito que saber usar IA com rigor já é uma competência essencial de engenharia.</strong> Isso amplia o que um engenheiro consegue realizar sozinho e a velocidade com que uma equipe pode avançar. Podemos usá-la para pesquisar uma questão, organizar evidências, explorar alternativas e traduzir um projeto detalhado em código. Um compilador segue regras definidas de tradução. Um assistente de IA gera sugestões de forma probabilística, então uma explicação convincente ou uma implementação bem escrita ainda pode estar errada. Parte dessa competência é saber conferir uma afirmação na fonte e testar o código com base em um comportamento que definimos de forma independente.</p>
-            <p>O valor dessa velocidade está no que podemos fazer com o tempo que ela libera. Pelo que cada abstração é responsável? O que uma parte pode confiar que a outra fará? Quando um resultado experimental muda, quais decisões o sistema deve rever e quais continuam válidas? Na minha experiência, até os modelos mais capazes têm dificuldade para responder a essas perguntas de forma consistente. É aí que o discernimento desenvolvido com a prática faz mais diferença. Combinar esse discernimento com a capacidade da IA de transformar um projeto bem especificado em uma implementação é uma parte importante do que me permite desenvolver sozinho um sistema como este.</p>
-            <p class="programmers-contact">Se quiser saber mais sobre essa abordagem ou receber orientações sobre como estruturar um projeto de software complexo, fique à vontade para <a href="mailto:martincifuentesgomez1@gmail.com">me escrever por e-mail</a>.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
     <section class="section about-section" id="about" aria-labelledby="about-title">
-      <div class="container about-layout">
-        <img class="about-portrait" src="../assets/martin-cifuentes.webp" width="532" height="630" loading="lazy" decoding="async" alt="Martin Cifuentes">
-        <div class="section-aside">
-          <p class="eyebrow">08 / Sobre mim</p>
-          <h2 id="about-title">Martin Cifuentes</h2>
-          <p class="aside-note">Engenharia de software<br>Modelagem molecular computacional</p>
+      <div class="container">
+        <div class="about-layout">
+          <img class="about-portrait" src="../assets/martin-cifuentes.webp" width="532" height="630" loading="lazy" decoding="async" alt="Martin Cifuentes">
+          <div class="section-aside"><h2 id="about-title">Desenvolvido por Martin Cifuentes</h2></div>
+          <div class="prose"><p>Desenvolvo software científico e sistemas numéricos. O ACADD reúne esse trabalho em um processo de descoberta que conecta evidências moleculares, raciocínio preditivo e a escolha de novas investigações.</p></div>
         </div>
-        <div class="prose">
-          <p>Desenvolvi o núcleo de raciocínio científico deste projeto. Agora estou verificando como ele aprende com as evidências e escolhe os estudos e preparando a avaliação dessas decisões em mundos químicos reais.</p>
-          <div id="collaboration">
-            <span id="validation" class="section-alias" aria-hidden="true"></span>
-            <span id="validation-title" class="section-alias" aria-hidden="true"></span>
-            <span id="collaboration-title" class="section-alias" aria-hidden="true"></span>
-            <div class="contact-links"><a href="https://github.com/martin1cifuentes">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/martin-cifuentes-3029b9334/">LinkedIn <span aria-hidden="true">↗</span></a><a href="mailto:martincifuentesgomez1@gmail.com">E-mail <span aria-hidden="true">↗</span></a></div>
+        <section class="reading-block" id="previous-work" aria-labelledby="work-title">
+          <h3 id="work-title">Trabalhos anteriores</h3>
+          <div class="project-catalog">
+            <article class="compact-project" aria-labelledby="protein-title">
+              <a class="screenshot-link" href="../assets/protein-membrane-workspace.png" target="_blank" rel="noopener" aria-label="Ver a captura de tela do Protein–Membrane Workspace em tamanho original, em uma nova aba">
+                <img src="../assets/protein-membrane-workspace.png" width="2866" height="1788" loading="lazy" decoding="async" alt="Protein–Membrane Workspace com a estrutura 2PGH, seleção das cadeias proteicas, visualizador molecular e painel de avaliação da proteína.">
+              </a>
+              <h4 id="protein-title">Protein–Membrane Workspace</h4>
+              <p>Uma aplicação científica que conecta a preparação de sistemas moleculares, sua construção, minimização e inspeção.</p>
+              <a class="text-link" data-project-link="protein" href="https://github.com/martin1cifuentes/protein-membrane-system">Explore o projeto <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="compact-project" aria-labelledby="particle-title">
+              <a class="screenshot-link" href="../assets/particle-simulator.png" target="_blank" rel="noopener" aria-label="Ver a captura de tela do Particle Simulator em tamanho original, em uma nova aba">
+                <img src="../assets/particle-simulator.png" width="2880" height="1798" loading="lazy" decoding="async" alt="Particle Simulator com 64 partículas no passo de tempo 1000, controles de simulação e uma tabela de energias.">
+              </a>
+              <h4 id="particle-title">Particle Simulator</h4>
+              <p>Uma aplicação numérica interativa para explorar a dinâmica de partículas, trajetórias e grandezas físicas.</p>
+              <a class="text-link" data-project-link="particle" href="https://github.com/martin1cifuentes/Particle-Simulation">Explore o projeto <span aria-hidden="true">↗</span></a>
+            </article>
           </div>
-        </div>
+          <p class="engineering-link" id="for-programmers"><a class="text-link" href="../engineering/pt-br/#programmers">Para quem programa</a></p>
+        </section>
+        <section class="reading-block" id="contact" aria-labelledby="contact-title">
+        <span class="section-anchor" id="collaboration-title" aria-hidden="true"></span><span class="section-anchor" id="validation-title" aria-hidden="true"></span>
+          <span class="section-alias" id="collaboration" aria-hidden="true"></span>
+          <span class="section-alias" id="validation" aria-hidden="true"></span>
+          <h3 id="contact-title">Converse sobre um problema de pesquisa ou uma colaboração</h3>
+          <div class="prose">
+            <p>Tenho interesse em conversar com químicos medicinais e computacionais sobre as questões que consomem tempo de pesquisa, as evidências necessárias para agir com base em uma predição e contextos úteis para avaliação.</p>
+            <p>Também tenho interesse em conversar com possíveis parceiros e investidores sobre o desenvolvimento e a validação do sistema.</p>
+            <p><a href="mailto:martincifuentesgomez1@gmail.com">martincifuentesgomez1@gmail.com</a></p>
+            <div class="contact-links"><a href="https://github.com/martin1cifuentes">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/martin-cifuentes-3029b9334/">LinkedIn <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </section>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer"><div class="container footer-inner"><span>Descoberta Autônoma de Fármacos Assistida por Computador</span><span>Martin Cifuentes</span><a href="#top">Voltar ao início <span aria-hidden="true">↑</span></a></div></footer>

@@ -30,7 +30,12 @@ revealLinkedDetails();
 window.addEventListener('hashchange', revealLinkedDetails);
 
 const navLinks = [...document.querySelectorAll('.main-nav a')];
-const observedSections = [document.querySelector('#top'), ...navLinks.map(link => document.querySelector(link.getAttribute('href')))].filter(Boolean);
+const observedSections = [
+  document.getElementById('top'),
+  ...navLinks
+    .filter(link => link.origin === location.origin && link.pathname === location.pathname)
+    .map(link => document.getElementById(link.hash.slice(1))),
+].filter(Boolean);
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(entries => {
     for (const entry of entries) {
